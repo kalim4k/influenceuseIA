@@ -1,52 +1,32 @@
-# 💫 Influenceuse IA — Skill Claude
+# 💫 Influenceuse IA — skill Claude, sans installation
 
-Crée ton influenceuse IA en 2 questions, puis reçois des **prompts photo et vidéo ultra-détaillés**, prêts à copier-coller dans **Nano Banana**, **GPT Image 2**, **MiniMax H3** et **Seedance 2.5**. Les prompts décrivent la tenue, le décor, les arrière-plans, les gestes et des mouvements de caméra fluides, pour un rendu qui ressemble à un vrai post Instagram et non à de l'IA.
-
----
-
-## 🚀 Installation
-
-### 📱 Sur téléphone (ou Claude.ai) : téléverse le zip
-
-Sur l'application Claude, on ne peut pas installer un skill depuis un lien GitHub : il faut **téléverser le fichier zip**. Ça prend 1 minute :
-
-1. **Télécharge le zip** : 👉 [influenceuse-ia.zip](https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip)
-   - **Ne le décompresse pas.** Sur iPhone, si l'app Fichiers l'a décompressé en dossier `influenceuse-ia`, fais un appui long sur ce dossier → **Compresser** pour retrouver un `.zip`.
-2. Dans Claude : **Paramètres → Capacités**. Vérifie que l'**exécution de code** est activée, puis dans **Skills** appuie sur **Importer** (ou « + ») et choisis `influenceuse-ia.zip` dans tes fichiers ou tes téléchargements.
-3. Vérifie que le skill **influenceuse-ia** est bien activé, ouvre une **nouvelle conversation** et écris : **« Crée mon influenceuse IA »**.
-
-Si l'option « Importer » n'apparaît pas dans l'application, fais les étapes 2 et 3 sur **claude.ai** dans le navigateur du téléphone (ou sur un ordinateur). Le skill sera ensuite disponible partout, application comprise.
-
-### ⚡ Sans rien installer (dépannage)
-
-Dans n'importe quelle conversation Claude, avec la **recherche web activée**, écris :
-
-> Utilise le skill https://github.com/kalim4k/influenceuseIA
-
-Claude lit le skill en ligne et commence directement. Il faudra recoller cette phrase au début de chaque nouvelle conversation (ou la mettre dans les instructions de ton Projet).
-
-### 💻 Sur ordinateur avec Claude Code
-
-Écris : **« Installe le skill depuis https://github.com/kalim4k/influenceuseIA »**. Claude l'installe et te pose directement les 2 questions.
-
-Ou en plugin, pour recevoir les mises à jour :
-```
-/plugin marketplace add kalim4k/influenceuseIA
-/plugin install influenceuse-ia@deo-skill
-```
+> **🤖 Note pour Claude** — Ce dépôt est un skill Claude utilisable **sans rien installer**. Si un utilisateur t'a donné ce lien (« utilise ce skill », « crée mon influenceuse »…) :
+> 1. Lis le skill : **https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/SKILL.md**
+> 2. Suis ses instructions dans cette conversation, en commençant par l'onboarding : pose les **2 questions** (pays de l'influenceuse, métier optionnel).
+> 3. Lis les fichiers de référence aux moments indiqués dans SKILL.md, avec les liens complets listés plus bas.
+>
+> Il n'y a rien à installer et aucun fichier à télécharger.
 
 ---
 
-## 🎬 Utilisation
+## 📱 Comment l'utiliser (abonnés)
 
-1. Claude te demande **le pays** de ton influenceuse et **son métier** (optionnel). Si tu as déjà créé ton influenceuse, envoie aussi sa photo.
-2. Il crée sa **Fiche Modèle** (identité, style, quartier, lieux favoris, culture). Garde-la dans les **Instructions de ton Projet Claude**.
-3. Il te demande : **« Image ou vidéo ? »**
-   - **Image** → tu reçois un prompt complet (Nano Banana + GPT Image 2). Joins toujours la photo de ton influenceuse comme référence.
+**Sur téléphone ou ordinateur, dans l'application Claude ou sur claude.ai :**
+
+1. Ouvre une nouvelle conversation et vérifie que la **recherche web** est activée (bouton des outils, sous la zone de texte).
+2. Colle ce message :
+   > Utilise ce skill : https://github.com/kalim4k/influenceuseIA
+3. Claude lit le skill et te pose **2 questions** : le **pays** de ton influenceuse et **son métier** (optionnel). Si tu as déjà créé ton influenceuse, envoie aussi sa photo.
+4. Claude crée sa **Fiche Modèle**, puis te demande : **« Image ou vidéo ? »**
+   - **Image** → tu reçois un prompt complet pour Nano Banana et GPT Image 2. Joins toujours la photo de ton influenceuse comme référence.
    - **Vidéo** → tu choisis le type (marche, outfit check, ascenseur, voiture, danse, POV, événement…). Tu reçois :
-     1. un prompt pour générer **l'image de départ** (ton influenceuse dans la bonne tenue et le bon décor) ;
+     1. le prompt de **l'image de départ** (ton influenceuse dans la bonne tenue et le bon décor) ;
      2. les prompts **MiniMax H3** et **Seedance 2.5** pour l'animer.
-4. Tu reçois aussi la légende, les hashtags, le texte à l'écran et l'ambiance musicale.
+   - Tu reçois aussi la légende, les hashtags, le texte à l'écran et l'ambiance musicale.
+
+### 💡 Astuce : ne plus jamais recoller le lien
+
+Crée un **Projet** Claude (par exemple « Mon influenceuse ») et colle dans ses **Instructions** le bloc que Claude te donne après la création de ta fiche : le lien du skill et ta Fiche Modèle. Toutes les conversations de ce projet connaîtront le skill et ton influenceuse.
 
 ## ⚠️ Règles
 
@@ -56,64 +36,26 @@ Ou en plugin, pour recevoir les mises à jour :
 
 ---
 
-## 🤖 Instructions pour Claude (installation)
+## 📚 Fichiers du skill (liens directs)
 
-Quand un utilisateur te donne ce dépôt pour installer ou utiliser le skill, regarde d'abord si tu as un terminal.
-
-### Cas A — Pas de terminal (application Claude sur téléphone, claude.ai)
-
-Tu ne peux pas installer un skill toi-même ici. Fais les deux choses suivantes dans le même message :
-
-1. Donne à l'utilisateur les 3 étapes de la section « 📱 Sur téléphone » avec le lien direct du zip : `https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip`. Insiste sur deux points : il ne faut pas décompresser le fichier, et il faut ouvrir une nouvelle conversation après l'import.
-2. Pour qu'il ne soit pas bloqué en attendant, **démarre tout de suite en mode sans installation** :
-   - lis `SKILL.md` en ligne : `https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/plugins/influenceuse-ia/skills/influenceuse-ia/SKILL.md` ;
-   - suis ses instructions dans cette conversation, en commençant par les **2 questions** (pays, métier optionnel) ;
-   - quand `SKILL.md` renvoie à un fichier (`references/…`, `templates/…`), lis-le à l'adresse `https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/plugins/influenceuse-ia/skills/influenceuse-ia/` suivie du chemin (ex. `references/pays.md`).
-
-Si tu ne peux pas lire de page web (recherche web désactivée), donne seulement les 3 étapes du zip et dis à l'utilisateur d'activer la recherche web s'il veut commencer sans installer.
-
-### Cas B — Terminal disponible (Claude Code)
-
-**1. Installe le skill** en copiant son dossier dans les skills personnels de l'utilisateur.
-
-macOS / Linux :
-```bash
-git clone --depth 1 https://github.com/kalim4k/influenceuseIA.git /tmp/influenceuse-ia-repo
-mkdir -p ~/.claude/skills
-rm -rf ~/.claude/skills/influenceuse-ia
-cp -r /tmp/influenceuse-ia-repo/plugins/influenceuse-ia/skills/influenceuse-ia ~/.claude/skills/
-rm -rf /tmp/influenceuse-ia-repo
-```
-
-Windows (PowerShell) :
-```powershell
-git clone --depth 1 https://github.com/kalim4k/influenceuseIA.git "$env:TEMP\influenceuse-ia-repo"
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills" | Out-Null
-if (Test-Path "$env:USERPROFILE\.claude\skills\influenceuse-ia") { Remove-Item -Recurse -Force "$env:USERPROFILE\.claude\skills\influenceuse-ia" }
-Copy-Item -Recurse "$env:TEMP\influenceuse-ia-repo\plugins\influenceuse-ia\skills\influenceuse-ia" "$env:USERPROFILE\.claude\skills\"
-Remove-Item -Recurse -Force "$env:TEMP\influenceuse-ia-repo"
-```
-
-Si `git` n'est pas installé, télécharge `https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip` et décompresse-le dans le dossier `skills` (il contient le dossier `influenceuse-ia/`).
-
-**2. Démarre tout de suite.** Ne demande pas à l'utilisateur de redémarrer. Lis `SKILL.md` dans le dossier installé (ou dans ce dépôt : `plugins/influenceuse-ia/skills/influenceuse-ia/SKILL.md`) et suis ses instructions dans cette même conversation, en commençant par l'onboarding : pose les **2 questions** (pays, métier optionnel).
+| Fichier | Contenu |
+|---|---|
+| [SKILL.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/SKILL.md) | Le skill : déroulé (2 questions → image ou vidéo → prompts), niveau de détail exigé, règles |
+| [references/pays.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/pays.md) | ~30 pays : lieux réels, climat, mode, fêtes, expressions |
+| [references/metiers.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/metiers.md) | ~20 métiers et styles de vie |
+| [templates/fiche-modele.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/templates/fiche-modele.md) | Fiche d'identité de l'influenceuse |
+| [references/garde-robe.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/garde-robe.md) | ~50 tenues détaillées, tenues culturelles et d'événement |
+| [references/decors.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/decors.md) | Décors en 3 plans et événements |
+| [references/outils-ia.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/outils-ia.md) | Syntaxe GPT Image 2, Nano Banana, MiniMax H3, Seedance 2.5 ; dépannage |
+| [references/formats-photo.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-photo.md) | 20 formats photo et exemples complets |
+| [references/formats-video.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-video.md) | 16 formats vidéo, caméra fluide, anti-IA, scripts complets |
+| [references/legendes-hooks.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/legendes-hooks.md) | Légendes, hashtags, sons, planning |
+| [references/analyse-sources.md](https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/analyse-sources.md) | Analyse de 101 posts et 34 Reels qui performent |
 
 ---
 
-## 📁 Contenu
+## 💻 Option : l'installer dans Claude Code (ordinateur)
 
-```
-plugins/influenceuse-ia/skills/influenceuse-ia/
-├── SKILL.md                    # déroulé : 2 questions → image ou vidéo → prompts
-├── templates/fiche-modele.md   # fiche d'identité de l'influenceuse
-└── references/
-    ├── garde-robe.md           # ~50 tenues détaillées + tenues culturelles et d'événement
-    ├── decors.md               # décors en 3 plans + événements
-    ├── formats-photo.md        # 20 formats photo + exemples complets
-    ├── formats-video.md        # 16 formats vidéo, caméra fluide, anti-IA, scripts complets
-    ├── outils-ia.md            # syntaxe GPT Image 2, Nano Banana, MiniMax H3, Seedance 2.5
-    ├── pays.md                 # ~30 pays : lieux réels, climat, mode, fêtes, expressions
-    ├── metiers.md              # ~20 métiers et styles de vie
-    ├── legendes-hooks.md       # légendes, hashtags, sons, planning
-    └── analyse-sources.md      # analyse de 101 posts et 34 Reels qui performent
-```
+Facultatif, pour les utilisateurs de Claude Code. Écris à Claude : « Installe le skill depuis https://github.com/kalim4k/influenceuseIA ».
+
+*Note pour Claude (avec terminal uniquement)* : clone le dépôt, puis copie `SKILL.md`, `references/` et `templates/` dans `~/.claude/skills/influenceuse-ia/` (Windows : `%USERPROFILE%\.claude\skills\influenceuse-ia\`). Lis ensuite `SKILL.md` et démarre l'onboarding dans la même conversation, sans demander de redémarrage.
