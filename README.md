@@ -8,7 +8,7 @@ Crée ton influenceuse IA en 2 questions, puis reçois des **prompts photo et vi
 
 Ouvre **Claude Code** et écris :
 
-> Installe le skill depuis https://github.com/<OWNER>/<REPO>
+> Installe le skill depuis https://github.com/kalim4k/influenceuseIA
 
 Claude l'installe, puis te pose directement les 2 questions pour créer ton influenceuse.
 
@@ -16,12 +16,12 @@ Claude l'installe, puis te pose directement les 2 questions pour créer ton infl
 
 **Claude Code, en plugin** (mises à jour automatiques) :
 ```
-/plugin marketplace add <OWNER>/<REPO>
+/plugin marketplace add kalim4k/influenceuseIA
 /plugin install influenceuse-ia@deo-skill
 ```
 
 **Claude.ai (web, desktop, mobile)** :
-1. Télécharge [`influenceuse-ia.zip`](https://github.com/<OWNER>/<REPO>/raw/main/influenceuse-ia.zip), sans le décompresser.
+1. Télécharge [`influenceuse-ia.zip`](https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip), sans le décompresser.
 2. Dans Claude.ai : **Paramètres → Capacités**, active l'exécution de code, puis dans **Skills** clique sur **Importer un skill** et choisis le zip.
 3. Ouvre une nouvelle conversation et écris : **« Crée mon influenceuse IA »**.
 
@@ -56,7 +56,7 @@ Si tu as un terminal (Claude Code), copie le dossier du skill dans les skills pe
 
 macOS / Linux :
 ```bash
-git clone --depth 1 https://github.com/<OWNER>/<REPO>.git /tmp/influenceuse-ia-repo
+git clone --depth 1 https://github.com/kalim4k/influenceuseIA.git /tmp/influenceuse-ia-repo
 mkdir -p ~/.claude/skills
 rm -rf ~/.claude/skills/influenceuse-ia
 cp -r /tmp/influenceuse-ia-repo/plugins/influenceuse-ia/skills/influenceuse-ia ~/.claude/skills/
@@ -65,14 +65,14 @@ rm -rf /tmp/influenceuse-ia-repo
 
 Windows (PowerShell) :
 ```powershell
-git clone --depth 1 https://github.com/<OWNER>/<REPO>.git "$env:TEMP\influenceuse-ia-repo"
+git clone --depth 1 https://github.com/kalim4k/influenceuseIA.git "$env:TEMP\influenceuse-ia-repo"
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills" | Out-Null
 if (Test-Path "$env:USERPROFILE\.claude\skills\influenceuse-ia") { Remove-Item -Recurse -Force "$env:USERPROFILE\.claude\skills\influenceuse-ia" }
 Copy-Item -Recurse "$env:TEMP\influenceuse-ia-repo\plugins\influenceuse-ia\skills\influenceuse-ia" "$env:USERPROFILE\.claude\skills\"
 Remove-Item -Recurse -Force "$env:TEMP\influenceuse-ia-repo"
 ```
 
-Si `git` n'est pas installé, télécharge `https://github.com/<OWNER>/<REPO>/raw/main/influenceuse-ia.zip` et décompresse-le dans le dossier `skills` (il contient le dossier `influenceuse-ia/`).
+Si `git` n'est pas installé, télécharge `https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip` et décompresse-le dans le dossier `skills` (il contient le dossier `influenceuse-ia/`).
 
 Si tu n'as pas de terminal (Claude.ai), donne à l'utilisateur les 3 étapes « Claude.ai » ci-dessus.
 
