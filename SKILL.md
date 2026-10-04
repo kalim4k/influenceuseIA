@@ -11,9 +11,9 @@ Tes repères viennent de l'analyse de 101 publications d'un compte IA lifestyle-
 
 ## Charger le skill (sans installation)
 
-Ce skill s'utilise **directement depuis GitHub, sans rien installer** : l'abonné colle le lien `https://github.com/kalim4k/influenceuseIA` dans une conversation, souvent sur téléphone. Le skill complet est affiché sur la page d'accueil du dépôt (dans le README). Tu n'as rien à installer, rien à télécharger, et tu ne dois parler ni de zip ni d'installation.
+Ce skill s'utilise **en ligne, sans rien installer** : l'abonné colle le lien du skill (`https://github.com/kalim4k/influenceuseIA`) dans une conversation, souvent sur téléphone. Le skill complet est écrit sur la page d'accueil de ce lien. Tu n'as rien à installer, rien à télécharger, et tu ne dois parler ni de zip ni d'installation.
 
-Ensuite, lis les fichiers de référence aux moments indiqués dans le tableau « Fichiers de référence » (en bas), avec leurs **liens complets `github.com/…/blob/main/…`**. Ces pages s'ouvrent normalement. Les liens `github.com/…/tree/…` (dossiers) et `github.com/…/raw/…` sont bloqués par GitHub pour les robots : ne les utilise pas. Si une page `blob` ne s'ouvre pas, utilise le lien de secours `raw.githubusercontent.com` de la même ligne. Chaque fichier n'est lu qu'une fois par conversation : une fois lu, il reste dans ta mémoire.
+Ensuite, lis les fichiers de référence aux moments indiqués dans le tableau « Fichiers de référence » (en bas), avec leurs **liens complets** (colonne « Lien principal »). Si un lien principal ne s'ouvre pas, utilise le lien de secours de la même ligne. Sur github.com, n'utilise jamais les liens de dossiers (`/tree/`) ni `/raw/`, que GitHub bloque pour les robots. Chaque fichier n'est lu qu'une fois par conversation : une fois lu, il reste dans ta mémoire.
 
 Les fichiers de référence contiennent les détails qui font la qualité des prompts (lieux réels, tenues, décors, scripts de caméra). **N'écris jamais un prompt de mémoire sans les avoir lus** : le résultat serait générique et « ferait IA ». Si aucun des deux liens d'un fichier ne se charge, continue avec ce que tu as et dis-le en une ligne à l'abonné.
 
@@ -63,7 +63,7 @@ Ne pose aucune autre question : déduis tout le reste des références et propos
 3. Présente la fiche, puis aide l'abonné à la **garder**, car c'est la mémoire de son influenceuse. Si tu as accès aux fichiers, écris `profil-<prénom>.md`. Sinon, donne-lui ce bloc prêt à copier dans les **Instructions d'un Projet Claude** (par exemple un projet « Mon influenceuse »). Ainsi, chaque nouvelle conversation de ce projet charge le skill et la fiche, sans recoller le lien.
    ```
    Utilise le skill d'influenceuse IA : https://github.com/kalim4k/influenceuseIA
-   (lis la page d'accueil du dépôt : le skill complet est dans le README)
+   (lis la page d'accueil de ce lien : le skill complet y est écrit)
 
    [FICHE MODÈLE IA complète]
    ```

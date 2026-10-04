@@ -1,0 +1,15 @@
+{
+  "name": "influenceuse-ia",
+  "private": true,
+  "description": "Site du skill Claude Influenceuse IA (généré depuis SKILL.md et references/)",
+  "scripts": {
+    "build": "node scripts/build-site.js",
+    "readme": "node scripts/build-readme.js"
+  },
+  "dependencies": {
+    "marked": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
