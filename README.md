@@ -4,26 +4,36 @@ Crée ton influenceuse IA en 2 questions, puis reçois des **prompts photo et vi
 
 ---
 
-## 🚀 Installation la plus simple
+## 🚀 Installation
 
-Ouvre **Claude Code** et écris :
+### 📱 Sur téléphone (ou Claude.ai) : téléverse le zip
 
-> Installe le skill depuis https://github.com/kalim4k/influenceuseIA
+Sur l'application Claude, on ne peut pas installer un skill depuis un lien GitHub : il faut **téléverser le fichier zip**. Ça prend 1 minute :
 
-Claude l'installe, puis te pose directement les 2 questions pour créer ton influenceuse.
+1. **Télécharge le zip** : 👉 [influenceuse-ia.zip](https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip)
+   - **Ne le décompresse pas.** Sur iPhone, si l'app Fichiers l'a décompressé en dossier `influenceuse-ia`, fais un appui long sur ce dossier → **Compresser** pour retrouver un `.zip`.
+2. Dans Claude : **Paramètres → Capacités**. Vérifie que l'**exécution de code** est activée, puis dans **Skills** appuie sur **Importer** (ou « + ») et choisis `influenceuse-ia.zip` dans tes fichiers ou tes téléchargements.
+3. Vérifie que le skill **influenceuse-ia** est bien activé, ouvre une **nouvelle conversation** et écris : **« Crée mon influenceuse IA »**.
 
-### Autres méthodes
+Si l'option « Importer » n'apparaît pas dans l'application, fais les étapes 2 et 3 sur **claude.ai** dans le navigateur du téléphone (ou sur un ordinateur). Le skill sera ensuite disponible partout, application comprise.
 
-**Claude Code, en plugin** (mises à jour automatiques) :
+### ⚡ Sans rien installer (dépannage)
+
+Dans n'importe quelle conversation Claude, avec la **recherche web activée**, écris :
+
+> Utilise le skill https://github.com/kalim4k/influenceuseIA
+
+Claude lit le skill en ligne et commence directement. Il faudra recoller cette phrase au début de chaque nouvelle conversation (ou la mettre dans les instructions de ton Projet).
+
+### 💻 Sur ordinateur avec Claude Code
+
+Écris : **« Installe le skill depuis https://github.com/kalim4k/influenceuseIA »**. Claude l'installe et te pose directement les 2 questions.
+
+Ou en plugin, pour recevoir les mises à jour :
 ```
 /plugin marketplace add kalim4k/influenceuseIA
 /plugin install influenceuse-ia@deo-skill
 ```
-
-**Claude.ai (web, desktop, mobile)** :
-1. Télécharge [`influenceuse-ia.zip`](https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip), sans le décompresser.
-2. Dans Claude.ai : **Paramètres → Capacités**, active l'exécution de code, puis dans **Skills** clique sur **Importer un skill** et choisis le zip.
-3. Ouvre une nouvelle conversation et écris : **« Crée mon influenceuse IA »**.
 
 ---
 
@@ -48,11 +58,23 @@ Claude l'installe, puis te pose directement les 2 questions pour créer ton infl
 
 ## 🤖 Instructions pour Claude (installation)
 
-Quand un utilisateur te demande d'installer ce skill depuis ce dépôt :
+Quand un utilisateur te donne ce dépôt pour installer ou utiliser le skill, regarde d'abord si tu as un terminal.
 
-**1. Installe-le.**
+### Cas A — Pas de terminal (application Claude sur téléphone, claude.ai)
 
-Si tu as un terminal (Claude Code), copie le dossier du skill dans les skills personnels de l'utilisateur.
+Tu ne peux pas installer un skill toi-même ici. Fais les deux choses suivantes dans le même message :
+
+1. Donne à l'utilisateur les 3 étapes de la section « 📱 Sur téléphone » avec le lien direct du zip : `https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip`. Insiste sur deux points : il ne faut pas décompresser le fichier, et il faut ouvrir une nouvelle conversation après l'import.
+2. Pour qu'il ne soit pas bloqué en attendant, **démarre tout de suite en mode sans installation** :
+   - lis `SKILL.md` en ligne : `https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/plugins/influenceuse-ia/skills/influenceuse-ia/SKILL.md` ;
+   - suis ses instructions dans cette conversation, en commençant par les **2 questions** (pays, métier optionnel) ;
+   - quand `SKILL.md` renvoie à un fichier (`references/…`, `templates/…`), lis-le à l'adresse `https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/plugins/influenceuse-ia/skills/influenceuse-ia/` suivie du chemin (ex. `references/pays.md`).
+
+Si tu ne peux pas lire de page web (recherche web désactivée), donne seulement les 3 étapes du zip et dis à l'utilisateur d'activer la recherche web s'il veut commencer sans installer.
+
+### Cas B — Terminal disponible (Claude Code)
+
+**1. Installe le skill** en copiant son dossier dans les skills personnels de l'utilisateur.
 
 macOS / Linux :
 ```bash
@@ -73,8 +95,6 @@ Remove-Item -Recurse -Force "$env:TEMP\influenceuse-ia-repo"
 ```
 
 Si `git` n'est pas installé, télécharge `https://github.com/kalim4k/influenceuseIA/raw/main/influenceuse-ia.zip` et décompresse-le dans le dossier `skills` (il contient le dossier `influenceuse-ia/`).
-
-Si tu n'as pas de terminal (Claude.ai), donne à l'utilisateur les 3 étapes « Claude.ai » ci-dessus.
 
 **2. Démarre tout de suite.** Ne demande pas à l'utilisateur de redémarrer. Lis `SKILL.md` dans le dossier installé (ou dans ce dépôt : `plugins/influenceuse-ia/skills/influenceuse-ia/SKILL.md`) et suis ses instructions dans cette même conversation, en commençant par l'onboarding : pose les **2 questions** (pays, métier optionnel).
 

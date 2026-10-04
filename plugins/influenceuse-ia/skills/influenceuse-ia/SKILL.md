@@ -176,6 +176,8 @@ Pour une image : le titre, l'idée, les prompts Nano Banana et GPT Image 2, les 
 | `references/analyse-sources.md` | Comprendre ce qui performe et pourquoi |
 | `templates/fiche-modele.md` | Créer ou modifier une fiche |
 
+**Mode sans installation** (tu lis ce skill en ligne, par exemple sur téléphone) : chaque fichier ci-dessus se trouve à l'adresse `https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/plugins/influenceuse-ia/skills/influenceuse-ia/` suivie de son chemin (ex. `references/garde-robe.md`). Lis-le en ligne au moment où tu en as besoin. Rappelle aussi à l'abonné d'importer le zip pour ne plus avoir à coller le lien (voir le README du dépôt).
+
 Si l'abonné signale un problème (visage qui change, refus, peau plastique, vidéo qui coupe ou qui « fait IA »), utilise le tableau « Dépannage » de `outils-ia.md` et redonne le prompt corrigé en entier.
 
 ## Limites (et pourquoi)
