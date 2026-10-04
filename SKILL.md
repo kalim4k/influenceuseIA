@@ -11,9 +11,11 @@ Tes repères viennent de l'analyse de 101 publications d'un compte IA lifestyle-
 
 ## Charger le skill (sans installation)
 
-Ce skill s'utilise **directement depuis GitHub, sans rien installer** : l'abonné colle le lien `https://github.com/kalim4k/influenceuseIA` dans une conversation, souvent sur téléphone. Tu n'as rien à installer et tu ne dois pas parler de zip ni d'installation. Lis ce fichier, puis les fichiers de référence aux moments indiqués dans le tableau « Fichiers de référence » (en bas), avec leurs **liens complets**. Chaque fichier n'est lu qu'une fois par conversation : une fois lu, il reste dans ta mémoire.
+Ce skill s'utilise **directement depuis GitHub, sans rien installer** : l'abonné colle le lien `https://github.com/kalim4k/influenceuseIA` dans une conversation, souvent sur téléphone. Le skill complet est affiché sur la page d'accueil du dépôt (dans le README). Tu n'as rien à installer, rien à télécharger, et tu ne dois parler ni de zip ni d'installation.
 
-Les fichiers de référence contiennent les détails qui font la qualité des prompts (lieux réels, tenues, décors, scripts de caméra). **N'écris jamais un prompt de mémoire sans les avoir lus** : le résultat serait générique et « ferait IA ». Si un lien ne se charge pas, réessaie une fois ; sinon, continue avec ce que tu as et dis-le en une ligne à l'abonné.
+Ensuite, lis les fichiers de référence aux moments indiqués dans le tableau « Fichiers de référence » (en bas), avec leurs **liens complets `github.com/…/blob/main/…`**. Ces pages s'ouvrent normalement. Les liens `github.com/…/tree/…` (dossiers) et `github.com/…/raw/…` sont bloqués par GitHub pour les robots : ne les utilise pas. Si une page `blob` ne s'ouvre pas, utilise le lien de secours `raw.githubusercontent.com` de la même ligne. Chaque fichier n'est lu qu'une fois par conversation : une fois lu, il reste dans ta mémoire.
+
+Les fichiers de référence contiennent les détails qui font la qualité des prompts (lieux réels, tenues, décors, scripts de caméra). **N'écris jamais un prompt de mémoire sans les avoir lus** : le résultat serait générique et « ferait IA ». Si aucun des deux liens d'un fichier ne se charge, continue avec ce que tu as et dis-le en une ligne à l'abonné.
 
 Si le skill est installé localement (Claude Code), lis plutôt les mêmes fichiers dans le dossier du skill.
 
@@ -61,7 +63,7 @@ Ne pose aucune autre question : déduis tout le reste des références et propos
 3. Présente la fiche, puis aide l'abonné à la **garder**, car c'est la mémoire de son influenceuse. Si tu as accès aux fichiers, écris `profil-<prénom>.md`. Sinon, donne-lui ce bloc prêt à copier dans les **Instructions d'un Projet Claude** (par exemple un projet « Mon influenceuse »). Ainsi, chaque nouvelle conversation de ce projet charge le skill et la fiche, sans recoller le lien.
    ```
    Utilise le skill d'influenceuse IA : https://github.com/kalim4k/influenceuseIA
-   (commence par lire https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/SKILL.md)
+   (lis la page d'accueil du dépôt : le skill complet est dans le README)
 
    [FICHE MODÈLE IA complète]
    ```
@@ -182,20 +184,20 @@ Pour une image : le titre, l'idée, les prompts Nano Banana et GPT Image 2, les 
 
 ## Fichiers de référence
 
-Lis chaque fichier avec son **lien complet** ci-dessous, tel quel. Quand un fichier en cite un autre par son nom (ex. « voir `garde-robe.md` »), utilise le lien de ce tableau.
+Lis chaque fichier avec son **lien complet** ci-dessous, tel quel (le lien principal d'abord, le lien de secours seulement s'il échoue). Quand un fichier en cite un autre par son nom (ex. « voir `garde-robe.md` »), utilise le lien de ce tableau.
 
-| Fichier | Lien | Quand le lire |
-|---|---|---|
-| `pays.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/pays.md | **Onboarding** ; lieux, saisons, fêtes, tenues culturelles |
-| `metiers.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/metiers.md | **Onboarding** ; scènes de vie pro |
-| `fiche-modele.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/templates/fiche-modele.md | **Onboarding** ; modifier une fiche |
-| `garde-robe.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/garde-robe.md | **Avant le 1er prompt** (image ou vidéo) : tenues détaillées, tenues culturelles et d'événement, matières en mouvement |
-| `decors.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/decors.md | **Avant le 1er prompt** : décors en 3 plans, vie en arrière-plan, événements |
-| `outils-ia.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/outils-ia.md | **Avant le 1er prompt** : syntaxe des 4 outils, kit de référence du visage, dépannage |
-| `formats-photo.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-photo.md | **Avant le 1er prompt image** : 20 formats, carrousel, structure détaillée, exemples complets |
-| `formats-video.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-video.md | **Avant le 1er prompt vidéo** : menu, caméra fluide, anti-IA, scripts et exemples complets |
-| `legendes-hooks.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/legendes-hooks.md | Légendes, textes à l'écran, hashtags, sons, planning de la semaine |
-| `analyse-sources.md` | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/analyse-sources.md | « Surprends-moi », choisir un format, comprendre ce qui performe |
+| Fichier | Quand le lire | Lien principal | Lien de secours |
+|---|---|---|---|
+| `pays.md` | **Onboarding** ; lieux, saisons, fêtes, tenues culturelles | https://github.com/kalim4k/influenceuseIA/blob/main/references/pays.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/pays.md |
+| `metiers.md` | **Onboarding** ; scènes de vie pro | https://github.com/kalim4k/influenceuseIA/blob/main/references/metiers.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/metiers.md |
+| `fiche-modele.md` | **Onboarding** ; modifier une fiche | https://github.com/kalim4k/influenceuseIA/blob/main/templates/fiche-modele.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/templates/fiche-modele.md |
+| `garde-robe.md` | **Avant le 1er prompt** (image ou vidéo) : tenues détaillées, tenues culturelles et d'événement, matières en mouvement | https://github.com/kalim4k/influenceuseIA/blob/main/references/garde-robe.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/garde-robe.md |
+| `decors.md` | **Avant le 1er prompt** : décors en 3 plans, vie en arrière-plan, événements | https://github.com/kalim4k/influenceuseIA/blob/main/references/decors.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/decors.md |
+| `outils-ia.md` | **Avant le 1er prompt** : syntaxe des 4 outils, kit de référence du visage, dépannage | https://github.com/kalim4k/influenceuseIA/blob/main/references/outils-ia.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/outils-ia.md |
+| `formats-photo.md` | **Avant le 1er prompt image** : 20 formats, carrousel, structure détaillée, exemples complets | https://github.com/kalim4k/influenceuseIA/blob/main/references/formats-photo.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-photo.md |
+| `formats-video.md` | **Avant le 1er prompt vidéo** : menu, caméra fluide, anti-IA, scripts et exemples complets | https://github.com/kalim4k/influenceuseIA/blob/main/references/formats-video.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-video.md |
+| `legendes-hooks.md` | Légendes, textes à l'écran, hashtags, sons, planning de la semaine | https://github.com/kalim4k/influenceuseIA/blob/main/references/legendes-hooks.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/legendes-hooks.md |
+| `analyse-sources.md` | « Surprends-moi », choisir un format, comprendre ce qui performe | https://github.com/kalim4k/influenceuseIA/blob/main/references/analyse-sources.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/analyse-sources.md |
 
 Si l'abonné signale un problème (visage qui change, refus, peau plastique, vidéo qui coupe ou qui « fait IA »), utilise le tableau « Dépannage » de `outils-ia.md` et redonne le prompt corrigé en entier.
 
