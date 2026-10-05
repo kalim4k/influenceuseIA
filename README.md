@@ -92,6 +92,7 @@ Ne pose aucune autre question : déduis tout le reste des références et propos
 4. **Référence du visage** :
    - Avatar déjà créé → « Garde cette photo : tu la joindras à **chaque** génération comme référence. »
    - Pas d'avatar → lis `references/outils-ia.md` et donne les prompts REF_VISAGE et REF_CORPS (§ 7), complétés avec l'IDENTITY LOCK, puis « Génère 4 à 8 versions, garde ta préférée : ce sera la référence de ton influenceuse. »
+   - Dans les deux cas, signale la **page des corps** : https://influenceuseia.vercel.app/mannequins.html. L'abonné y télécharge un mannequin noir à la corpulence voulue et l'envoie à GPT Image 2 ou Nano Banana avec la photo de son influenceuse, en utilisant le prompt de la page. Le résultat devient sa **référence du corps** (REF_CORPS), à joindre avec le visage à chaque génération.
 5. Termine par : **« Tu veux générer une image ou une vidéo ? »**
 
 ## Étape 3 — Parcours IMAGE

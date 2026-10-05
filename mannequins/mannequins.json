@@ -1,0 +1,22 @@
+[
+  { "file": "mannequin-01.png", "type": "Sablier extrême", "titre": "Poitrine très forte, taille fine, hanches larges", "vues": 3, "tenue": "Sans tenue" },
+  { "file": "mannequin-02.png", "type": "Sablier extrême", "titre": "Taille très fine, hanches très larges", "vues": 3, "tenue": "Sans tenue" },
+  { "file": "mannequin-03.png", "type": "Sablier extrême", "titre": "Courbes extrêmes, bras derrière la tête", "vues": 1, "tenue": "Robe longue noire moulante" },
+  { "file": "mannequin-04.png", "type": "Sablier extrême", "titre": "Poitrine forte, hanches très larges", "vues": 1, "tenue": "Robe longue rayée orange et rose" },
+  { "file": "mannequin-05.png", "type": "Sablier extrême", "titre": "Taille fine, hanches larges, bras levés", "vues": 1, "tenue": "Combinaison noire à sangles" },
+  { "file": "mannequin-06.png", "type": "Sablier", "titre": "Sablier fin, jambes longues", "vues": 3, "tenue": "Sans tenue" },
+  { "file": "mannequin-07.png", "type": "Sablier", "titre": "Sablier, cheveux longs lisses", "vues": 3, "tenue": "Mini-robe corset froncée" },
+  { "file": "mannequin-08.png", "type": "Sablier", "titre": "Sablier, cheveux ondulés et lunettes", "vues": 3, "tenue": "Haut moulant et jupe plissée" },
+  { "file": "mannequin-09.png", "type": "Sablier", "titre": "Sablier, plan rapproché", "vues": 1, "tenue": "Haut moulant et jupe plissée" },
+  { "file": "mannequin-10.png", "type": "Sablier", "titre": "Sablier, pose décontractée", "vues": 1, "tenue": "Corset marron et jupe longue léopard" },
+  { "file": "mannequin-11.png", "type": "Sablier", "titre": "Sablier, mains ouvertes", "vues": 1, "tenue": "Mini-robe blanche épaules dénudées" },
+  { "file": "mannequin-12.png", "type": "Sablier", "titre": "Sablier, en marche", "vues": 1, "tenue": "Top en dentelle, mini-jupe et sac à main" },
+  { "file": "mannequin-13.png", "type": "Poitrine forte", "titre": "Poitrine forte sur silhouette fine", "vues": 3, "tenue": "Mini-robe portefeuille dos nu" },
+  { "file": "mannequin-14.png", "type": "Poitrine forte", "titre": "Poitrine forte, cheveux longs", "vues": 3, "tenue": "Mini-robe moulante et sac matelassé" },
+  { "file": "mannequin-15.png", "type": "Poitrine forte", "titre": "Poitrine forte, ventre plat", "vues": 1, "tenue": "T-shirt court rose et jupe en cuir" },
+  { "file": "mannequin-16.png", "type": "Fessier rebondi", "titre": "Slim-thick, vue de dos", "vues": 3, "tenue": "Sans tenue" },
+  { "file": "mannequin-17.png", "type": "Fessier rebondi", "titre": "Assise, vue de dos", "vues": 1, "tenue": "Sans tenue (dos nu à nouer)" },
+  { "file": "mannequin-18.png", "type": "Poire", "titre": "Poire, hanches larges", "vues": 3, "tenue": "Robe midi froncée grise" },
+  { "file": "mannequin-19.png", "type": "Élancée", "titre": "Élancée, courbes douces", "vues": 1, "tenue": "Combinaison en dentelle verte" },
+  { "file": "mannequin-20.png", "type": "Pulpeuse", "titre": "Pulpeuse, cuisses pleines", "vues": 1, "tenue": "Selfie miroir, sweat en jean" }
+]

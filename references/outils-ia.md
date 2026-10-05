@@ -136,6 +136,8 @@ Create a photorealistic head-and-shoulders portrait of [IDENTITY LOCK] She looks
 Using Image 1 as the exact face and hair reference of [Name], create a photorealistic full-body photo of [IDENTITY LOCK] She stands relaxed in a bright minimalist room with white walls and a light wooden floor, facing the camera, arms loosely at her sides, weight slightly on one hip. She wears a plain black fitted tank top and high-waisted straight blue jeans with white sneakers, so her proportions are clearly visible. Shot on a recent iPhone at chest height, full body in frame with some space above her head, soft daylight. Realistic skin texture, no filter, no text. Vertical 4:5.
 ```
 
+**REF_CORPS à partir d'un mannequin** (pour choisir une corpulence précise) : l'abonné télécharge un mannequin sur https://influenceuseia.vercel.app/mannequins.html, joint REF_VISAGE en image 1 et le mannequin en image 2, puis copie le prompt GPT Image 2 ou Nano Banana de cette page.
+
 **Planche personnage (optionnelle) — Nano Banana** (joindre REF_VISAGE) :
 ```
 Using the attached photo of [Name] as the exact identity reference, create a clean character reference sheet on a plain light-grey background: four full-body views of the same woman side by side — front view, three-quarter view, side profile and back view — in the same plain black fitted tank top and high-waisted blue jeans. Identical face, hairstyle, skin tone, body proportions and jewelry in every view. Even soft studio daylight, photorealistic. 16:9 aspect ratio, high resolution.
