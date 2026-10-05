@@ -235,11 +235,11 @@ Adapte le petit-déjeuner au pays (fruits tropicaux et jus de bissap ; msemen et
 
 ## Événements
 
-Chaque événement = **tenue** (`garde-robe.md` § K et § J) + **décor** + **figurants** cohérents. Les invités restent en arrière-plan, de dos ou de trois quarts, occupés.
+Chaque événement = **tenue de soirée ou de fête du style des références** (`garde-robe.md` § A et § K, jamais de tenue traditionnelle sauf demande) + **décor** + **figurants** cohérents. Les invités restent en arrière-plan, de dos ou de trois quarts, occupés.
 
 **E1 Mariage traditionnel africain**
 ```
-A traditional wedding celebration in a decorated hall or courtyard: rows of guests in coordinated aso-ebi / matching wax outfits, a flower-decorated stage with the couple seen from afar, gold chiavari chairs, drummers or a DJ booth, women dancing and spraying banknotes, warm string lights, gold and white drapes.
+A traditional wedding celebration in a decorated hall or courtyard: rows of guests in elegant colorful party outfits, a flower-decorated stage with the couple seen from afar, gold chiavari chairs, drummers or a DJ booth, women dancing and spraying banknotes, warm string lights, gold and white drapes.
 ```
 Elle est invitée (jamais la mariée, sauf demande explicite), au premier plan, rayonnante.
 

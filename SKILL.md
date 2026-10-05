@@ -58,7 +58,7 @@ Ne pose aucune autre question : déduis tout le reste des références et propos
 1. **Lis maintenant** `references/pays.md` (section du pays), `references/metiers.md` (section du métier) et `templates/fiche-modele.md`.
 2. Remplis la fiche avec des détails concrets et uniques : grain de beauté précis, bijou signature, coque de téléphone, quartier réel, voiture, appartement.
    - **Si l'abonné a envoyé la photo de son avatar**, décris **ce que tu vois** dans le bloc d'identité (teint, forme du visage, yeux, cheveux, silhouette, signes distinctifs) au lieu d'inventer. Sinon, les prompts contrediraient sa référence et le visage dériverait.
-   - Distingue l'**origine** (traits, prénom, culture, tenues traditionnelles) de la **résidence** (lieux, climat, saisons).
+   - Distingue l'**origine** (traits, prénom, expressions) de la **résidence** (lieux, climat, saisons). Le style vestimentaire, lui, est toujours celui des références (voir « Style vestimentaire »).
    - L'âge est compris entre 21 et 32 ans, toujours adulte.
 3. Présente la fiche, puis aide l'abonné à la **garder**, car c'est la mémoire de son influenceuse. Si tu as accès aux fichiers, écris `profil-<prénom>.md`. Sinon, donne-lui ce bloc prêt à copier dans les **Instructions d'un Projet Claude** (par exemple un projet « Mon influenceuse »). Ainsi, chaque nouvelle conversation de ce projet charge le skill et la fiche, sans recoller le lien.
    ```
@@ -107,7 +107,7 @@ Livre directement **un prompt photo complet**, en version **Nano Banana** et en 
 
 **4.3 Livre en deux étapes** (détails dans `references/formats-video.md`) :
 
-- **Étape A — Image de départ** : un prompt Nano Banana et un prompt GPT Image 2 qui génèrent l'influenceuse (avatar en référence) **dans la tenue et le décor exacts de la vidéo**, en 9:16, dans la pose du **début** du mouvement. C'est indispensable dès que la vidéo demande un décor, une tenue ou un événement précis (mariage, gala, plage, voiture…), car les outils vidéo gardent bien mieux le visage en partant d'une image validée. Si l'abonné a déjà une photo d'elle dans ce décor et cette tenue, il peut sauter cette étape.
+- **Étape A — Image de départ** : un prompt Nano Banana et un prompt GPT Image 2 qui génèrent l'influenceuse (avatar en référence) **dans la tenue (style des références) et le décor exacts de la vidéo**, en 9:16, dans la pose du **début** du mouvement. C'est indispensable dès que la vidéo demande un décor, une tenue ou un événement précis (mariage, gala, plage, voiture…), car les outils vidéo gardent bien mieux le visage en partant d'une image validée. Si l'abonné a déjà une photo d'elle dans ce décor et cette tenue, il peut sauter cette étape.
 - **Étape B — Vidéo** : un prompt **MiniMax H3** et un prompt **Seedance 2.5**, en image-to-video à partir de l'image de départ, avec l'avatar joint en référence du visage quand l'outil le permet.
 
 Ajoute ensuite : texte à l'écran (à poser dans CapCut, Instagram ou TikTok), son, légende et hashtags.
@@ -119,7 +119,7 @@ L'abonné veut des résultats qui **ne ressemblent pas à de l'IA**. Un prompt v
 **Un prompt IMAGE (250 à 450 mots) contient obligatoirement :**
 1. **Références** : quelle image jointe contrôle quoi (« Image 1 = her face, hair and body, keep her identity exactly »).
 2. **Identité** : l'IDENTITY LOCK de la fiche, mot pour mot.
-3. **Tenue complète** : type de vêtement, coupe, encolure, bretelles ou manches, longueur, ajustement, matière, texture, couleur exacte, détails (fronces, fente, boutons, liens), chaussures, sac, bijoux, ongles, maquillage, coiffure du jour. Bibliothèque : `references/garde-robe.md`.
+3. **Tenue complète, dans le style des références** (voir « Style vestimentaire ») : type de vêtement, coupe, encolure, bretelles ou manches, longueur, ajustement, matière, texture, couleur exacte, détails (fronces, fente, boutons, liens), chaussures, sac, bijoux, ongles, maquillage, coiffure du jour. Bibliothèque : `references/garde-robe.md` § A à I et § K.
 4. **Décor en 3 plans** : premier plan (objets proches, partiellement dans le cadre), plan moyen (où elle se tient, surfaces, props), arrière-plan (architecture, paysage, figurants occupés à leurs activités, véhicules, ciel). Bibliothèque : `references/decors.md`.
 5. **Pose et geste** : orientation du corps, appui, position de chaque bras et main, jambes, inclinaison de la tête, direction du regard, micro-expression.
 6. **Caméra** : qui prend la photo (une amie, un selfie, un miroir, un trépied), téléphone et objectif, hauteur, angle, distance, cadrage, place dans l'image, format.
@@ -127,34 +127,45 @@ L'abonné veut des résultats qui **ne ressemblent pas à de l'IA**. Un prompt v
 8. **Réalisme** : texture de peau, pores, petits cheveux, plis du tissu, imperfections du décor, traitement couleur du téléphone.
 9. **Interdits** : pas de peau lisse, de filtre beauté, de lumière de studio, de doigts en trop, de texte, de logo ou de filigrane.
 
-**Un prompt VIDÉO (250 à 500 mots pour H3, 150 à 300 pour Seedance) contient obligatoirement :**
-1. **Plan** : 9:16, téléphone (tenu par une amie sur gimbal, sur trépied, ou en selfie), **vitesse réelle**, un seul plan continu, durée.
-2. **Identité** : « same woman as the start image » + le résumé d'identité + « identical from first to last frame ».
-3. **Script minuté** (par exemple 0-3 s, 3-6 s, 6-8 s) : ses actions, avec 2 ou 3 temps forts pour 8 s, pas plus.
-4. **Gestes et visage** : micro-gestes humains (remettre une mèche, ajuster la robe, regarder ailleurs puis revenir, clignements, respiration, sourire qui monte).
-5. **Mouvements secondaires** : cheveux, tissu, bijoux et sac qui réagissent au pas, au vent, à la gravité, avec un temps de retard naturel.
-6. **Vie en arrière-plan** : 2 ou 3 figurants occupés à leurs propres actions, à leur propre rythme, qui ne regardent jamais la caméra ; plus des éléments mobiles (voitures, feuilles, vagues, serveur…).
-7. **Caméra fluide** : un seul mouvement, sa direction, sa vitesse, son amplitude, la distance gardée, le cadrage de fin ; « smooth, steady, no jerks, no sudden zoom ». Grammaire des mouvements : `references/formats-video.md` § Caméra.
+**Un prompt VIDÉO (250 à 400 mots pour H3, 150 à 250 pour Seedance) contient obligatoirement :**
+1. **Plan** : 9:16, téléphone (tenu par une amie qui marche, sur trépied, ou en selfie), **vitesse réelle 1×, rythme rapide et décontracté d'un vrai Reel**, durée de **5 à 6 s** (8 s au maximum, sinon plusieurs plans courts).
+2. **Identité** : « same woman as the start image » + l'IDENTITY SHORT + « identical from first to last frame ».
+3. **Script seconde par seconde** (0–1 s, 1–2 s, … 5–6 s) : **un geste rapide par seconde** qui s'enchaîne au suivant sans pause, en reprenant la chorégraphie mesurée du format (`formats-video.md` § 6).
+4. **Gestes et visage** : gestes vifs et naturels (demi-tour en une demi-seconde, coup de cheveux d'un seul geste, regard ailleurs puis retour caméra, sourire rapide).
+5. **Mouvements secondaires** : cheveux, tissu, bijoux et sac qui rebondissent et se reposent aussitôt.
+6. **Vie en arrière-plan** : 2 ou 3 figurants occupés, **à vitesse normale**, qui ne regardent jamais la caméra ; plus des éléments mobiles (voitures, feuilles, vagues, serveur…).
+7. **Caméra de téléphone** : un seul mouvement par plan, calé sur la vitesse du sujet, avec le léger balancement naturel d'une main ou la fixité d'un trépied. Pas de flottement, pas de drone, pas d'orbite. Grammaire : `formats-video.md` § 3.
 8. **Lumière continue**, avec des ombres qui bougent avec elle.
-9. **Anti-IA** : « no slow motion, natural physics and weight, no morphing, no warping background, natural motion blur, iPhone video look ».
+9. **Anti-IA et tempo** : le bloc de `formats-video.md` § 4 (« real-time 1x speed… no slow motion, no time-stretching… no pause longer than half a second… »). **N'écris jamais** `slowly`, `gently`, `gradually`, `lingering`, `graceful`, `dreamy`, `eases` ni `smile builds slowly` : ces mots créent l'effet ralenti qui trahit l'IA.
 10. **Son** : 2 à 4 sons d'ambiance, sans musique (la musique s'ajoute dans l'application).
 
+Si l'abonné trouve encore la vidéo lente, conseille-lui de la générer en 5 s ou de l'accélérer à 1,2× dans CapCut.
+
 Avant de livrer, relis chaque prompt et demande-toi : « Est-ce qu'un réalisateur pourrait tourner cette scène avec ce texte seul, sans rien inventer ? » Si non, ajoute ce qui manque.
+
+## Style vestimentaire : toujours celui des références
+
+**Quel que soit le pays de l'influenceuse**, ses tenues suivent le style des photos de référence analysées : robes longues moulantes unies et vives, robes satinées, robes dos nu, mini-robes ajustées, ensembles crop top et jupe, corsets, maillots et paréos, peignoir pour les selfies intimes. Utilise **uniquement** les tenues de `garde-robe.md` § A à I et § K.
+
+- **Ne mets jamais** de pagne, de wax, de boubou, de bazin, de caftan, de kente ni aucune autre tenue traditionnelle au seul motif de l'origine. Une Togolaise, une Camerounaise ou une Marocaine portent les mêmes types de tenues que la référence.
+- Une tenue traditionnelle (`garde-robe.md` § J) n'est utilisée **que si l'abonné la demande explicitement** (« en tenue traditionnelle », « en pagne pour la fête nationale »…).
+- Le pays et la ville influencent **les décors, les lieux, les plats, la lumière et les légendes**, jamais le style des vêtements.
+- Seule adaptation au climat : par temps froid, ajoute une pièce par-dessus la même tenue (long manteau, blazer, bottes).
 
 ## Règles de cohérence
 
 - **Lieu** : réel, dans la ville de résidence (80 % du temps) ou en voyage plausible pour son niveau de vie.
-- **Climat et date** : tenue et lumière adaptées à la saison sur place et aux fêtes proches. Vérifie la date du jour.
-- **Métier** : environ 20 % de vie pro (tenue correcte, jamais sexualisée), 50 % de lifestyle, 30 % de glamour.
+- **Date** : lumière et décor adaptés à la saison sur place et aux fêtes proches. Vérifie la date du jour.
+- **Métier** : environ 20 % de vie pro (tenue de travail correcte, jamais sexualisée), 50 % de lifestyle, 30 % de glamour.
 - **Ancres récurrentes** : réutilise l'appartement, le bijou signature, la coque de téléphone, la voiture et les lieux favoris de la fiche.
-- **Culture** : tissus, plats, musique, architecture et expressions locales, avec respect et sans caricature.
+- **Culture locale** : dans le décor, les plats, la musique, l'architecture et les expressions des légendes, pas dans les vêtements.
 
 ## Format de livraison
 
 Un bloc de code par prompt, pour un copier-coller en un clic. Exemple pour une vidéo :
 
 ````
-### 🎬 [Titre] — [type de vidéo] · 9:16 · 8 s
+### 🎬 [Titre] — [type de vidéo] · 9:16 · 6 s
 **Idée :** une phrase (pourquoi ça va plaire)
 
 **Étape A — Image de départ** · à joindre : la photo de ton influenceuse
@@ -168,11 +179,11 @@ GPT Image 2 :
 ```
 
 **Étape B — Vidéo** · à joindre : l'image de l'étape A (+ la photo de ton influenceuse)
-MiniMax H3 (image-to-video, 9:16, 8 s) :
+MiniMax H3 (image-to-video, 9:16, 6 s) :
 ```
 …
 ```
-Seedance 2.5 (9:16, 8 s) :
+Seedance 2.5 (9:16, 6 s) :
 ```
 …
 ```
@@ -188,10 +199,10 @@ Lis chaque fichier avec son **lien complet** ci-dessous, tel quel (le lien princ
 
 | Fichier | Quand le lire | Lien principal | Lien de secours |
 |---|---|---|---|
-| `pays.md` | **Onboarding** ; lieux, saisons, fêtes, tenues culturelles | https://github.com/kalim4k/influenceuseIA/blob/main/references/pays.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/pays.md |
+| `pays.md` | **Onboarding** ; lieux, saisons, fêtes, expressions (et tenues traditionnelles, seulement si demandées) | https://github.com/kalim4k/influenceuseIA/blob/main/references/pays.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/pays.md |
 | `metiers.md` | **Onboarding** ; scènes de vie pro | https://github.com/kalim4k/influenceuseIA/blob/main/references/metiers.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/metiers.md |
 | `fiche-modele.md` | **Onboarding** ; modifier une fiche | https://github.com/kalim4k/influenceuseIA/blob/main/templates/fiche-modele.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/templates/fiche-modele.md |
-| `garde-robe.md` | **Avant le 1er prompt** (image ou vidéo) : tenues détaillées, tenues culturelles et d'événement, matières en mouvement | https://github.com/kalim4k/influenceuseIA/blob/main/references/garde-robe.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/garde-robe.md |
+| `garde-robe.md` | **Avant le 1er prompt** (image ou vidéo) : tenues du style des références, tenues d'événement, matières en mouvement | https://github.com/kalim4k/influenceuseIA/blob/main/references/garde-robe.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/garde-robe.md |
 | `decors.md` | **Avant le 1er prompt** : décors en 3 plans, vie en arrière-plan, événements | https://github.com/kalim4k/influenceuseIA/blob/main/references/decors.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/decors.md |
 | `outils-ia.md` | **Avant le 1er prompt** : syntaxe des 4 outils, kit de référence du visage, dépannage | https://github.com/kalim4k/influenceuseIA/blob/main/references/outils-ia.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/outils-ia.md |
 | `formats-photo.md` | **Avant le 1er prompt image** : 20 formats, carrousel, structure détaillée, exemples complets | https://github.com/kalim4k/influenceuseIA/blob/main/references/formats-photo.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-photo.md |

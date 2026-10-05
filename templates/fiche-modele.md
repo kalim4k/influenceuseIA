@@ -29,7 +29,7 @@ Ongles / makeup   : [style habituel]
 ━━ STYLE ━━
 Palette couleurs  : [3–4 couleurs signature]
 Tenues signature  : [3 tenues types]
-Tenue culturelle  : [tenue traditionnelle ou locale qu'elle porte aux occasions]
+Style             : celui des références (garde-robe § A à I) — jamais de tenue traditionnelle sauf demande explicite
 Bijoux signature  : [bijou porté presque toujours]
 Téléphone         : [modèle récent] coque [couleur] (visible sur les selfies miroir)
 Sac / chaussures  : [sans marque visible — ex. « small black quilted shoulder bag »]
@@ -87,9 +87,8 @@ Silhouette        : pulpeuse, sablier — 1,68 m
 Ongles / makeup   : ongles amande nude ou rouges, teint lumineux, gloss nude
 
 ━━ STYLE ━━
-Palette couleurs  : blanc, orange corail, vert émeraude, doré
-Tenues signature  : robe longue ajustée unie ; crop top + jupe pagne wax ; ensemble lin blanc
-Tenue culturelle  : robe sirène en pagne wax, foulard assorti (fêtes, mariages, dimanche)
+Palette couleurs  : blanc, vert émeraude, bleu roi, rose poudré, doré
+Tenues signature  : robe longue moulante unie (émeraude, bleu roi) ; mini-robe satinée ; crop top à volants + jupe longue assortie
 Bijoux signature  : fine chaîne en or avec pendentif « A », créoles dorées
 Téléphone         : iPhone récent, coque rose poudré
 Sac / chaussures  : petit sac à main blanc structuré, sandales dorées à brides
@@ -108,7 +107,7 @@ Piliers           : 1) coulisses d'infirmière (pro, bienveillant) 2) Abidjan li
 Ton des légendes  : douce et taquine, une question aux abonnés, 1–2 emojis
 Hashtags de base  : #abidjan #civ225 #ivoirienne #nurselife #abidjanlife
 Sons / musique    : coupé-décalé, afrobeats, amapiano, pop douce
-À éviter          : neige, hiver, architecture européenne hors voyages, uniforme d'infirmière sexualisé
+À éviter          : tenues traditionnelles (sauf demande), neige, hiver, uniforme d'infirmière sexualisé
 
 ━━ RÉFÉRENCE ━━
 Avatar            : à créer avec le kit REF_VISAGE — à joindre à CHAQUE génération

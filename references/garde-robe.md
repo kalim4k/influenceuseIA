@@ -1,12 +1,14 @@
 # Garde-robe
 
-Bibliothèque de tenues décrites en anglais, prêtes à coller dans les prompts. Les tenues des sections A à G viennent de l'analyse des 101 photos sources (★ = post très performant). Adapte la couleur à la palette de la fiche, ajoute les bijoux signature et vérifie la cohérence avec le climat et l'occasion.
+Bibliothèque de tenues décrites en anglais, prêtes à coller dans les prompts. Les tenues des sections A à G viennent de l'analyse des 101 photos sources (★ = post très performant). Adapte la couleur à la palette de la fiche, ajoute les bijoux signature et vérifie que la tenue convient à l'occasion.
+
+> **Règle principale : le style des références s'applique à toutes les influenceuses, quel que soit leur pays.** Choisis toujours dans les sections A à I et K. Une influenceuse togolaise, camerounaise, sénégalaise ou marocaine porte les mêmes types de tenues que la référence : robes longues moulantes unies, satin, robes dos nu, mini-robes ajustées, ensembles crop top et jupe, corsets, maillots. La section J (tenues traditionnelles) n'est utilisée **que si l'abonné le demande explicitement**. Par temps froid, ajoute seulement une pièce par-dessus (long manteau, blazer, bottes).
 
 ## Sommaire
 - Méthode : décrire une tenue
 - A. Robes longues de soirée · B. Robes longues de jour · C. Mini et midi robes · D. Ensembles deux-pièces
 - E. Plage et piscine · F. Maison et intimité · G. Ville et décontracté · H. Sport · I. Travail
-- J. Tenues culturelles par pays · K. Tenues d'événement
+- J. Tenues traditionnelles (seulement sur demande explicite) · K. Tenues d'événement
 - L. Accessoires, coiffures, maquillage, ongles
 - M. Matières en mouvement (vidéo)
 - N. Couleurs et contrastes qui performent
@@ -301,9 +303,9 @@ a tailored camel blazer over a cream silk blouse, high-waisted black wide-leg tr
 
 ---
 
-## J. Tenues culturelles par pays
+## J. Tenues traditionnelles (seulement sur demande explicite)
 
-À utiliser pour les fêtes, les mariages, les dimanches et la fête nationale. Décris le tissu avec précision et sans caricature.
+**N'utilise cette section que si l'abonné demande lui-même une tenue traditionnelle** (« en pagne », « en tenue traditionnelle pour la fête nationale »…). Jamais par défaut, jamais à cause du pays de la fiche, jamais pour une fête ou un mariage sans demande. Le reste du temps, elle porte le style des références (sections A à I et K). Quand elle est demandée, décris le tissu avec précision et sans caricature.
 
 - **Côte d'Ivoire** : `a fitted mermaid maxi dress tailored from vivid wax-print cotton in orange, emerald and gold geometric patterns, an off-the-shoulder neckline, a matching wax head wrap tied high in a sculpted knot, gold jewelry` · pagne Kita : `a woven Kita cloth in gold, green and red stripes wrapped elegantly as a skirt with a fitted matching top`.
 - **Sénégal** : `a flowing grand boubou in glossy embroidered bazin riche, deep fuchsia with intricate gold embroidery around the neckline, worn with a matching head wrap and gold earrings` · taille basse : `a fitted wax-print top with puff sleeves and a matching long wrap skirt`.
@@ -326,7 +328,9 @@ a tailored camel blazer over a cream silk blouse, high-waisted black wide-leg tr
 
 ## K. Tenues d'événement
 
-- **Mariage (invitée)** : `a floor-length satin gown in sage green with a cowl neckline and a draped open back, small pearl earrings, a beaded clutch` (ou la tenue culturelle du pays, coordonnée « aso ebi »).
+Toutes dans le style des références, quel que soit le pays.
+
+- **Mariage (invitée)** : `a floor-length royal-blue off-the-shoulder gown with a ruffled neckline and a flared skirt` (A1) ou `a floor-length satin gown in sage green with a cowl neckline and a draped open back, small pearl earrings, a beaded clutch`.
 - **Gala / soirée chic** : `a strapless black velvet mermaid gown with a sweetheart neckline, long satin opera gloves, diamond-like drop earrings`.
 - **Anniversaire (le sien)** : `a sparkly silver sequin mini dress with thin straps, clear heeled sandals, a small rhinestone tiara, a satin "Birthday Girl" sash without readable brand`.
 - **Fashion week / défilé** : `an oversized structured black blazer worn as a dress, sheer black tights, pointed slingback heels, small sunglasses`.
@@ -335,7 +339,7 @@ a tailored camel blazer over a cream silk blouse, high-waisted black wide-leg tr
 - **Brunch entre amies** : `a white broderie-anglaise midi dress with puff sleeves, woven straw tote, flat sandals`.
 - **Remise de diplôme** : `a fitted white midi dress under an open black graduation gown, a mortarboard cap in her hand`.
 - **Noël / Nouvel An** : `a red velvet off-the-shoulder midi dress` ou `a gold sequin long-sleeved mini dress`.
-- **Tabaski / Aïd** : tenue culturelle du pays, couleurs vives, tissu neuf, broderies.
+- **Fête religieuse (Tabaski, Aïd, Noël en famille)** : `an elegant long-sleeved satin maxi dress in emerald green with a softly draped neckline, gold jewelry` (tenue traditionnelle seulement si l'abonné la demande).
 - **Beach party** : `a white crochet cover-up dress over a bikini, shell anklet, barefoot in the sand`.
 
 ---
@@ -351,21 +355,21 @@ a tailored camel blazer over a cream silk blouse, high-waisted black wide-leg tr
 
 ## M. Matières en mouvement (vidéo)
 
-À insérer dans les prompts vidéo pour que le tissu se comporte comme dans la réalité :
+À insérer dans les prompts vidéo pour que le tissu se comporte comme dans la réalité, **au rythme rapide d'un vrai Reel** (le tissu réagit vite et se repose aussitôt) :
 
 | Matière | Comportement à décrire |
 |---|---|
-| Satin, soie | `the satin catches moving highlights and ripples softly with each step, clinging then releasing` |
-| Mousseline, chiffon | `the light chiffon floats and trails slightly behind her, lifted by the breeze` |
+| Satin, soie | `the satin catches quick moving highlights and ripples with each step, clinging then snapping back` |
+| Mousseline, chiffon | `the light chiffon flicks and flutters behind her with each step and in the breeze` |
 | Jersey et maille moulante | `the fitted knit moves with her body, small natural creases forming at the waist and hips as she walks` |
 | Robe longue avec fente | `the slit opens and closes naturally with each stride` |
-| Jupe à volants, tiered | `the ruffled tiers bounce and sway with a slight delay after each step` |
+| Jupe à volants, tiered | `the ruffled tiers bounce with each step and settle immediately` |
 | Crochet | `the open-weave crochet stretches slightly and the fringe swings` |
 | Lin | `the linen wrinkles and flutters loosely in the wind` |
-| Wax, coton épais | `the stiff wax-print cotton holds its shape, only the hem swaying gently` |
+| Coton épais | `the stiff cotton holds its shape, only the hem swinging with each step` |
 | Paillettes | `the sequins flicker and sparkle as they catch the light` |
-| Peignoir éponge | `the thick terry cloth moves heavily and softly, the belt ends swinging` |
-| Cheveux longs | `her hair bounces with each step and settles with a natural delay; loose strands lift in the breeze` |
+| Peignoir éponge | `the thick terry cloth moves with weight, the belt ends swinging` |
+| Cheveux longs | `her hair bounces with each step and settles at once; loose strands lift in the breeze` |
 | Tresses | `her braids swing together with weight and momentum, tapping lightly against her back` |
 | Bijoux et sac | `the gold hoops sway and glint, the handbag swings slightly at her side` |
 

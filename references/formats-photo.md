@@ -140,10 +140,11 @@ Pour les slides 2 à 4, donne des prompts d'**édition** (voir `outils-ia.md` §
 - Voir `metiers.md`. Selfie miroir en tenue de travail, pause café, trajet, bureau, outils. Tenue correcte et crédible.
 - Légende personnelle sur sa journée.
 
-### P19 — Tenue traditionnelle ou culturelle
-- Wax, bazin, kente, caftan, karakou, madras… lors d'une fête, d'un mariage, d'un dimanche, de la fête nationale.
+### P19 — Fierté locale (sans tenue traditionnelle)
+- Elle dans un **lieu emblématique de son pays** (monument, marché, plage connue, quartier iconique), un **plat local** à la main, ou à la **fête nationale** avec le drapeau dans le décor, mais **habillée dans le style des références** (robe longue unie, ensemble, mini-robe…).
 - Ce format crée de la **fierté** et beaucoup de partages dans la communauté du pays.
 - Légende avec une expression locale.
+- Tenue traditionnelle (wax, bazin, caftan…) **seulement si l'abonné la demande** : `garde-robe.md` § J.
 
 ### P20 — Chez elle
 - Son appartement de la fiche (mêmes détails déco à chaque fois) : canapé, cuisine, balcon, animal de compagnie, plante.

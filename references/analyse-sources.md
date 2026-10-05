@@ -31,7 +31,7 @@ Base de travail : **101 captures** d'un compte Instagram d'influenceuse IA lifes
 
 **Lieux** : terrasses avec vue mer, villas en pierre, bougainvilliers, piscines à débordement, plages de sable blanc, ports et voiliers, criques rocheuses, bateau ou yacht, villages côtiers colorés en escalier, champs de fleurs, jardins, rues de ville (glace à la main), salles de bain en marbre, chambre (lit défait), couloir d'hôtel, intérieur d'hélicoptère, cour d'hôtel avec fontaine, restaurant (burger-frites, gâteau au chocolat).
 
-**Tenues** : robes longues moulantes unies (noir, bleu roi, rose, olive, blanc), robes satinées à fines bretelles, robes dos nu, robes bustier, tops crochet, corsets, mini-jupes à volants, maillots de bain (unis, à pois, léopard), paréos, peignoir de bain rose duveteux, ensemble jean et crop top. Couleurs vives et unies qui **contrastent avec le décor** (rose sur vert, bleu roi sur pierre, rouge sur sable blanc).
+**Tenues** : robes longues moulantes unies (noir, bleu roi, rose, olive, blanc), robes satinées à fines bretelles, robes dos nu, robes bustier, tops crochet, corsets, mini-jupes à volants, maillots de bain (unis, à pois, léopard), paréos, peignoir de bain rose duveteux, ensemble jean et crop top. Couleurs vives et unies qui **contrastent avec le décor** (rose sur vert, bleu roi sur pierre, rouge sur sable blanc). **Ce style de tenues est celui de toutes les influenceuses créées avec le skill, quel que soit leur pays** (pas de tenue traditionnelle, sauf demande explicite de l'abonné).
 
 **Accessoires et props** : sac matelassé noir, sac en paille, petit sac blanc, fleur d'hibiscus derrière l'oreille, glace en cornet, café glacé, iPhone visible (coque rose ou noire) sur les selfies miroir, bouquet de fleurs, Vespa blanche, citrons.
 
@@ -95,7 +95,7 @@ C'est la méthode la plus simple pour garder un visage constant : on génère la
 
 ## 5. Formats vidéo observés (34 Reels)
 
-Caractéristiques communes : vertical 9:16, **4 à 15 s** (la plupart entre 6 et 12 s), filmé au téléphone (main ou trépied), lumière naturelle, accroche visuelle dès la première seconde, texte à l'écran sur environ 30 % des vidéos.
+Caractéristiques communes : vertical 9:16, **4 à 10 s le plus souvent** (quelques-unes jusqu'à 15 s), filmé au téléphone (à la main ou sur trépied), lumière naturelle, accroche visuelle dès la première seconde, texte à l'écran sur environ 30 % des vidéos. **Tempo mesuré image par image** : un nouveau geste toutes les 0,5 à 1 s, une marche à environ 2 pas par seconde, des demi-tours en une demi-seconde, et plusieurs vidéos montées en 2 ou 3 plans courts. Détails : `formats-video.md` § 1.
 
 | # | Format | Description | Vidéos sources |
 |---|---|---|---|

@@ -73,7 +73,7 @@ Le générateur vidéo produit l'ambiance sonore ; la musique s'ajoute dans Inst
 |---|---|---|
 | Douce, nostalgique | Selfies, intimité, nature | pop indie douce, R&B lent, bossa nova |
 | Confiance, glamour | Soirée, marche, outfit check | afrobeats, amapiano, R&B, pop dansante |
-| Fierté culturelle | Tenue traditionnelle, fête | coupé-décalé, mbalax, makossa, ndombolo, highlife, chaâbi, raï, konpa, zouk, funk carioca, reggaeton |
+| Fierté locale | Fête nationale, événement local | coupé-décalé, mbalax, makossa, ndombolo, highlife, chaâbi, raï, konpa, zouk, funk carioca, reggaeton |
 | Humour, POV | Gags, arrière-plan | son viral du moment, voix off tendance |
 
 ## 5. Rythme de publication
@@ -88,7 +88,7 @@ Rythme observé : 1 à 2 posts par jour. Rythme conseillé pour démarrer, plus 
 | Jeudi | Reel marche vers la caméra (V1) ou POV (V10 / V11) | Glamour / humour |
 | Vendredi | Carrousel soirée (P10 / P6) | Glamour |
 | Samedi | Carrousel plage, piscine ou nature (P11 / P14) | Lifestyle |
-| Dimanche | Tenue traditionnelle (P19) ou chez elle (P20) + Reel vibe (V7) | Culture / intimité |
+| Dimanche | Chez elle (P20) ou nature (P14) + Reel vibe (V7) | Intimité / lifestyle |
 
 En plus : 2 ou 3 stories par jour (selfies simples, « day in my life », sondages).
 
