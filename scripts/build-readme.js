@@ -26,6 +26,7 @@ const header = `<!-- Généré par scripts/build-readme.js à partir de SKILL.md
    Utilise ce skill d'influenceuse IA. Voici ses pages (commence par la première) :
    https://influenceuseia.vercel.app/skill.html
    https://influenceuseia.vercel.app/etape-profil.html
+   https://influenceuseia.vercel.app/etape-style.html
    https://influenceuseia.vercel.app/etape-image.html
    https://influenceuseia.vercel.app/etape-video.html
    \`\`\`

@@ -32,8 +32,9 @@ const doc = (src) => DOCS.find((d) => d.src === src);
 // Pages d'étape : tous les fichiers d'une étape réunis sur une seule page, pour que Claude n'ait qu'un lien à ouvrir.
 const PACKS = [
   { slug: 'etape-profil', name: 'PROFIL', icon: '🪪', title: "Étape PROFIL — créer l'influenceuse", when: "à l'onboarding, avant d'écrire la fiche", files: ['templates/fiche-modele.md', 'references/pays.md', 'references/metiers.md', 'references/outils-ia.md'] },
-  { slug: 'etape-image', name: 'IMAGE', icon: '📸', title: 'Étape IMAGE — écrire un prompt photo', when: 'avant le premier prompt image', files: ['references/formats-photo.md', 'references/garde-robe.md', 'references/decors.md', 'references/outils-ia.md', 'references/legendes-hooks.md'] },
-  { slug: 'etape-video', name: 'VIDÉO', icon: '🎬', title: 'Étape VIDÉO — écrire un prompt vidéo', when: 'avant le premier prompt vidéo', files: ['references/formats-video.md', 'references/garde-robe.md', 'references/decors.md', 'references/outils-ia.md', 'references/legendes-hooks.md'] },
+  { slug: 'etape-style', name: 'STYLE', icon: '👗', title: 'Étape STYLE — tenues et décors', when: 'avant le premier prompt, image ou vidéo', files: ['references/garde-robe.md', 'references/decors.md'] },
+  { slug: 'etape-image', name: 'IMAGE', icon: '📸', title: 'Étape IMAGE — écrire un prompt photo', when: 'avant le premier prompt image', files: ['references/formats-photo.md', 'references/outils-ia.md', 'references/legendes-hooks.md'] },
+  { slug: 'etape-video', name: 'VIDÉO', icon: '🎬', title: 'Étape VIDÉO — écrire un prompt vidéo', when: 'avant le premier prompt vidéo', files: ['references/formats-video.md', 'references/outils-ia.md', 'references/legendes-hooks.md'] },
 ].map((p) => ({ ...p, html: `/${p.slug}.html`, docs: p.files.map(doc) }));
 
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
@@ -203,6 +204,7 @@ Ce site contient un skill Claude complet, utilisable <strong>sans rien installer
 <li>Commence tout de suite par l'onboarding : pose les <strong>2 questions</strong> (pays de l'influenceuse, métier optionnel).</li>
 <li>À chaque étape, ouvre <strong>une seule page</strong>, qui contient tout ce qu'il faut pour cette étape :
 <br>PROFIL (onboarding) : ${abs('/etape-profil.html')}
+<br>STYLE, tenues et décors (avant le 1er prompt) : ${abs('/etape-style.html')}
 <br>IMAGE (avant le 1er prompt image) : ${abs('/etape-image.html')}
 <br>VIDÉO (avant le 1er prompt vidéo) : ${abs('/etape-video.html')}</li>
 <li>Tu ne peux ouvrir que les liens que l'utilisateur a collés lui-même. S'il n'a pas collé ces liens d'étape, demande-lui de les coller dans sa réponse (le skill explique comment).</li>

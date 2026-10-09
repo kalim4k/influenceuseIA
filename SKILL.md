@@ -13,8 +13,9 @@ Tes repères viennent de l'analyse de 101 publications d'un compte IA lifestyle-
 
 Ce skill s'utilise **en ligne, sans rien installer**, souvent sur téléphone. Tu n'as rien à installer ni à télécharger, et tu ne dois parler ni de zip ni d'installation.
 
-Le skill tient en une page d'accueil (ces instructions) et **3 pages d'étape**, chacune avec tout ce qu'il faut pour son moment de la conversation :
+Le skill tient en une page d'accueil (ces instructions) et **4 pages d'étape**, chacune avec tout ce qu'il faut pour son moment de la conversation :
 - **PROFIL** : à l'onboarding, avant d'écrire la fiche ;
+- **STYLE** (tenues et décors) : avant le premier prompt, image ou vidéo ;
 - **IMAGE** : avant le premier prompt image ;
 - **VIDÉO** : avant le premier prompt vidéo.
 
@@ -23,6 +24,7 @@ Le skill tient en une page d'accueil (ces instructions) et **3 pages d'étape**,
 Utilise ce skill d'influenceuse IA. Voici ses pages (commence par la première) :
 https://influenceuseia.vercel.app/skill.html
 https://influenceuseia.vercel.app/etape-profil.html
+https://influenceuseia.vercel.app/etape-style.html
 https://influenceuseia.vercel.app/etape-image.html
 https://influenceuseia.vercel.app/etape-video.html
 ```
@@ -73,6 +75,7 @@ Si l'abonné n'a pas collé les liens des pages d'étape, termine ce message par
 > 📎 Pour que je puisse lire tout le skill, copie aussi ces liens dans ta réponse :
 > ```
 > https://influenceuseia.vercel.app/etape-profil.html
+> https://influenceuseia.vercel.app/etape-style.html
 > https://influenceuseia.vercel.app/etape-image.html
 > https://influenceuseia.vercel.app/etape-video.html
 > ```
@@ -89,6 +92,7 @@ Ne pose aucune autre question : déduis tout le reste des références et propos
    Utilise ce skill d'influenceuse IA. Voici ses pages (commence par la première) :
    https://influenceuseia.vercel.app/skill.html
    https://influenceuseia.vercel.app/etape-profil.html
+   https://influenceuseia.vercel.app/etape-style.html
    https://influenceuseia.vercel.app/etape-image.html
    https://influenceuseia.vercel.app/etape-video.html
 
@@ -103,7 +107,7 @@ Ne pose aucune autre question : déduis tout le reste des références et propos
 
 ## Étape 3 — Parcours IMAGE
 
-Avant le premier prompt image de la conversation, **lis la page IMAGE** (https://influenceuseia.vercel.app/etape-image.html) : formats photo, garde-robe, décors, outils IA, légendes.
+Avant le premier prompt image de la conversation, **lis la page STYLE** (https://influenceuseia.vercel.app/etape-style.html : garde-robe et décors) si ce n'est pas déjà fait, puis **la page IMAGE** (https://influenceuseia.vercel.app/etape-image.html : formats photo, outils IA, légendes).
 
 Livre directement **un prompt photo complet**, en version **Nano Banana** et en version **GPT Image 2**, avec la référence de l'avatar jointe.
 - Si l'abonné a donné une scène, un lieu ou un événement, utilise-le.
@@ -135,7 +139,7 @@ Livre directement **un prompt photo complet**, en version **Nano Banana** et en 
 
 Pour un type suivi de « quartier », garde la chorégraphie du type et prends le décor associé dans le tableau « Format → décor de quartier » de `decors.md`. Le type 13 suit la chorégraphie V17 et l'exemple D de `formats-video.md`.
 
-**4.2 Avant le premier prompt vidéo** de la conversation, **lis la page VIDÉO** (https://influenceuseia.vercel.app/etape-video.html) : formats vidéo avec scripts et exemples complets, garde-robe, décors, outils IA, légendes.
+**4.2 Avant le premier prompt vidéo** de la conversation, **lis la page STYLE** (https://influenceuseia.vercel.app/etape-style.html : garde-robe et décors) si ce n'est pas déjà fait, puis **la page VIDÉO** (https://influenceuseia.vercel.app/etape-video.html : formats vidéo avec scripts et exemples complets, outils IA, légendes).
 
 **4.3 Livre en deux étapes** (détails dans `references/formats-video.md`) :
 
@@ -249,13 +253,14 @@ Pour une image : le titre, l'idée, les prompts Nano Banana et GPT Image 2, les 
 
 ## Pages à lire
 
-Ouvre chaque page avec son **lien complet**, tel quel, au moment indiqué. Quand le skill cite un fichier par son nom (ex. « `garde-robe.md` § M »), il se trouve dans la page de l'étape en cours.
+Ouvre chaque page avec son **lien complet**, tel quel, au moment indiqué. Quand le skill cite un fichier par son nom (ex. « `garde-robe.md` § M »), il se trouve dans la page d'étape indiquée dans la colonne « Étape » du second tableau.
 
 | Page | Quand la lire | Contenu | Lien |
 |---|---|---|---|
 | **PROFIL** | **Onboarding**, ou pour modifier une fiche | modèle de fiche, ~30 pays, ~20 métiers, kit de la photo de référence | https://influenceuseia.vercel.app/etape-profil.html |
-| **IMAGE** | **Avant le 1er prompt image** | 20 formats photo, garde-robe, décors, outils IA, légendes et hashtags | https://influenceuseia.vercel.app/etape-image.html |
-| **VIDÉO** | **Avant le 1er prompt vidéo** | 16 formats vidéo (scripts seconde par seconde, exemples complets), garde-robe, décors, outils IA, légendes | https://influenceuseia.vercel.app/etape-video.html |
+| **STYLE** | **Avant le 1er prompt**, image ou vidéo | ~50 tenues du style des références, décors en 3 plans (dont 25 décors du quotidien africain), événements | https://influenceuseia.vercel.app/etape-style.html |
+| **IMAGE** | **Avant le 1er prompt image** | 20 formats photo et exemples complets, outils IA, légendes et hashtags | https://influenceuseia.vercel.app/etape-image.html |
+| **VIDÉO** | **Avant le 1er prompt vidéo** | 17 formats vidéo (scripts seconde par seconde, exemples complets), outils IA, légendes | https://influenceuseia.vercel.app/etape-video.html |
 | **CORPS** | Quand l'abonné veut choisir la corpulence | 20 mannequins à télécharger + le prompt | https://influenceuseia.vercel.app/mannequins.html |
 
 **Fichiers séparés**, seulement si une page d'étape ne s'ouvre pas ou paraît coupée :
@@ -267,8 +272,8 @@ Ouvre chaque page avec son **lien complet**, tel quel, au moment indiqué. Quand
 | `metiers.md` | PROFIL | https://influenceuseia.vercel.app/references/metiers.html |
 | `formats-photo.md` | IMAGE | https://influenceuseia.vercel.app/references/formats-photo.html |
 | `formats-video.md` | VIDÉO | https://influenceuseia.vercel.app/references/formats-video.html |
-| `garde-robe.md` | IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/garde-robe.html |
-| `decors.md` | IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/decors.html |
+| `garde-robe.md` | STYLE | https://influenceuseia.vercel.app/references/garde-robe.html |
+| `decors.md` | STYLE | https://influenceuseia.vercel.app/references/decors.html |
 | `outils-ia.md` | PROFIL, IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/outils-ia.html |
 | `legendes-hooks.md` | IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/legendes-hooks.html |
 | `analyse-sources.md` | « Surprends-moi », comprendre ce qui performe | https://influenceuseia.vercel.app/references/analyse-sources.html |
