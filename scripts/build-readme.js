@@ -21,12 +21,18 @@ const header = `<!-- Généré par scripts/build-readme.js à partir de SKILL.md
 ## 📱 Comment l'utiliser (abonnés)
 
 1. Ouvre une **nouvelle conversation** Claude (application ou claude.ai) et vérifie que la **recherche web** est activée.
-2. Colle ce message :
-   > Utilise ce skill : https://influenceuseia.vercel.app
+2. Copie ce message **en entier** et colle-le (Claude ne peut ouvrir que les liens que tu colles toi-même) :
+   \`\`\`
+   Utilise ce skill d'influenceuse IA. Voici ses pages (commence par la première) :
+   https://influenceuseia.vercel.app/skill.html
+   https://influenceuseia.vercel.app/etape-profil.html
+   https://influenceuseia.vercel.app/etape-image.html
+   https://influenceuseia.vercel.app/etape-video.html
+   \`\`\`
 3. Claude te pose **2 questions** : le **pays** de ton influenceuse et **son métier** (optionnel). Si tu as déjà créé ton influenceuse, envoie aussi sa photo.
 4. Claude crée sa **Fiche Modèle**, puis te demande **« Image ou vidéo ? »** et te donne des prompts complets pour Nano Banana, GPT Image 2, MiniMax H3 et Seedance 2.5.
 
-**💡 Astuce :** crée un **Projet** Claude (« Mon influenceuse ») et colle dans ses **Instructions** le bloc que Claude te donne après la fiche (le lien et ta fiche). Tu n'auras plus jamais à recoller le lien.
+**💡 Astuce :** garde dans tes notes le bloc que Claude te donne après la fiche (les liens + ta fiche) et colle-le au début de chaque nouvelle conversation.
 
 **⚠️ Règles :** personnage fictif et adulte, jamais le visage d'une vraie personne ; glamour mais non explicite ; étiquette « Contenu IA » activée sur Instagram et TikTok.
 

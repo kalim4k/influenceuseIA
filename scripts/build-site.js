@@ -181,6 +181,8 @@ const write = (p, content) => {
 };
 
 const skillBody = siteLinks(read('SKILL.md').replace(/^---\n[\s\S]*?\n---\n/, '').trim());
+// Message de départ : l'abonné colle lui-même tous les liens, car Claude (application) n'ouvre que les liens collés par l'utilisateur.
+const START_BLOCK = `Utilise ce skill d'influenceuse IA. Voici ses pages (commence par la première) :\n${abs('/skill.html')}\n${PACKS.map((p) => abs(p.html)).join('\n')}`;
 const description = "Skill Claude pour créer une influenceuse IA cohérente (pays + métier) et générer des prompts photo et vidéo ultra-détaillés pour GPT Image 2, Nano Banana, MiniMax H3 et Seedance 2.5 — sans installation.";
 
 // L'URL complète est écrite en clair sous chaque lien : certains lecteurs web ne gardent que le texte.
@@ -203,6 +205,7 @@ Ce site contient un skill Claude complet, utilisable <strong>sans rien installer
 <br>PROFIL (onboarding) : ${abs('/etape-profil.html')}
 <br>IMAGE (avant le 1er prompt image) : ${abs('/etape-image.html')}
 <br>VIDÉO (avant le 1er prompt vidéo) : ${abs('/etape-video.html')}</li>
+<li>Tu ne peux ouvrir que les liens que l'utilisateur a collés lui-même. S'il n'a pas collé ces liens d'étape, demande-lui de les coller dans sa réponse (le skill explique comment).</li>
 </ol>
 Rien à installer, rien à télécharger, aucun zip.
 </div>
@@ -211,10 +214,11 @@ Rien à installer, rien à télécharger, aucun zip.
 <strong>📱 Comment l'utiliser</strong>
 <ol>
 <li>Ouvre une nouvelle conversation Claude (application ou claude.ai) et vérifie que la <strong>recherche web</strong> est activée.</li>
-<li>Colle ce message :<span class="paste">Utilise ce skill : ${SITE || 'https://ton-site.vercel.app'}</span></li>
+<li>Copie ce message <strong>en entier</strong> et colle-le :
+<pre><code>${esc(START_BLOCK)}</code></pre></li>
 <li>Réponds aux 2 questions (pays, métier), puis choisis <strong>image</strong> ou <strong>vidéo</strong>.</li>
 </ol>
-💡 Crée un <strong>Projet</strong> Claude et colle dans ses Instructions le bloc que Claude te donne après la fiche : tu n'auras plus à recoller le lien.
+💡 Garde ce message dans tes notes (avec la fiche que Claude te donne) et colle-le au début de chaque nouvelle conversation : Claude ne peut ouvrir que les liens que tu colles toi-même.
 </div>
 
 <a class="promo" href="${abs(MQ_PAGE)}"><img src="/mannequins/mini/${MANNEQUINS[0].file.replace(/\.png$/, '.jpg')}" alt="" width="64" height="64"><span><strong>🖤 Choisis le corps de ton influenceuse</strong><br>${MANNEQUINS.length} mannequins à télécharger + le prompt pour leur donner son visage →</span></a>
@@ -231,6 +235,8 @@ ${tocHtml(skill.toc)}
 ${skill.html}
 `;
 write('index.html', page({ title: 'Influenceuse IA — skill Claude sans installation', description, body: indexBody, canonical: '/' }));
+// Même page à une adresse dédiée, utilisée dans le message de départ (adresse neuve : pas de vieille version en cache chez les lecteurs web).
+write('skill.html', page({ title: 'Influenceuse IA — skill Claude sans installation', description, body: indexBody }));
 
 const NO_DESC = "Rappel : aucun prompt ne décrit le physique de l'influenceuse (visage, teint, cheveux, silhouette) ; sa photo, jointe en image 1, s'en charge.";
 

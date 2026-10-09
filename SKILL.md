@@ -11,16 +11,26 @@ Tes repères viennent de l'analyse de 101 publications d'un compte IA lifestyle-
 
 ## Charger le skill (sans installation)
 
-Ce skill s'utilise **en ligne, sans rien installer** : l'abonné colle le lien du skill (https://influenceuseia.vercel.app) dans une conversation, souvent sur téléphone. Le skill complet est écrit sur la page d'accueil de ce lien. Tu n'as rien à installer, rien à télécharger, et tu ne dois parler ni de zip ni d'installation.
+Ce skill s'utilise **en ligne, sans rien installer**, souvent sur téléphone. Tu n'as rien à installer ni à télécharger, et tu ne dois parler ni de zip ni d'installation.
 
-Le reste du skill tient en **3 pages d'étape** (tableau « Pages à lire », en bas), chacune avec tout ce qu'il faut pour son moment de la conversation :
+Le skill tient en une page d'accueil (ces instructions) et **3 pages d'étape**, chacune avec tout ce qu'il faut pour son moment de la conversation :
 - **PROFIL** : à l'onboarding, avant d'écrire la fiche ;
 - **IMAGE** : avant le premier prompt image ;
 - **VIDÉO** : avant le premier prompt vidéo.
 
-Ouvre chaque page avec son **lien complet**, tel quel. Une page lue reste dans ta mémoire pour toute la conversation : ne la relis pas. Si une page d'étape ne s'ouvre pas ou paraît coupée, ouvre à la place les fichiers séparés de cette étape (second tableau).
+**Point important : dans l'application Claude, tu ne peux ouvrir que les liens que l'abonné a collés lui-même** dans la conversation (ou trouvés par une recherche web). Un lien lu à l'intérieur d'une page ne s'ouvre pas : l'ouverture échoue. C'est pourquoi l'abonné démarre en collant ce **bloc de liens** :
+```
+Utilise ce skill d'influenceuse IA. Voici ses pages (commence par la première) :
+https://influenceuseia.vercel.app/skill.html
+https://influenceuseia.vercel.app/etape-profil.html
+https://influenceuseia.vercel.app/etape-image.html
+https://influenceuseia.vercel.app/etape-video.html
+```
+- Ouvre chaque page d'étape **au moment indiqué**, avec le lien exact que l'abonné a collé. Une page lue reste dans ta mémoire pour toute la conversation : ne la relis pas.
+- **S'il n'a collé que le lien d'accueil**, les pages d'étape ne s'ouvriront pas. Ajoute alors à ton message d'onboarding la demande de l'étape 2 (« 📎 … »), pour qu'il colle le bloc de liens dans sa réponse.
+- **Si l'ouverture d'une page échoue quand même**, n'écris rien de mémoire : demande à l'abonné de coller ce lien précis dans son prochain message (donne-le-lui dans un bloc à copier), puis reprends là où tu en étais.
 
-Ces pages contiennent les détails qui font la qualité des prompts (lieux réels, tenues, décors, scripts de caméra). **N'écris jamais un prompt de mémoire sans les avoir lues** : le résultat serait générique et « ferait IA ». Si rien ne se charge, continue avec ce que tu as et dis-le en une ligne à l'abonné.
+Ces pages contiennent les détails qui font la qualité des prompts (lieux réels, tenues, décors, scripts de caméra). **N'écris jamais une fiche ni un prompt de mémoire sans les avoir lues** : le résultat serait générique et « ferait IA ».
 
 Si le skill est installé localement (Claude Code), lis plutôt les mêmes fichiers dans le dossier du skill.
 
@@ -58,21 +68,33 @@ Envoie **un seul message court** avec les deux questions :
 >
 > 📸 Tu as déjà créé ton influenceuse ? Envoie-moi aussi sa photo : j'adapterai sa fiche à son vrai visage.
 
+Si l'abonné n'a pas collé les liens des pages d'étape, termine ce message par :
+
+> 📎 Pour que je puisse lire tout le skill, copie aussi ces liens dans ta réponse :
+> ```
+> https://influenceuseia.vercel.app/etape-profil.html
+> https://influenceuseia.vercel.app/etape-image.html
+> https://influenceuseia.vercel.app/etape-video.html
+> ```
+
 Ne pose aucune autre question : déduis tout le reste des références et propose de modifier ensuite. Puis :
 
-1. **Lis maintenant la page PROFIL** (https://influenceuseia.vercel.app/etape-profil.html) : le modèle de fiche, puis la section du pays et celle du métier.
+1. **Lis maintenant la page PROFIL** (https://influenceuseia.vercel.app/etape-profil.html, avec le lien collé par l'abonné) : le modèle de fiche, puis la section du pays et celle du métier. Si elle ne s'ouvre pas, demande-lui de coller ce lien avant d'écrire la fiche.
 2. Remplis la fiche avec des détails concrets et uniques : grain de beauté précis, bijou signature, coque de téléphone, quartier réel, voiture, appartement.
    - **Si l'abonné a envoyé la photo de son avatar**, remplis le bloc PHYSIQUE avec **ce que tu vois** (teint, visage, cheveux, silhouette) au lieu d'inventer. Cette description reste dans la fiche, pour la cohérence ; elle n'entre jamais dans les prompts (voir « Son physique : la photo, pas le texte »).
    - Distingue l'**origine** (traits, prénom, expressions) de la **résidence** (lieux, climat, saisons). Le style vestimentaire, lui, est toujours celui des références (voir « Style vestimentaire »).
    - L'âge est compris entre 21 et 32 ans, toujours adulte.
-3. Présente la fiche, puis aide l'abonné à la **garder**, car c'est la mémoire de son influenceuse. Si tu as accès aux fichiers, écris `profil-<prénom>.md`. Sinon, donne-lui ce bloc prêt à copier dans les **Instructions d'un Projet Claude** (par exemple un projet « Mon influenceuse »). Ainsi, chaque nouvelle conversation de ce projet charge le skill et la fiche, sans recoller le lien.
+3. Présente la fiche, puis aide l'abonné à la **garder**, car c'est la mémoire de son influenceuse. Si tu as accès aux fichiers, écris `profil-<prénom>.md`. Sinon, donne-lui ce bloc prêt à copier, qui contient les liens du skill et sa fiche : en le collant au début d'une nouvelle conversation, il retrouve le skill et son influenceuse.
    ```
-   Utilise le skill d'influenceuse IA : https://influenceuseia.vercel.app
-   (lis cette page : le skill complet y est écrit)
+   Utilise ce skill d'influenceuse IA. Voici ses pages (commence par la première) :
+   https://influenceuseia.vercel.app/skill.html
+   https://influenceuseia.vercel.app/etape-profil.html
+   https://influenceuseia.vercel.app/etape-image.html
+   https://influenceuseia.vercel.app/etape-video.html
 
    [FICHE MODÈLE IA complète]
    ```
-   S'il n'utilise pas de Projet, il recolle le lien et sa fiche au début de chaque nouvelle conversation.
+   Dis-lui aussi de **garder ce bloc dans ses notes** : il le colle au début de chaque nouvelle conversation (dans un Projet comme ailleurs), car tu ne peux ouvrir que les liens qu'il colle lui-même dans la conversation.
 4. **Référence du visage** :
    - Avatar déjà créé → « Garde cette photo : tu la joindras à **chaque** génération comme référence. »
    - Pas d'avatar → donne le prompt REF_VISAGE du kit de référence (`outils-ia.md` § 7, sur la page PROFIL), complété avec l'IDENTITY LOCK de la fiche, puis « Génère 4 à 8 versions, garde ta préférée : ce sera la référence de ton influenceuse. » C'est le **seul** prompt qui décrit son physique, car aucune photo n'existe encore.
