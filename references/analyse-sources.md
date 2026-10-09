@@ -1,6 +1,6 @@
 # Analyse des sources
 
-Base de travail : **101 captures** d'un compte Instagram d'influenceuse IA lifestyle-glamour (étiqueté « Contenu IA », environ 90 publications entre mi-août et début octobre) et **34 Reels / TikToks** de créatrices réelles et IA, choisis pour leurs formats viraux. Ce fichier explique *pourquoi* les formats du skill fonctionnent. Consulte-le pour choisir un format, justifier une idée ou répondre à « surprends-moi ».
+Base de travail : **101 captures** d'un compte Instagram d'influenceuse IA lifestyle-glamour (étiqueté « Contenu IA », environ 90 publications entre mi-août et début octobre) et **34 Reels / TikToks** de créatrices réelles et IA, choisis pour leurs formats viraux, plus **54 publications de créatrices d'Afrique de l'Ouest** analysées pour leurs décors du quotidien. Ce fichier explique *pourquoi* les formats du skill fonctionnent. Consulte-le pour choisir un format, justifier une idée ou répondre à « surprends-moi ».
 
 ## Sommaire
 1. ADN visuel des photos
@@ -9,6 +9,7 @@ Base de travail : **101 captures** d'un compte Instagram d'influenceuse IA lifes
 4. Légendes, sons et rythme
 5. Formats vidéo observés
 6. Faiblesses du compte analysé (à ne pas reproduire)
+7. Décors du quotidien en Afrique de l'Ouest
 
 ---
 
@@ -124,3 +125,13 @@ Format volontairement **exclu** du skill : le POV où des mains d'homme touchent
 - **Aucun ancrage culturel** : pas de nourriture locale, de langue ou de fête.
 
 Le skill corrige ces quatre points grâce à la Fiche Modèle (pays, ville, métier, ancres récurrentes) et aux règles de cohérence.
+
+## 7. Décors du quotidien en Afrique de l'Ouest (54 publications)
+
+Captures TikTok et Instagram de créatrices réelles, surtout de Lomé et des pays voisins (enseignes en +228, quartiers comme Agoè). Seuls les **décors** sont retenus : les tenues de ces créatrices (pagnes, voiles) ne s'appliquent pas, car le skill garde le style des références.
+
+- **Où elles se filment** : la rue de quartier en terre (le décor le plus fréquent), la cour et la véranda de la maison familiale, devant un portail en fer forgé ou une porte en bois, des murs peints de couleurs vives (turquoise, jaune, saumon), le marché et les boutiques (cosmétiques, couture, friperie), la plage populaire, plus rarement un lounge moderne ou une terrasse.
+- **Ce qui rend ces images vraies** : la tôle ondulée, le crépi moucheté, les parpaings bruts, la latérite rouge, les chaises en plastique bleues, les seaux et fûts bleus, les fils électriques, les motos garées, le linge qui sèche. Le décor n'est jamais parfait, et c'est ce qui le rend crédible.
+- **Lumière** : soleil tropical dur, lumière dorée de fin de journée sur la terre rouge, ciel laiteux d'harmattan, ciel gris de saison des pluies, ampoule nue la nuit.
+- **Cadrage** : selfie à bout de bras ou téléphone tenu par une amie, souvent en plan moyen ou en pied, dans la rue ou devant un mur, avec des passants qui vivent leur vie derrière.
+- **Leçon pour le skill** : alterner ces décors avec ceux de prestige rend l'influenceuse réelle et proche de son public. Les 25 décors décrits en 3 plans sont dans `decors.md` § Afrique du quotidien (D29 à D53).

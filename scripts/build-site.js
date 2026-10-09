@@ -20,7 +20,7 @@ const DOCS = [
   { src: 'references/metiers.md', title: 'Métiers', desc: '~20 métiers : niveau de vie, scènes de vie pro, tenues de travail, légendes' },
   { src: 'templates/fiche-modele.md', title: 'Fiche Modèle', desc: "Modèle de fiche d'identité de l'influenceuse + exemple complet" },
   { src: 'references/garde-robe.md', title: 'Garde-robe', desc: "~50 tenues détaillées du style des références, tenues d'événement, matières en mouvement" },
-  { src: 'references/decors.md', title: 'Décors', desc: 'Décors en 3 plans, vie en arrière-plan, 12 événements' },
+  { src: 'references/decors.md', title: 'Décors', desc: 'Décors en 3 plans (dont 25 décors du quotidien africain : cour, rue en terre, marché…), vie en arrière-plan, 12 événements' },
   { src: 'references/outils-ia.md', title: 'Outils IA', desc: 'Syntaxe GPT Image 2, Nano Banana, MiniMax H3, Seedance 2.5 ; kit de référence ; dépannage' },
   { src: 'references/formats-photo.md', title: 'Formats photo', desc: '20 formats photo, carrousel, structure détaillée, exemples complets' },
   { src: 'references/formats-video.md', title: 'Formats vidéo', desc: '16 formats vidéo, caméra fluide, anti-IA, scripts et exemples complets' },

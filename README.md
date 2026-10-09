@@ -228,6 +228,7 @@ Les seules exceptions sont les prompts du kit (`outils-ia.md` § 7), qui créent
 ## Règles de cohérence
 
 - **Lieu** : réel, dans la ville de résidence (80 % du temps) ou en voyage plausible pour son niveau de vie.
+- **Afrique** : si elle vit en Afrique, alterne les décors de prestige avec ceux du quotidien (`decors.md` § Afrique du quotidien : cour familiale, rue en terre, portail, marché, boutique), environ 1 post sur 3, toujours avec une tenue du style des références. C'est ce qui la rend crédible pour un public africain.
 - **Date** : lumière et décor adaptés à la saison sur place et aux fêtes proches. Vérifie la date du jour.
 - **Métier** : environ 20 % de vie pro (tenue de travail correcte, jamais sexualisée), 50 % de lifestyle, 30 % de glamour.
 - **Ancres récurrentes** : réutilise l'appartement, le bijou signature, la coque de téléphone, la voiture et les lieux favoris de la fiche.
