@@ -4,7 +4,7 @@ Les formats et les rythmes de ce fichier ont été **mesurés image par image** 
 - **(A) Image de départ** : l'influenceuse (avatar en référence) dans la tenue et le décor exacts, en 9:16, dans la pose du début du mouvement ;
 - **(B) Animation image-to-video** avec MiniMax H3 et Seedance 2.5.
 
-Syntaxe propre à chaque outil : `outils-ia.md` § 5 et § 6. Tenues : toujours le style des sources (`garde-robe.md`), quel que soit le pays.
+Syntaxe propre à chaque outil : `outils-ia.md` § 5 et § 6. Tenues : toujours le style des sources (`garde-robe.md`), quel que soit le pays. Influenceuse qui vit en Afrique : chaque format a aussi sa version « quartier » (tableau « Format → décor de quartier » de `decors.md` § Afrique du quotidien, chorégraphie V17, exemple D).
 
 ## Sommaire
 1. Le tempo naturel (le plus important)
@@ -12,8 +12,8 @@ Syntaxe propre à chaque outil : `outils-ia.md` § 5 et § 6. Tenues : toujours 
 3. Grammaire caméra
 4. Bloc anti-IA vidéo
 5. Structure d'un prompt vidéo
-6. Chorégraphies V1 à V16 (mesurées sur les références)
-7. Exemples complets (A, B, C)
+6. Chorégraphies V1 à V17 (mesurées sur les références)
+7. Exemples complets (A, B, C, D)
 8. Textes à l'écran
 
 ---
@@ -57,6 +57,9 @@ Syntaxe propre à chaque outil : `outils-ia.md` § 5 et § 6. Tenues : toujours 
 | 4 Selfie voiture | V5 | 10 Face caméra | V13 |
 | 5 Selfie miroir / comptoir | V6 | 11 Moment de vie | V15 |
 | 6 Petite danse | V7 | 12 Événement | V16 |
+| | | 13 Dans mon quartier | V17 |
+
+Un type suivi de « quartier » (ex. « 2 quartier ») garde sa chorégraphie et prend le décor du tableau « Format → décor de quartier » de `decors.md`.
 
 Formats bonus à proposer quand c'est pertinent : V2 (assise → se lève), V9 (de dos + texte gag), V11 (POV fantaisie), V14 (traversée devant une boutique).
 
@@ -245,6 +248,26 @@ Référence : 3 plans en 7,9 s.
 - 5–6 s : clin d'œil ou sourire ; la caméra s'est rapprochée jusqu'à la taille.
 - **Vie** : invités qui dansent, servent, discutent, applaudissent à vitesse normale.
 
+### V17 — Dans mon quartier (menu 13) · 6 s · C2 ou C1
+Référence : les décors des 54 publications de créatrices d'Afrique de l'Ouest (`decors.md` D29 à D53). Tenue du style des sources, vive pour trancher sur la terre et les murs (bleu électrique, fuchsia, jaune, blanc).
+- **Dans sa rue** (D39, D41, D45), C2 : une amie recule devant elle.
+  - 0–1 s : déjà en marche dans la rue en terre, pas vifs, sac au bras.
+  - 1–2 s : salue d'un petit geste de la main quelqu'un hors champ, sourire rapide.
+  - 2–3 s : revient au regard caméra et remonte la bretelle de son sac.
+  - 3–4 s : enjambe une ornière d'un petit pas de côté et rit.
+  - 4–5 s : passe la main dans ses cheveux.
+  - 5–6 s : s'arrête devant l'objectif, appui sur une hanche, sourire fier.
+  - **Arrière-plan** : un moto-taxi passe, une vendeuse traverse avec une bassine sur la tête, des feuilles de palmier bougent.
+- **Au portail ou dans la cour** (D29, D30, D32), C1 : téléphone posé ou tenu par une amie immobile.
+  - 0–1 s : elle pousse le battant du portail et sort d'un pas vif.
+  - 1–2 s : referme le battant derrière elle d'une main.
+  - 2–3 s : se tourne vers la caméra et lisse sa robe des deux mains.
+  - 3–4 s : demi-tour rapide (en une demi-seconde) pour montrer le dos, regard par-dessus l'épaule.
+  - 4–5 s : revient de face, main sur la hanche.
+  - 5–6 s : petit coup de menton « alors ? » et sourire.
+  - **Son** : grincement du portail, coqs, radio lointaine.
+- **Au marché** (D48) : utilise V12 (regarde l'arrière-plan) ou V14 (traversée) dans l'allée du marché.
+
 ---
 
 ## 7. Exemples complets
@@ -393,6 +416,57 @@ Quick natural movements flowing into each other, no pauses, no slow motion. Her 
 
 **Texte à l'écran** : « When it's your best friend's wedding 💙 » · **Son** : coupé-décalé ou afrobeats de mariage tendance · **Légende** : « Wedding guest mode 💙✨ who's next to marry? » · **Hashtags** : #abidjan #civ225 #weddingguest #eveninglook #thatgirl
 
+### Exemple D — V17 Dans mon quartier : la rue de son enfance à Yopougon · 6 s
+
+Version quartier du format V1 : même rythme, décor D39 (rue en terre rouge). La tenue reste du style des sources, dans une couleur vive qui tranche sur la terre et les murs. L'étape A fixe le décor : sans elle, l'outil vidéo invente une rue générique.
+
+**Étape A — Image de départ · GPT Image 2** (joindre l'avatar) :
+```
+REFERENCES: Image 1 = my influencer Aya. Use her exactly as she is in this photo: same face, skin tone, hair and body.
+SUBJECT: Aya, the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+OUTFIT: An electric-blue two-piece set in smooth crepe: a cropped off-the-shoulder top with a ruffled neckline and a small front tie, and a matching high-waisted maxi skirt with a side slit up to the knee; flat gold sandals; a small white structured shoulder bag (unbranded) on her left shoulder; chunky gold hoops; her thin gold "A" pendant; glossy nude almond nails; soft glam makeup; hair worn loose, same hair as in image 1.
+POSE & GESTURE: Mid-stride walking toward the camera about two meters away, left foot forward, right arm swinging, left hand on the bag strap, chin up, a relaxed confident half-smile, eyes on the lens.
+FOREGROUND: Ruts and footprints in the packed red laterite road, a few small stones.
+MIDGROUND: The middle of a wide unpaved residential street in Yopougon, Abidjan, the street where she grew up.
+BACKGROUND: Compound walls in cream and salmon-pink splatter render, a bright orange metal gate, a motorbike parked against the wall, a big mango tree and two coconut palms, wooden electricity poles with tangled wires, a satellite dish on a roof, a woman far away carrying a basin on her head, small kiosks painted in faded colors with no readable text.
+CAMERA: A frame from a vertical iPhone video held at chest height by a friend walking backward in front of her, head to mid-shin, subject slightly off-center; vertical 9:16.
+LIGHT: 5:30 pm, low golden sun from the left making the red earth and the walls glow orange, long shadows across the road, warm light on the left side of her face.
+REALISM: Natural iPhone colors with slight HDR, visible pores and baby hairs, fine dust in the air, natural creases in the crepe, slightly cracked render on the walls. No beauty filter, no studio lighting, no extra fingers, no text, no logos, no watermark.
+```
+
+**Étape B — MiniMax H3** (image-to-video, 9:16, 6 s) :
+```
+SHOT: Vertical 9:16 Instagram Reel filmed on a recent iPhone by a friend walking backward, real-time 1x speed, fast casual pace, one continuous shot with no cuts, 6 seconds.
+SUBJECT: The same adult woman as in the start image, exactly as she appears there — face, hair, body and electric-blue two-piece set identical from first to last frame.
+OUTFIT IN MOTION: The maxi skirt swings with each step and the slit opens to the knee, the ruffled neckline bounces lightly, the white bag taps against her hip, the gold hoops swing and glint.
+ACTION SCRIPT (one quick action per second, flowing without pauses):
+0–1 s: She is already walking toward the camera at a brisk natural pace, about two steps per second, eyes on the lens.
+1–2 s: She waves quickly at someone off-camera on her right with a fast, bright smile.
+2–3 s: She looks back into the lens and pulls the strap of her bag higher on her shoulder.
+3–4 s: She steps over a rut with a small quick side step and laughs.
+4–5 s: She runs her right hand through her hair without breaking stride.
+5–6 s: She stops right in front of the camera, weight dropping onto one hip, and gives a proud smile.
+BACKGROUND LIFE: A moto-taxi drives past behind her raising a little dust, the woman with the basin on her head crosses the street, a man sitting on a bench by a kiosk scrolls on his phone, palm fronds move in the breeze — all at normal speed; nobody looks at the camera.
+CAMERA: The friend walks backward in front of her holding the phone, matching her brisk pace about two meters away, natural slight walking bounce, framing her head to knees, stopping when she stops [tracking shot].
+LIGHT: Low golden sun from the left, consistent; the red earth glows and her long shadow moves with her.
+REALISM: Real-time 1x speed with the fast, casual pace of a real Instagram Reel: no slow motion, no time-stretching, no lingering. Each movement flows straight into the next, no pause longer than half a second. Realistic weight and physics. Background people move at normal speed and never look at the camera. Stable background, no warping, no morphing, correct anatomy, natural motion blur, iPhone video color, no text on screen.
+AUDIO: Sandal steps on the dirt road, a passing motorbike engine, roosters, a faint muffled radio far away, no music track.
+```
+
+**Étape B bis — Seedance 2.5** (9:16, 6 s ; @Image1 = image de départ, @Image2 = avatar) :
+```
+@Image1 is the first frame and defines Aya's appearance, her electric-blue two-piece set and the red-earth street in Yopougon. @Image2 defines her face only.
+Vertical 9:16 iPhone Reel filmed by a friend walking backward, real-time speed, fast casual pace like a real Instagram Reel, one continuous shot, warm golden late-afternoon sun.
+0-1s: already walking toward the camera at a brisk pace, two steps per second. 1-2s: quick wave at someone off-camera, bright smile. 2-3s: looks back at the lens, pulls her bag strap up. 3-4s: quick side step over a rut, laughs. 4-5s: runs her hand through her hair while walking. 5-6s: stops in front of the camera, hip out, proud smile.
+Camera: the friend walks backward at her exact pace, two meters away, natural slight bounce, stops when she stops.
+Background: a moto-taxi passing and raising a little dust, a woman crossing with a basin on her head, a man on a bench by a kiosk, palm fronds moving; nobody looks at the camera.
+Details: skirt swinging and slit opening, ruffles bouncing, hoops swinging, bag tapping her hip.
+Quick natural movements flowing into each other, no pauses, no slow motion. Her face, hair and outfit stay identical. No morphing, no warping.
+<sandal steps on dirt, passing motorbike, roosters, faint distant radio> No captions, no watermark, no background music.
+```
+
+**Texte à l'écran** : « Back in my hood 🏘️💙 » · **Son** : coupé-décalé ou afrobeats tendance · **Légende** : « Yop city forever 💙 Where did you grow up? » *(FR : Yop city pour toujours. Tu as grandi où ?)* · **Hashtags** : #abidjan #yopougon #civ225 #ootd #babi
+
 ---
 
 ## 8. Textes à l'écran (hooks)
@@ -405,3 +479,4 @@ Quick natural movements flowing into each other, no pauses, no slow motion. Her 
 - Question : « Would you date a [métier]? », « Which one: 1 or 2? »
 - Gag pays : « Open the door in: Abidjan 🇨🇮 / Paris 🇫🇷 / Lagos 🇳🇬 »
 - Événement : « When it's your best friend's wedding », « Birthday girl 🎂 »
+- Quartier : « Back in my hood 🏘️ », « POV: you grew up in Yopougon / Bè / Akpakpa », « Sunday at mama's »

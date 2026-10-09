@@ -245,6 +245,32 @@ Décors tirés de l'analyse de 54 publications TikTok et Instagram de créatrice
 - **Pas de texte lisible** : enseignes, kiosques et tabliers gardent leurs couleurs vives mais « no readable text, no logos ».
 - **Figurants adultes uniquement**, de dos ou occupés ; pas d'enfants au premier plan ni en gros plan, pas d'école ni d'uniforme scolaire.
 - **Adapte à la ville** (`pays.md`) : sable et palmiers sur la côte (Lomé, Cotonou, Abidjan, Dakar), latérite rouge et néré ou manguiers à l'intérieur des terres (Kara, Bouaké, Ouagadougou), sable clair et murs en banco au Sahel (Niamey, Bamako), béton et circulation dense à Lagos ou Accra.
+- **Situe-le dans un vrai quartier populaire ou familial de sa ville** (ex. Yopougon ou Abobo à Abidjan, Bè ou Agoè à Lomé, Akpakpa à Cotonou, Médina à Dakar) : « the house where she grew up », « her mother's courtyard ».
+
+**Format → décor de quartier** (garde la chorégraphie ou la composition du format, change seulement le décor)
+
+| Format photo | Décor de quartier | Format vidéo | Décor de quartier |
+|---|---|---|---|
+| P1 Selfie miroir | D37 (miroir mural), D49 | V1 Marche vers la caméra | D39, D40, D41, D45 |
+| P2 Selfie au lit | D37 | V3 Outfit check | D32, D33, D34 |
+| P3 Selfie au soleil | D39, D45, D50 | V4 Sortie de porte | D31, D32 (elle sort du portail) |
+| P4 Petit-déjeuner | D29 (sur la véranda) | V5 Selfie voiture | voiture garée dans D39 |
+| P5 Dans la voiture | voiture garée dans D39 | V6 Selfie comptoir | D47 (comptoir de la boutique), D37 |
+| P6 Robe longue | D32, D35 | V7 Petite danse | D30, D33, D36 |
+| P7 Profil au bord de l'eau | D50 | V8 Cache-caméra | D33, D34 |
+| P8 Terrasse avec vue | D51, D35 | V9 De dos + texte gag | D32 (« Open the gate in: Lomé ») |
+| P9 Porte ou façade colorée | D31, D32, D33 | V10 POV petit ami | D29, D37 |
+| P10 Soirée | D36, D44, D52 | V12 Regarde l'arrière-plan | D48, D39 (le moto-taxi qui se retourne) |
+| P11 Plage | D50 | V13 Face caméra | D30, D33, D42 |
+| P13 En ville | D39, D42, D43 | V14 Traversée devant une boutique | D46, D47, D49 |
+| P14 Nature | D53 | V15 Moment de vie | D50, D51, D42 (un jus de bissap sous l'arbre) |
+| P15 Coucher de soleil | D40, D43 | V16 Événement | E1 dans une cour décorée (bâches, chaises louées en housses blanches) |
+| P17 Sport | D39 (footing au lever du soleil), D50 | V17 Dans mon quartier | D29 à D53 (voir `formats-video.md` § 6) |
+| P18 Au travail | D46, D47, D48, D49 | | |
+| P19 Fierté locale | D48, D42, D29 (retour chez maman) | | |
+| P20 Chez elle | D29, D30, D33, D37 | | |
+
+P12 (piscine) et P16 (voyage) n'ont pas d'équivalent de quartier.
 
 **Vocabulaire des matières** (à piocher pour enrichir chaque plan)
 - Toits et plafonds : `corrugated metal roof sheets with rust streaks`, `exposed wooden rafters and purlins`, `white PVC ceiling panels`, `a bare light bulb hanging from a twisted wire`.

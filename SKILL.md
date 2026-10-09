@@ -99,7 +99,7 @@ Ne pose aucune autre question : déduis tout le reste des références et propos
    - Avatar déjà créé → « Garde cette photo : tu la joindras à **chaque** génération comme référence. »
    - Pas d'avatar → donne le prompt REF_VISAGE du kit de référence (`outils-ia.md` § 7, sur la page PROFIL), complété avec l'IDENTITY LOCK de la fiche, puis « Génère 4 à 8 versions, garde ta préférée : ce sera la référence de ton influenceuse. » C'est le **seul** prompt qui décrit son physique, car aucune photo n'existe encore.
    - Dans les deux cas, signale la **page des corps** : https://influenceuseia.vercel.app/mannequins.html. L'abonné y télécharge un mannequin noir à la corpulence voulue et l'envoie à GPT Image 2 ou Nano Banana avec la photo de son influenceuse, en utilisant le prompt de la page. Le résultat devient sa **référence du corps** (REF_CORPS), à joindre avec le visage à chaque génération. (Sans mannequin, le prompt REF_CORPS du kit fait le même travail.)
-5. Termine par : **« Tu veux générer une image ou une vidéo ? »**
+5. Termine par : **« Tu veux générer une image ou une vidéo ? »** Si elle vit en Afrique : **« Tu veux générer une image ou une vidéo ? Et plutôt décor chic 🥂 ou de quartier 🏘️ ? »**
 
 ## Étape 3 — Parcours IMAGE
 
@@ -108,8 +108,9 @@ Avant le premier prompt image de la conversation, **lis la page IMAGE** (https:/
 Livre directement **un prompt photo complet**, en version **Nano Banana** et en version **GPT Image 2**, avec la référence de l'avatar jointe.
 - Si l'abonné a donné une scène, un lieu ou un événement, utilise-le.
 - Sinon, choisis toi-même un format qui performe (`references/formats-photo.md`), cohérent avec la fiche, la saison et la date du jour. Annonce l'idée en une ligne.
+- **Décor de quartier** (elle vit en Afrique et l'abonné a choisi « quartier », ou c'est ton tour d'alterner) : prends le décor associé au format dans le tableau « Format → décor de quartier » de `decors.md` § Afrique du quotidien, et inspire-toi de l'exemple 3 de `formats-photo.md`.
 - Ajoute 2 prompts d'édition courts pour en faire un carrousel (même scène, micro-poses). C'est la signature des comptes qui marchent.
-- Termine par : « Une autre scène, ou on passe à une vidéo ? »
+- Termine par : « Une autre scène, ou on passe à une vidéo ? » Si elle vit en Afrique : « Une autre scène (chic 🥂 ou quartier 🏘️), ou on passe à une vidéo ? »
 
 ## Étape 4 — Parcours VIDÉO
 
@@ -128,8 +129,11 @@ Livre directement **un prompt photo complet**, en version **Nano Banana** et en 
 > 10. 🗣️ Elle parle face caméra
 > 11. 🌴 Moment de vie (plage, piscine, café, coucher de soleil)
 > 12. 🎉 Événement (mariage, gala, anniversaire, fête, concert…)
+> 13. 🏘️ Dans mon quartier (rue en terre, cour, portail, marché) *(seulement si elle vit en Afrique)*
 >
-> Ou décris ton idée en une phrase.
+> Ou décris ton idée en une phrase. *(Si elle vit en Afrique, ajoute : « Pour les autres types, écris “quartier” avec le numéro, ex. “2 quartier”, pour la tourner dans ton quartier. »)*
+
+Pour un type suivi de « quartier », garde la chorégraphie du type et prends le décor associé dans le tableau « Format → décor de quartier » de `decors.md`. Le type 13 suit la chorégraphie V17 et l'exemple D de `formats-video.md`.
 
 **4.2 Avant le premier prompt vidéo** de la conversation, **lis la page VIDÉO** (https://influenceuseia.vercel.app/etape-video.html) : formats vidéo avec scripts et exemples complets, garde-robe, décors, outils IA, légendes.
 
@@ -201,7 +205,10 @@ Les seules exceptions sont les prompts du kit (`outils-ia.md` § 7), qui créent
 ## Règles de cohérence
 
 - **Lieu** : réel, dans la ville de résidence (80 % du temps) ou en voyage plausible pour son niveau de vie.
-- **Afrique** : si elle vit en Afrique, alterne les décors de prestige avec ceux du quotidien (`decors.md` § Afrique du quotidien : cour familiale, rue en terre, portail, marché, boutique), environ 1 post sur 3, toujours avec une tenue du style des références. C'est ce qui la rend crédible pour un public africain.
+- **Afrique** : si elle vit en Afrique, alterne les décors de prestige avec ceux du quotidien (`decors.md` § Afrique du quotidien : cour familiale, rue en terre, portail, marché, boutique), toujours avec une tenue du style des références. C'est ce qui la rend crédible pour un public africain. Concrètement :
+  - chaque fois que tu demandes « image ou vidéo ? » ou proposes une autre scène, ajoute le choix « décor chic 🥂 ou de quartier 🏘️ ? » ;
+  - si l'abonné ne choisit pas, alterne toi-même : environ 1 prompt sur 3 en décor de quartier, et dis-le dans la ligne « Idée » ;
+  - le décor de quartier de chaque format est donné par le tableau « Format → décor de quartier » de `decors.md`.
 - **Date** : lumière et décor adaptés à la saison sur place et aux fêtes proches. Vérifie la date du jour.
 - **Métier** : environ 20 % de vie pro (tenue de travail correcte, jamais sexualisée), 50 % de lifestyle, 30 % de glamour.
 - **Ancres récurrentes** : réutilise l'appartement, le bijou signature, la coque de téléphone, la voiture et les lieux favoris de la fiche.

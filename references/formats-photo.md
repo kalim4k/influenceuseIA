@@ -1,6 +1,6 @@
 # Formats photo
 
-Catalogue des formats observés dans les sources, classés par performance, et adaptables à n'importe quel pays. Pour chaque format : l'idée, la composition, les variantes de carrousel et les ingrédients du prompt. Assemble ensuite le prompt avec la **structure très détaillée** en fin de fichier, la tenue de `garde-robe.md` et le décor en 3 plans de `decors.md`.
+Catalogue des formats observés dans les sources, classés par performance, et adaptables à n'importe quel pays. Pour chaque format : l'idée, la composition, les variantes de carrousel et les ingrédients du prompt. Assemble ensuite le prompt avec la **structure très détaillée** en fin de fichier, la tenue de `garde-robe.md` et le décor en 3 plans de `decors.md`. Influenceuse qui vit en Afrique : chaque format a aussi sa version « quartier » (tableau « Format → décor de quartier » de `decors.md` § Afrique du quotidien, exemple 3).
 
 ## Sommaire
 - Méthode du carrousel
@@ -9,7 +9,7 @@ Catalogue des formats observés dans les sources, classés par performance, et a
 - Formats « lifestyle » : P11 à P17
 - Formats « identité » : P18 à P20
 - Structure d'un prompt photo très détaillé
-- Exemples complets (2)
+- Exemples complets (3, dont un en décor de quartier)
 
 ---
 
@@ -247,3 +247,41 @@ Keep this exact photo — same woman, bathrobe, bathroom, phone, light and frami
 
 **Légende** : « 12h shift done… now it's me time 🛁 Caught you staring 👀 » *(FR : Garde de 12 h terminée… maintenant c'est mon moment)* · **Hashtags** : #nurselife #abidjan #selfcare #civ225 #nightroutine
 
+
+### Exemple 3 — P9 Façade colorée, version quartier : dimanche chez maman à Yopougon · 2 slides
+
+**Idée** : le retour chez maman le dimanche. Une robe longue unie et vive devant le portail noir de la maison familiale, le spot photo le plus fréquent des créatrices d'Afrique de l'Ouest (`decors.md` D32). Le contraste entre la tenue soignée et le vrai décor de quartier la rend proche de son public.
+
+**Nano Banana** (joindre la photo de l'avatar) :
+```
+Using the attached photo of my influencer Aya as the exact and only reference for her appearance, create a photorealistic smartphone photo of her, keeping her face, skin tone, hair and body exactly as they are in the photo.
+
+She stands in front of the tall black wrought-iron gate of her mother's house in Yopougon, Abidjan, on a Sunday afternoon. She wears an ankle-length cobalt-blue stretch-jersey bodycon dress with a strapless straight neckline and a smooth fitted silhouette, clear-strap heeled sandals, a thin gold anklet, chunky gold hoops, her thin gold chain with a small letter "A" pendant, glossy red almond nails and soft glam makeup with a nude gloss; her hair is worn loose, same hair as in the photo.
+
+Her back is almost touching the gate, her weight on her left hip, her right knee slightly bent, her right hand resting on one of the vertical twisted bars at shoulder height and her left hand relaxed along her thigh. Her head is tilted slightly and she looks straight into the lens with a proud closed-mouth smile.
+
+In the foreground, packed red laterite ground with a few small stones and the edge of a blue plastic monobloc chair cut by the bottom-right corner of the frame. Behind her, the gate has vertical twisted bars with gold-painted spear tips and curly ironwork at the bottom; above it, the top of a cream compound wall with slightly cracked splatter render, a palm frond hanging over the wall, an electricity wire crossing the sky and the edge of the house's corrugated metal roof. On the side, the salmon-pink wall of the neighbor's house and a parked motorbike.
+
+The photo looks like it was taken by her cousin with a recent iPhone held at chest height, full body with a little space above the gate, subject centered. Late-afternoon sun from the right, warm on her face and shoulders, the shadows of the gate bars on the ground, a clear blue sky. Natural iPhone colors with slight HDR, realistic skin with visible pores and baby hairs, natural creases in the jersey, no beauty filter, no studio light, no text or logos. Vertical 4:5 aspect ratio, high resolution.
+```
+
+**GPT Image 2** (joindre la photo de l'avatar) :
+```
+REFERENCES: Image 1 = my influencer Aya. Use her exactly as she is in this photo: same face, skin tone, hair and body.
+SUBJECT: Aya, the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+OUTFIT: Ankle-length cobalt-blue stretch-jersey bodycon dress with a strapless straight neckline and a smooth fitted silhouette; clear-strap heeled sandals; a thin gold anklet; chunky gold hoops; thin gold chain with a small "A" pendant; glossy red almond nails; soft glam makeup with a nude gloss; hair worn loose, same hair as in image 1.
+POSE & GESTURE: Back almost touching the gate, weight on her left hip, right knee slightly bent, right hand resting on a vertical twisted bar at shoulder height, left hand relaxed along her thigh, head tilted slightly, looking straight into the lens with a proud closed-mouth smile.
+FOREGROUND: Packed red laterite ground with a few small stones, the edge of a blue plastic monobloc chair in the bottom-right corner.
+MIDGROUND: The tall black wrought-iron double gate of her mother's house in Yopougon, Abidjan: vertical twisted bars, gold-painted spear tips, curly ironwork at the bottom.
+BACKGROUND: The top of a cream compound wall with slightly cracked splatter render, a palm frond hanging over the wall, an electricity wire crossing the sky, the edge of a corrugated metal roof; on the side, the salmon-pink wall of the neighbor's house and a parked motorbike.
+CAMERA: Taken by her cousin with a recent iPhone main camera at chest height, full body with a little space above the gate, subject centered, vertical 4:5.
+LIGHT: Late-afternoon sun from the right, warm on her face and shoulders, shadows of the gate bars on the ground, clear blue sky.
+REALISM: Natural iPhone colors with slight HDR, visible pores and baby hairs, natural creases in the jersey, a little dust on the ground. No beauty filter, no studio lighting, no extra fingers, no text, no logos, no watermark.
+```
+
+**Slide 2 (édition)** :
+```
+Keep this exact photo — same woman, face, hair, cobalt dress, jewelry, gate, light and framing — but now she turns her back to the camera, both hands holding the gate bars at shoulder height, glancing back over her right shoulder with a playful smile. Everything else stays identical. Vertical 4:5.
+```
+
+**Légende** : « Sunday at mama's 💙 » *(FR : Dimanche chez maman)* · **Hashtags** : #abidjan #yopougon #civ225 #sundayvibes #ootd · **Son** : coupé-décalé doux ou afro-pop.
