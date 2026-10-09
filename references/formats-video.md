@@ -100,7 +100,7 @@ Real-time 1x speed with the fast, casual pace of a real Instagram Reel: no slow 
 **MiniMax H3** (image-to-video, 9:16, **6 s** ; 250 à 400 mots) :
 ```
 SHOT: Vertical 9:16 Instagram Reel filmed on a recent iPhone [by a friend walking backward / on a tripod / as a handheld selfie], real-time 1x speed, fast casual pace, one continuous shot with no cuts, 6 seconds.
-SUBJECT: The same woman as in the start image — [IDENTITY SHORT] — face, hair, body and outfit identical from first to last frame.
+SUBJECT: The same adult woman as in the start image, exactly as she appears there — face, hair, body and outfit identical from first to last frame.
 OUTFIT IN MOTION: [comment la tenue réagit — garde-robe § M, avec des verbes rapides : bounces, swings, snaps back].
 ACTION SCRIPT (one quick action per second, flowing without pauses):
 0–1 s: [geste].
@@ -131,7 +131,9 @@ Quick natural movements flowing into each other, no pauses, no slow motion. Her 
 **Version multi-plans** (vidéos de plus de 6 s, ou formats V4 et V12) : découpe en 2 ou 3 plans de 2 à 3 s.
 - H3 : `[Shot 1] 0–3 s: … [Shot 2] At 00:03 the camera cuts to …`
 - Seedance : `Shot 1 (0-3s): … Shot 2 (3-6s): …`
-- Restate l'identité et la tenue à chaque plan.
+- À chaque plan, rappelle « same woman and same outfit as the start image », sans la décrire.
+
+**Jamais de description physique** dans un prompt vidéo (ni teint, ni traits, ni cheveux, ni silhouette) : l'image de départ et l'avatar portent son apparence, et un texte en plus les concurrence et fait dériver le visage pendant le mouvement. Les cheveux n'apparaissent que dans les gestes et le mouvement (« her hair bounces », « she tucks a strand behind her ear »).
 
 ---
 
@@ -247,13 +249,13 @@ Référence : 3 plans en 7,9 s.
 
 ## 7. Exemples complets
 
-Fiche utilisée : « Aya Koné » (exemple de `templates/fiche-modele.md`). Les tenues suivent le style des sources, pas l'origine. Remplace par la fiche réelle.
+Fiche utilisée : « Aya Koné » (exemple de `templates/fiche-modele.md`). Les tenues suivent le style des sources, pas l'origine. Remplace par la fiche réelle. Aucun prompt ne décrit son physique : l'avatar et l'image de départ s'en chargent.
 
 ### Exemple A — V1 Marche vers la caméra · Plateau, Abidjan · 6 s
 
 **Étape A — Image de départ · Nano Banana** (joindre la photo de l'avatar) :
 ```
-Using the attached photo of my influencer Aya as the exact reference for her face, braids and body proportions, create a photorealistic vertical smartphone photo of her. Aya Koné is an adult 25-year-old Ivorian woman with deep brown skin with warm golden undertones and natural skin texture with visible pores, an oval face with high cheekbones, a softly rounded nose, full lips with a defined cupid's bow, large almond-shaped dark brown eyes, thick softly arched eyebrows, a tiny beauty mark just above the left corner of her upper lip, waist-length honey-brown ombré knotless box braids in a high ponytail, and a curvy hourglass figure, 1.68 m tall.
+Using the attached photo of my influencer Aya as the exact and only reference for her appearance, create a photorealistic vertical smartphone photo of her, keeping her face, skin tone, hair and body exactly as they are in the photo. Her hair is tied in a high ponytail, same hair as in the photo.
 It is 5:30 pm on a wide, clean sidewalk in the Plateau business district of Abidjan. She is mid-stride walking toward the camera, about two meters away, left foot forward, right arm swinging, a small structured white top-handle bag (unbranded) in her left hand. She wears a sky-blue fitted maxi dress with thin spaghetti straps, a straight neckline and a low open back, hugging her figure down to the ankles, nude platform sandals, chunky gold hoops and her thin gold chain with a small letter "A" pendant; almond nude nails, soft glam makeup, nude gloss. Confident relaxed expression, eyes on the lens.
 In the foreground, the edge of a concrete planter with a tropical plant cuts into the bottom-left corner. Behind her, glass office towers reflect the warm sky, two royal palms line the avenue, an orange taxi and a white SUV wait at a traffic light, and three office workers walk in different directions. Low sun from the left, warm light on the left side of her face, long shadows on the pale paving.
 A frame from a vertical iPhone video held at chest height by a friend walking backward, head to mid-shin, subject slightly off-center. Natural iPhone colors with slight HDR, realistic skin with baby hairs, natural creases in the fabric, no beauty filter, no text, no logos. Vertical 9:16 aspect ratio, high resolution.
@@ -262,12 +264,12 @@ A frame from a vertical iPhone video held at chest height by a friend walking ba
 **Étape B — MiniMax H3** (image-to-video, 9:16, 6 s) :
 ```
 SHOT: Vertical 9:16 Instagram Reel filmed on a recent iPhone by a friend walking backward, real-time 1x speed, fast casual pace, one continuous shot with no cuts, 6 seconds.
-SUBJECT: The same woman as in the start image — Aya, the adult 25-year-old Ivorian woman with deep brown skin, a tiny beauty mark above the left corner of her lip, honey-brown ombré knotless braids in a high ponytail and a curvy hourglass figure — face, braids, body and sky-blue maxi dress identical from first to last frame.
-OUTFIT IN MOTION: The fitted dress moves with every step, small creases snapping at the hips; the braided ponytail bounces with each step and settles immediately; the gold hoops swing and glint; the white bag swings at her side.
+SUBJECT: The same adult woman as in the start image, exactly as she appears there — face, hair, body and sky-blue maxi dress identical from first to last frame.
+OUTFIT IN MOTION: The fitted dress moves with every step, small creases snapping at the hips; her ponytail bounces with each step and settles immediately; the gold hoops swing and glint; the white bag swings at her side.
 ACTION SCRIPT (one quick action per second, flowing without pauses):
 0–1 s: She is already walking toward the camera at a brisk natural pace, about two steps per second, eyes on the lens.
 1–2 s: Two more steps, hips shifting naturally; she glances to her right at the passing traffic for half a second.
-2–3 s: She looks back into the lens and tucks a loose braid behind her ear without breaking stride.
+2–3 s: She looks back into the lens and tucks a loose strand of hair behind her ear without breaking stride.
 3–4 s: A quick confident smile, two more steps.
 4–5 s: She lifts the strap of her bag higher on her wrist.
 5–6 s: She stops right in front of the camera, weight dropping onto one hip, and smiles.
@@ -280,13 +282,13 @@ AUDIO: Sandal footsteps on pavement, city traffic, a distant car horn, light bre
 
 **Étape B bis — Seedance 2.5** (9:16, 6 s ; @Image1 = image de départ, @Image2 = avatar) :
 ```
-@Image1 is the first frame and defines Aya's face, braids, body, sky-blue maxi dress and the Plateau sidewalk. @Image2 defines her face only.
+@Image1 is the first frame and defines Aya's appearance, her sky-blue maxi dress and the Plateau sidewalk. @Image2 defines her face only.
 Vertical 9:16 iPhone Reel filmed by a friend walking backward, real-time speed, fast casual pace like a real Instagram Reel, one continuous shot, warm late-afternoon sun.
-0-1s: already walking toward the camera at a brisk pace, two steps per second. 1-2s: two more steps, a half-second glance at the traffic. 2-3s: looks back at the lens, tucks a braid behind her ear while walking. 3-4s: quick confident smile, two steps. 4-5s: lifts her bag strap higher on her wrist. 5-6s: stops in front of the camera, hip out, smiles.
+0-1s: already walking toward the camera at a brisk pace, two steps per second. 1-2s: two more steps, a half-second glance at the traffic. 2-3s: looks back at the lens, tucks a strand of hair behind her ear while walking. 3-4s: quick confident smile, two steps. 4-5s: lifts her bag strap higher on her wrist. 5-6s: stops in front of the camera, hip out, smiles.
 Camera: the friend walks backward at her exact pace, two meters away, natural slight bounce, stops when she stops.
 Background: a man walking away on his phone, two women crossing, an orange taxi pulling away, palms moving; nobody looks at the camera.
 Details: ponytail bouncing, dress creasing at the hips, hoops swinging, bag swinging.
-Quick natural movements flowing into each other, no pauses, no slow motion. Her face, braids and dress stay identical. No morphing, no warping.
+Quick natural movements flowing into each other, no pauses, no slow motion. Her face, hair and dress stay identical. No morphing, no warping.
 <sandal footsteps, city traffic, light breeze> No captions, no watermark, no background music.
 ```
 
@@ -296,9 +298,9 @@ Quick natural movements flowing into each other, no pauses, no slow motion. Her 
 
 **Étape A — Image de départ · GPT Image 2** (joindre l'avatar) :
 ```
-References: Image 1 = my influencer Aya — her face, braids and body; keep her identity exactly (face shape, eyes, nose, lips, skin tone, beauty mark, hairstyle, proportions).
-SUBJECT: Aya Koné, an adult 25-year-old Ivorian woman. Deep brown skin with warm golden undertones, natural skin texture with visible pores. Oval face, high cheekbones, softly rounded nose, full lips with a defined cupid's bow. Large almond-shaped dark brown eyes, thick softly arched eyebrows. A tiny beauty mark just above the left corner of her upper lip. Waist-length knotless box braids with a honey-brown ombré, worn loose over one shoulder. Curvy hourglass figure, 1.68 m tall.
-OUTFIT: A cream off-the-shoulder ribbed-knit mini dress with long fitted sleeves, hugging her figure to mid-thigh, cinched with a wide black leather belt with a gold buckle; white knee-high boots; a small black leather shoulder bag in her left hand (unbranded); chunky gold hoops; thin gold "A" pendant; glossy nude almond nails; soft glam makeup.
+REFERENCES: Image 1 = my influencer Aya. Use her exactly as she is in this photo: same face, skin tone, hair and body.
+SUBJECT: Aya, the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+OUTFIT: A cream off-the-shoulder ribbed-knit mini dress with long fitted sleeves, hugging her figure to mid-thigh, cinched with a wide black leather belt with a gold buckle; white knee-high boots; a small black leather shoulder bag in her left hand (unbranded); chunky gold hoops; thin gold "A" pendant; glossy nude almond nails; soft glam makeup; hair worn loose over one shoulder, same hair as in image 1.
 POSE & GESTURE: Standing in the middle of the hallway facing the camera, feet hip-width apart, weight starting to shift onto her right hip, right arm relaxed, chin level, eyes on the lens, confident neutral expression.
 FOREGROUND: Clean light-oak floor leading to her.
 MIDGROUND: A narrow apartment hallway in Cocody, Abidjan, with white walls and two white doors with black handles.
@@ -311,14 +313,14 @@ REALISM: Natural iPhone indoor colors, visible pores and knit texture, natural c
 **Étape B — MiniMax H3** (image-to-video, 9:16, 6 s) :
 ```
 SHOT: Vertical 9:16 Instagram Reel filmed on a recent iPhone locked off on a tripod at chest height, real-time 1x speed, fast casual pace, one continuous shot with no cuts, 6 seconds.
-SUBJECT: The same woman as in the start image — Aya, the adult 25-year-old Ivorian woman with deep brown skin, a beauty mark above the left corner of her lip, loose honey-brown ombré braids and a curvy hourglass figure — face, braids, cream knit mini dress, black belt and white boots identical from first to last frame.
-OUTFIT IN MOTION: The fitted knit moves with her body and snaps back into shape; the braids swing with weight on every turn and settle immediately; the black bag swings once on the turn; the gold hoops glint.
+SUBJECT: The same adult woman as in the start image, exactly as she appears there — face, hair, body, cream knit mini dress, black belt and white boots identical from first to last frame.
+OUTFIT IN MOTION: The fitted knit moves with her body and snaps back into shape; her hair swings with weight on every turn and settles immediately; the black bag swings once on the turn; the gold hoops glint.
 ACTION SCRIPT (one quick action per second, flowing without pauses):
 0–1 s: Facing the camera, she shifts her weight onto her right hip.
 1–2 s: She puts her right hand on her hip with a small shoulder roll.
 2–3 s: She turns her back to the camera in half a second, glances back over her right shoulder, then turns front again.
-3–4 s: She runs her right hand through her braids from the root.
-4–5 s: She flips her braids behind her shoulder in one quick motion.
+3–4 s: She runs her right hand through her hair from the root.
+4–5 s: She flips her hair behind her shoulder in one quick motion.
 5–6 s: She takes one step toward the camera, both hands sliding from her waist to her hips, with a confident smile.
 BACKGROUND LIFE: The sheer curtains at the end of the hallway move in the breeze; her reflection in the wall mirror follows her moves correctly.
 CAMERA: Phone locked off on the tripod for the first four seconds [static], then a short, steady push-in from full body to waist up during the last two seconds [push in].
@@ -329,12 +331,12 @@ AUDIO: Click of boot heels on the wooden floor, soft rustle of knit fabric, quie
 
 **Étape B bis — Seedance 2.5** (9:16, 6 s) :
 ```
-@Image1 is the first frame and defines Aya's face, braids, body, cream knit mini dress, black belt, white boots and her apartment hallway. @Image2 defines her face only.
+@Image1 is the first frame and defines Aya's appearance, her cream knit mini dress, black belt, white boots and her apartment hallway. @Image2 defines her face only.
 Vertical 9:16 iPhone Reel on a tripod at chest height, real-time speed, fast casual pace like a real Instagram Reel, one continuous shot.
-0-1s: shifts her weight onto her right hip. 1-2s: hand on hip, small shoulder roll. 2-3s: quick half-second turn to show her back, glance over her shoulder, turns front again. 3-4s: runs her hand through her braids. 4-5s: flips her braids behind her shoulder in one quick motion. 5-6s: one step toward the camera, hands sliding from waist to hips, confident smile.
+0-1s: shifts her weight onto her right hip. 1-2s: hand on hip, small shoulder roll. 2-3s: quick half-second turn to show her back, glance over her shoulder, turns front again. 3-4s: runs her hand through her hair. 4-5s: flips her hair behind her shoulder in one quick motion. 5-6s: one step toward the camera, hands sliding from waist to hips, confident smile.
 Camera: fixed for four seconds, then a short steady push-in to waist up.
-Details: knit dress snapping back into shape, braids swinging and settling, hoops glinting; natural blinking, realistic skin.
-Quick natural movements flowing into each other, no pauses, no slow motion. Her face, braids and outfit stay identical. No morphing, no warping.
+Details: knit dress snapping back into shape, hair swinging and settling, hoops glinting; natural blinking, realistic skin.
+Quick natural movements flowing into each other, no pauses, no slow motion. Her face, hair and outfit stay identical. No morphing, no warping.
 <boot heels on wood, rustle of fabric, quiet room tone> No captions, no watermark, no background music.
 ```
 
@@ -346,9 +348,9 @@ L'étape A est **indispensable** : elle doit apparaître en tenue de soirée dan
 
 **Étape A — Image de départ · GPT Image 2** (joindre l'avatar) :
 ```
-References: Image 1 = my influencer Aya — her face, braids and body; keep her identity exactly.
-SUBJECT: Aya Koné, an adult 25-year-old Ivorian woman. Deep brown skin with warm golden undertones, natural skin texture with visible pores. Oval face, high cheekbones, softly rounded nose, full lips with a defined cupid's bow. Large almond-shaped dark brown eyes, thick softly arched eyebrows. A tiny beauty mark just above the left corner of her upper lip. Honey-brown ombré knotless braids styled in a sleek low bun with two face-framing braids. Curvy hourglass figure, 1.68 m tall.
-OUTFIT: A floor-length royal-blue gown with an off-the-shoulder ruffled neckline sitting just below the collarbones, a fitted ruched bodice and a softly flared skirt that pools at her feet; matte crepe with a subtle sheen; silver strappy heels; silver drop earrings; her thin gold "A" pendant; a small silver beaded clutch; glossy nude almond nails; evening glam makeup with defined lashes and satin nude lips.
+REFERENCES: Image 1 = my influencer Aya. Use her exactly as she is in this photo: same face, skin tone, hair and body.
+SUBJECT: Aya, the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+OUTFIT: A floor-length royal-blue gown with an off-the-shoulder ruffled neckline sitting just below the collarbones, a fitted ruched bodice and a softly flared skirt that pools at her feet; matte crepe with a subtle sheen; silver strappy heels; silver drop earrings; her thin gold "A" pendant; a small silver beaded clutch; glossy nude almond nails; evening glam makeup with defined lashes and satin nude lips; hair styled in a sleek low bun with two face-framing strands, same hair as in image 1.
 POSE & GESTURE: Standing three-quarters to the camera near the dance floor, her right hand touching her drop earring, her left hand holding the clutch at her hip, chin slightly raised, a radiant smile toward the camera.
 FOREGROUND: The corner of a round guest table with a white tablecloth, a gold charger plate and a glass of sparkling juice, cut by the frame at bottom left.
 MIDGROUND: A decorated reception hall in Abidjan, gold chiavari chairs, a tall white-and-gold flower arrangement beside her.
@@ -361,7 +363,7 @@ REALISM: Natural iPhone colors in warm indoor light, slight grain, visible pores
 **Étape B — MiniMax H3** (image-to-video, 9:16, 6 s) :
 ```
 SHOT: Vertical 9:16 Instagram Reel filmed on a recent iPhone by a friend at the next table, real-time 1x speed, fast festive pace, one continuous shot with no cuts, 6 seconds.
-SUBJECT: The same woman as in the start image — Aya, the adult 25-year-old Ivorian woman with deep brown skin, a beauty mark above the left corner of her lip, braids in a sleek low bun — face, hair and royal-blue gown identical from first to last frame.
+SUBJECT: The same adult woman as in the start image, exactly as she appears there — face, hair, body and royal-blue gown identical from first to last frame.
 OUTFIT IN MOTION: The ruffled neckline flutters with her shoulders, the flared skirt swings and settles with each dance step, the drop earrings swing and catch the warm light.
 ACTION SCRIPT (one quick action per second, flowing without pauses):
 0–1 s: She finishes adjusting her drop earring and looks into the lens.

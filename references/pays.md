@@ -1,6 +1,6 @@
 # Profils pays
 
-Lis **uniquement** la section du pays d'origine et celle du pays de résidence (si différent). Chaque section donne : phénotype par défaut (formulations anglaises prêtes pour l'IDENTITY LOCK), prénoms et noms, lieux réels, mode locale (seulement sur demande), climat, culture et props, fêtes, langue et hashtags.
+Lis **uniquement** la section du pays d'origine et celle du pays de résidence (si différent). Chaque section donne : phénotype par défaut (formulations anglaises pour l'IDENTITY LOCK du kit de la photo de référence, jamais dans les autres prompts), prénoms et noms, lieux réels, mode locale (seulement sur demande), climat, culture et props, fêtes, langue et hashtags.
 
 **Règles générales**
 - **Tenues : le pays ne change rien.** L'influenceuse porte toujours le style des références (`garde-robe.md` § A à I et K), quel que soit son pays. La ligne « Mode locale » de chaque pays ne sert **que si l'abonné demande explicitement** une tenue traditionnelle. Le pays sert aux traits, au prénom, aux lieux, au climat, aux plats, aux fêtes et aux expressions.

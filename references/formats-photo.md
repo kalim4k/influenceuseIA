@@ -157,9 +157,9 @@ Pour les slides 2 à 4, donne des prompts d'**édition** (voir `outils-ia.md` §
 Chaque prompt image suit cet ordre. Rien n'est optionnel : un plan oublié, c'est un décor vide ou une tenue générique, donc un look IA.
 
 ```
-REFERENCES: Image 1 = my influencer [Name] — her face, hair and body; keep her identity exactly (face shape, eyes, nose, lips, skin tone, distinctive mark, hairstyle, proportions).
-SUBJECT: [IDENTITY LOCK complet, mot pour mot]
-OUTFIT: [garde-robe.md : type, coupe, encolure, manches, longueur, matière, couleur, détails] ; [chaussures] ; [sac sans marque] ; [bijoux signature] ; [ongles] ; [maquillage] ; [coiffure du jour].
+REFERENCES: Image 1 = my influencer [Name]. Use her exactly as she is in this photo: same face, skin tone, hair and body. [Si référence du corps : Image 2 = her body reference: same body shape and proportions.]
+SUBJECT: [Name], the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+OUTFIT: [garde-robe.md : type, coupe, encolure, manches, longueur, matière, couleur, détails] ; [chaussures] ; [sac sans marque] ; [bijoux signature] ; [ongles] ; [maquillage] ; [coiffure du jour, seulement si la scène l'exige : « hair styled in …, same hair as in image 1 »].
 POSE & GESTURE: [orientation du corps], [appui], [bras et mains un par un], [jambes], [tête], [regard], [micro-expression].
 FOREGROUND: [objet proche coupé par le cadre].
 MIDGROUND: [où elle se tient, surfaces, props].
@@ -169,11 +169,13 @@ LIGHT: [heure], [source et direction], [dureté], [ombres sur le visage, le corp
 REALISM: natural iPhone colors with slight HDR, visible pores and baby hairs, natural fabric creases, sharp everyday background details. No beauty filter, no studio lighting, no extra fingers, no text, no logos, no watermark.
 ```
 
-Pour **Nano Banana**, écris le même contenu en **prose** (2 à 4 paragraphes) qui commence par « Using the attached photo of my influencer [Name] as the exact reference for her face, hair and body proportions, create a photorealistic smartphone photo of her. », et termine par le ratio et la résolution.
+Pour **Nano Banana**, écris le même contenu en **prose** (2 à 4 paragraphes) qui commence par « Using the attached photo of my influencer [Name] as the exact and only reference for her appearance, create a photorealistic smartphone photo of her, keeping her face, skin tone, hair and body exactly as they are in the photo. », et termine par le ratio et la résolution.
+
+**Jamais de description physique** (âge, origine, teint, traits du visage, grain de beauté, cheveux, silhouette, taille) : la photo jointe s'en charge, et un texte en plus la concurrence et fait dériver le visage ou le corps. Le détail va à la scène : tenue, pose, décor, caméra, lumière.
 
 ## Exemples complets
 
-Les exemples utilisent la fiche d'exemple « Aya Koné » (infirmière à Abidjan). Remplace par la fiche réelle, et recopie toujours l'IDENTITY LOCK en entier.
+Les exemples utilisent la fiche d'exemple « Aya Koné » (infirmière à Abidjan). Remplace par la fiche réelle. Note qu'aucun prompt ne décrit son physique : la photo de l'avatar, jointe, s'en charge.
 
 ### Exemple 1 — P6 Robe longue, prestige local · carrousel 3 slides
 
@@ -181,9 +183,9 @@ Les exemples utilisent la fiche d'exemple « Aya Koné » (infirmière à Abidja
 
 **Nano Banana** (joindre la photo de l'avatar) :
 ```
-Using the attached photo of my influencer Aya as the exact reference for her face, braids and body proportions, create a photorealistic smartphone photo of her. Aya Koné is an adult 25-year-old Ivorian woman with deep brown skin with warm golden undertones and natural skin texture with visible pores, an oval face with high cheekbones, a softly rounded nose, full lips with a defined cupid's bow, large almond-shaped dark brown eyes, thick softly arched eyebrows, a tiny beauty mark just above the left corner of her upper lip, waist-length honey-brown ombré knotless box braids, and a curvy hourglass figure, 1.68 m tall.
+Using the attached photo of my influencer Aya as the exact and only reference for her appearance, create a photorealistic smartphone photo of her, keeping her face, skin tone, hair and body exactly as they are in the photo.
 
-She stands on the lagoon-side stone terrace of a grand hotel in Cocody, Abidjan, at blue hour, about ten minutes after sunset. She wears a floor-length emerald-green liquid-satin gown with an off-the-shoulder draped neckline sitting just below her collarbones, a fitted bodice that follows her curves, and a thigh-high slit on the left side that reveals her leg as she stands; the satin catches soft highlights along her hips. Gold strappy heeled sandals, chunky gold hoops, her thin gold chain with a small letter "A" pendant, glossy red almond nails, evening glam makeup with warm bronze lids and nude satin lips. Her braids are gathered in a sleek high ponytail falling down her back.
+She stands on the lagoon-side stone terrace of a grand hotel in Cocody, Abidjan, at blue hour, about ten minutes after sunset. She wears a floor-length emerald-green liquid-satin gown with an off-the-shoulder draped neckline sitting just below her collarbones, a fitted bodice that follows her curves, and a thigh-high slit on the left side that reveals her leg as she stands; the satin catches soft highlights along her hips. Gold strappy heeled sandals, chunky gold hoops, her thin gold chain with a small letter "A" pendant, glossy red almond nails, evening glam makeup with warm bronze lids and nude satin lips. Her hair is gathered in a sleek high ponytail falling down her back, same hair as in the photo.
 
 Her weight rests on her right hip, her left knee softly bent so the slit opens, her right hand resting lightly on the stone balustrade and her left arm relaxed along her body. Her head is tilted slightly to the right and she looks straight into the lens with a soft closed-mouth smile.
 
@@ -194,9 +196,9 @@ The photo looks like it was taken by a friend with a recent iPhone held at chest
 
 **GPT Image 2** (joindre la photo de l'avatar) :
 ```
-References: Image 1 = my influencer Aya — her face, braids and body; keep her identity exactly (face shape, eyes, nose, lips, skin tone, beauty mark, hairstyle, proportions).
-SUBJECT: Aya Koné, an adult 25-year-old Ivorian woman. Deep brown skin with warm golden undertones, natural skin texture with visible pores. Oval face, high cheekbones, softly rounded nose, full lips with a defined cupid's bow. Large almond-shaped dark brown eyes, thick softly arched eyebrows. A tiny beauty mark just above the left corner of her upper lip. Waist-length knotless box braids with a honey-brown ombré, in a sleek high ponytail. Curvy hourglass figure, 1.68 m tall.
-OUTFIT: Floor-length emerald-green liquid-satin gown, off-the-shoulder draped neckline just below the collarbones, fitted bodice following her curves, thigh-high slit on the left side; gold strappy heeled sandals; chunky gold hoops; thin gold chain with a small "A" pendant; glossy red almond nails; evening glam makeup with warm bronze lids and nude satin lips.
+REFERENCES: Image 1 = my influencer Aya. Use her exactly as she is in this photo: same face, skin tone, hair and body.
+SUBJECT: Aya, the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+OUTFIT: Floor-length emerald-green liquid-satin gown, off-the-shoulder draped neckline just below the collarbones, fitted bodice following her curves, thigh-high slit on the left side; gold strappy heeled sandals; chunky gold hoops; thin gold chain with a small "A" pendant; glossy red almond nails; evening glam makeup with warm bronze lids and nude satin lips; hair gathered in a sleek high ponytail, same hair as in image 1.
 POSE & GESTURE: Weight on her right hip, left knee softly bent so the slit opens, right hand resting lightly on the stone balustrade, left arm relaxed along her body, head tilted slightly right, looking straight into the lens with a soft closed-mouth smile.
 FOREGROUND: The rounded top of a carved stone balustrade and a small terracotta pot with a palm in the bottom-left corner.
 MIDGROUND: A pale stone hotel terrace in Cocody, Abidjan, two empty teak lounge chairs, a lit brass garden lamp.
@@ -208,7 +210,7 @@ REALISM: Natural iPhone night colors with slight grain, visible pores and baby h
 
 **Slide 2 (édition, Nano Banana ou GPT Image 2)** :
 ```
-Keep this exact photo — same woman, same face, braids, emerald gown, jewelry, terrace, lagoon view, evening light and framing — but now she closes her eyes and runs her right hand slowly along her ponytail, chin slightly lifted, with a peaceful smile, her left hand still relaxed along her body. Everything else stays identical. Vertical 4:5.
+Keep this exact photo — same woman, same face, hair, emerald gown, jewelry, terrace, lagoon view, evening light and framing — but now she closes her eyes and runs her right hand slowly along her ponytail, chin slightly lifted, with a peaceful smile, her left hand still relaxed along her body. Everything else stays identical. Vertical 4:5.
 ```
 
 **Slide 3 (édition)** :
@@ -224,9 +226,9 @@ Keep the same woman, face, gown, jewelry, location and evening light, but show h
 
 **GPT Image 2** (joindre la photo de l'avatar) :
 ```
-References: Image 1 = my influencer Aya — her face, braids and body; keep her identity exactly.
-SUBJECT: Aya Koné, an adult 25-year-old Ivorian woman. Deep brown skin with warm golden undertones, natural skin texture with visible pores. Oval face, high cheekbones, softly rounded nose, full lips with a defined cupid's bow. Large almond-shaped dark brown eyes, thick softly arched eyebrows. A tiny beauty mark just above the left corner of her upper lip. Honey-brown ombré knotless braids wrapped in a loose high bun with a few braids falling around her face. Curvy hourglass figure, 1.68 m tall.
-OUTFIT: A plush powder-pink terry-cloth bathrobe loosely tied at the waist with its belt, thick soft loops visible, the collar falling open naturally; her thin gold chain with a small "A" pendant; small gold studs; bare face after the shift, only lip balm; nude almond nails.
+REFERENCES: Image 1 = my influencer Aya. Use her exactly as she is in this photo: same face, skin tone, hair and body.
+SUBJECT: Aya, the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+OUTFIT: A plush powder-pink terry-cloth bathrobe loosely tied at the waist with its belt, thick soft loops visible, the collar falling open naturally; her thin gold chain with a small "A" pendant; small gold studs; bare face after the shift, only lip balm; nude almond nails; hair wrapped in a loose high bun with a few strands falling around her face, same hair as in image 1.
 POSE & GESTURE: Mirror selfie; she holds an iPhone with a powder-pink case in her right hand in front of her right shoulder, her left hand resting on the belt of the robe, head tilted slightly left, a tired but playful half-smile, eyes on the phone screen.
 FOREGROUND: The edge of a white marble vanity with a gold tap, a pump bottle of body lotion, a hair clip and a folded white towel, partly cut by the bottom of the frame.
 MIDGROUND: Her reflection in a large round mirror with a soft warm LED backlight, a light fog at the mirror's edges and a few faint water spots on the glass.
@@ -236,7 +238,7 @@ LIGHT: Late evening, warm LED mirror light on her face from the front, a cooler 
 REALISM: Natural iPhone indoor colors, slight grain, visible pores, a subtle healthy sheen on her skin after a shower, natural creases in the terry cloth. No beauty filter, no studio lighting, no extra fingers, no text, no logos, no watermark.
 ```
 
-**Nano Banana** : même contenu en prose, en commençant par « Using the attached photo of my influencer Aya as the exact reference for her face, braids and body proportions, create a photorealistic mirror-selfie photo of her… ».
+**Nano Banana** : même contenu en prose, en commençant par « Using the attached photo of my influencer Aya as the exact and only reference for her appearance, create a photorealistic mirror-selfie photo of her, keeping her face, skin tone, hair and body exactly as they are in the photo… ».
 
 **Slide 2 (édition)** :
 ```

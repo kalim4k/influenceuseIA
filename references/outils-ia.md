@@ -22,13 +22,18 @@ AVATAR (la photo de référence de l'influenceuse : REF_VISAGE, + REF_CORPS)
           └─► Vidéo image-to-video (MiniMax H3 ou Seedance 2.5) : image de départ + avatar en référence du visage
 ```
 
-L'**avatar** est soit la photo que l'abonné a déjà créée, soit la REF_VISAGE générée avec le kit (§ 7). Il est joint à **toutes** les générations.
+L'**avatar** est soit la photo que l'abonné a déjà créée, soit la REF_VISAGE générée avec le kit (§ 7). Il est joint à **toutes** les générations, et c'est lui seul qui porte son physique : les prompts ne décrivent jamais son visage, son teint, ses cheveux ni son corps (une description texte entre en concurrence avec la photo et fait dériver le résultat).
 
 **Pourquoi partir d'une image pour la vidéo ?** En text-to-video, le visage dérive à chaque génération. En image-to-video, la première image fixe le visage, la tenue, le décor et la lumière ; le prompt vidéo n'a plus qu'à décrire le mouvement. C'est la méthode la plus fiable pour une modèle reconnaissable.
 
 ## 2. Blocs standards à réutiliser
 
-**IDENTITY LOCK** : copié mot pour mot depuis la fiche, au début de chaque prompt image.
+**RÉFÉRENCE** (au début de chaque prompt image, à la place de toute description physique) :
+```
+REFERENCES: Image 1 = my influencer [Name]. Use her exactly as she is in this photo: same face, skin tone, hair and body.
+SUBJECT: [Name], the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+```
+Avec une référence du corps, ajoute : `Image 2 = her body reference: same body shape and proportions.` L'IDENTITY LOCK de la fiche ne sert que dans le kit (§ 7).
 
 **REALISM** (à coller à la fin des prompts image, en adaptant au besoin) :
 ```
@@ -53,7 +58,7 @@ Mirror selfie: she holds a [phone model] with a [color] case in front of her sho
 
 **Réglages** : format portrait (4:5 si disponible, sinon 2:3 / 1024×1536), qualité haute. Joindre REF_VISAGE (et REF_CORPS pour le plein pied).
 
-**Structure** : étiquettes en majuscules (REFERENCES, SUBJECT, OUTFIT, POSE & GESTURE, FOREGROUND, MIDGROUND, BACKGROUND, CAMERA, LIGHT, REALISM), que GPT Image 2 suit très bien. Modèle complet et exemples : `formats-photo.md` § « Structure d'un prompt photo très détaillé ». Étiquette chaque image jointe : « Image 1 = my influencer [Name] — her face, hair and body; keep her identity exactly ».
+**Structure** : étiquettes en majuscules (REFERENCES, SUBJECT, OUTFIT, POSE & GESTURE, FOREGROUND, MIDGROUND, BACKGROUND, CAMERA, LIGHT, REALISM), que GPT Image 2 suit très bien. Modèle complet et exemples : `formats-photo.md` § « Structure d'un prompt photo très détaillé ». Étiquette chaque image jointe : « Image 1 = my influencer [Name]. Use her exactly as she is in this photo ».
 
 **Édition (slides de carrousel)** : joindre l'image 1 générée.
 ```
@@ -68,9 +73,9 @@ Edit the attached photo. Keep everything identical: same woman, same face, hair,
 
 **Style** : **prose narrative** en phrases complètes plutôt qu'une liste de mots-clés. Mets le ratio et la qualité **à la fin**.
 
-**Modèle de prompt** : 2 à 4 paragraphes de prose qui couvrent le même contenu que la version GPT Image 2 (identité complète → tenue → pose → premier plan, plan moyen, arrière-plan → caméra et lumière → réalisme → ratio). Première phrase type :
+**Modèle de prompt** : 2 à 4 paragraphes de prose qui couvrent le même contenu que la version GPT Image 2 (référence sans description → tenue → pose → premier plan, plan moyen, arrière-plan → caméra et lumière → réalisme → ratio). Première phrase type :
 ```
-Using the attached photo of my influencer [Name] as the exact reference for her face, hair and body proportions, create a photorealistic smartphone photo of her.
+Using the attached photo of my influencer [Name] as the exact and only reference for her appearance, create a photorealistic smartphone photo of her, keeping her face, skin tone, hair and body exactly as they are in the photo.
 ```
 Exemple complet : `formats-photo.md` § Exemples.
 
@@ -86,7 +91,7 @@ Keep this exact photo — same woman, outfit, place, light and framing — but n
 **Ce qu'il faut savoir** : vidéos de 5 à 15 s, ratios jusqu'au 9:16, image de départ (premier plan) et image de fin optionnelle, audio natif, expansion automatique du prompt (activée par défaut), prompt de 7 000 caractères maximum.
 
 **Règles** :
-- En image-to-video, **ne redécris pas toute l'image** : rappelle l'identité en une phrase pour la verrouiller, puis consacre le prompt à ce qui bouge (elle, sa tenue, l'arrière-plan), comment, et à ce que fait la caméra.
+- En image-to-video, **ne redécris pas l'image** : dis en une phrase que c'est la même femme que dans l'image de départ, sans décrire son physique, puis consacre le prompt à ce qui bouge (elle, sa tenue, l'arrière-plan), comment, et à ce que fait la caméra.
 - Si l'interface accepte une image de référence du sujet en plus de l'image de départ, joins l'avatar.
 - **Un seul mouvement de caméra par plan**, avec son **amplitude** (small, medium, large) et sa **vitesse** (slow, steady, fast).
 - Les commandes courtes entre crochets se placent **juste après** la description concernée : `[static]`, `[push in]`, `[pull out]`, `[pan left]`, `[tracking shot]`, `[zoom in]`.
@@ -115,25 +120,25 @@ Keep this exact photo — same woman, outfit, place, light and framing — but n
 
 **Références** : `@Image1` = l'image de départ (premier plan, tenue, décor) ; `@Image2` = l'avatar (« defines her face only »).
 
-**Modèle de prompt** : références étiquetées → ligne de plan (9:16, iPhone, vitesse réelle, un plan) → plages minutées avec l'action et la caméra → arrière-plan vivant → détails de mouvement → verrou d'identité et anti-IA → sons. Modèle complet et exemples : `formats-video.md` § 4 et § 6.
+**Modèle de prompt** : références étiquetées → ligne de plan (9:16, iPhone, vitesse réelle, un plan) → plages minutées avec l'action et la caméra → arrière-plan vivant → détails de mouvement → « même femme, rien ne change » et anti-IA → sons. Modèle complet et exemples : `formats-video.md` § 4 et § 6.
 
 ## 7. Kit de référence (prompts)
 
-À donner juste après la fiche, **seulement si l'abonné n'a pas encore d'avatar**. S'il en a déjà un, sa photo devient la référence et ces prompts sont inutiles. Remplace `[IDENTITY LOCK]` par le texte intégral du bloc de la fiche.
+À donner juste après la fiche, **seulement si l'abonné n'a pas encore d'avatar**. S'il en a déjà un, sa photo devient la référence et ces prompts sont inutiles. Remplace `[IDENTITY LOCK]` par le texte intégral du bloc de la fiche : c'est le seul endroit où son physique est décrit, car aucune photo n'existe encore.
 
 **REF_VISAGE — GPT Image 2** (générer 4 à 8 fois et garder la meilleure) :
 ```
-Photorealistic close-up portrait of [IDENTITY LOCK] She faces the camera directly, head straight, relaxed expression with a faint closed-mouth smile, eyes looking into the lens. Her hair is in her usual style with the hairline fully visible. Plain light-grey wall background, soft diffused daylight from a window at the front-left, no harsh shadows. Shot on a recent iPhone main camera at eye level, head-and-shoulders framing, sharp focus on the eyes. Natural skin texture with visible pores and subtle imperfections, light natural makeup, no retouching, no filter. She wears a plain white crew-neck t-shirt and her signature jewelry. Vertical 4:5.
+Photorealistic close-up portrait of [IDENTITY LOCK] She faces the camera directly, head straight, relaxed expression with a faint closed-mouth smile, eyes looking into the lens. Her hair is in her usual style with the hairline fully visible. Plain light-grey wall background, soft diffused daylight from a window at the front-left, no harsh shadows. Shot on a recent iPhone main camera at eye level, head-and-shoulders framing, sharp focus on the eyes. Natural skin texture with visible pores and subtle imperfections, light natural makeup, no retouching, no filter. She wears a plain white crew-neck t-shirt and [bijou signature de la fiche, en anglais]. Vertical 4:5.
 ```
 
 **REF_VISAGE — Nano Banana** :
 ```
-Create a photorealistic head-and-shoulders portrait of [IDENTITY LOCK] She looks straight into the camera with a relaxed, faint closed-mouth smile, standing in front of a plain light-grey wall in soft diffused window light. She wears a plain white crew-neck t-shirt and her signature jewelry. The image looks like a real smartphone photo: natural skin with visible pores, light natural makeup, no beauty filter, sharp focus on the eyes. Vertical 4:5 aspect ratio, high resolution.
+Create a photorealistic head-and-shoulders portrait of [IDENTITY LOCK] She looks straight into the camera with a relaxed, faint closed-mouth smile, standing in front of a plain light-grey wall in soft diffused window light. She wears a plain white crew-neck t-shirt and [bijou signature de la fiche, en anglais]. The image looks like a real smartphone photo: natural skin with visible pores, light natural makeup, no beauty filter, sharp focus on the eyes. Vertical 4:5 aspect ratio, high resolution.
 ```
 
-**REF_CORPS — GPT Image 2 ou Nano Banana** (joindre REF_VISAGE) :
+**REF_CORPS — GPT Image 2 ou Nano Banana** (joindre REF_VISAGE ; la photo du visage ne montre pas le corps, d'où la silhouette décrite ici, une seule fois) :
 ```
-Using Image 1 as the exact face and hair reference of [Name], create a photorealistic full-body photo of [IDENTITY LOCK] She stands relaxed in a bright minimalist room with white walls and a light wooden floor, facing the camera, arms loosely at her sides, weight slightly on one hip. She wears a plain black fitted tank top and high-waisted straight blue jeans with white sneakers, so her proportions are clearly visible. Shot on a recent iPhone at chest height, full body in frame with some space above her head, soft daylight. Realistic skin texture, no filter, no text. Vertical 4:5.
+Using Image 1 as the exact reference for the face, skin tone and hair of my influencer [Name], create a photorealistic full-body photo of her, keeping her face, skin tone and hair exactly as in the photo. Her body: [silhouette de la fiche en vocabulaire de mode, + taille]. She stands relaxed in a bright minimalist room with white walls and a light wooden floor, facing the camera, arms loosely at her sides, weight slightly on one hip. She wears a plain black fitted tank top and high-waisted straight blue jeans with white sneakers, so her proportions are clearly visible. Shot on a recent iPhone at chest height, full body in frame with some space above her head, soft daylight. Realistic skin texture, no filter, no text. Vertical 4:5.
 ```
 
 **REF_CORPS à partir d'un mannequin** (pour choisir une corpulence précise) : l'abonné télécharge un mannequin sur https://influenceuseia.vercel.app/mannequins.html, joint REF_VISAGE en image 1 et le mannequin en image 2, puis copie le prompt GPT Image 2 ou Nano Banana de cette page.
@@ -147,13 +152,13 @@ Using the attached photo of [Name] as the exact identity reference, create a cle
 
 | Problème | Solution |
 |---|---|
-| Le visage change d'une image à l'autre | Rejoindre REF_VISAGE en précisant « face and hair only », recopier l'IDENTITY LOCK mot pour mot, rapprocher le cadrage. Avec Nano Banana, repartir d'une photo validée en édition. |
+| Le visage change d'une image à l'autre | Joindre en image 1 une photo nette, de face et bien éclairée ; garder « Use her exactly as she is in this photo » ; retirer du prompt toute description physique (teint, traits, cheveux, silhouette), qui concurrence la photo ; rapprocher le cadrage. Avec Nano Banana, repartir d'une photo validée en édition. |
 | Peau plastique, look « IA » | Ajouter le bloc REALISM, retirer « perfect, flawless, 8k », ajouter « slight film grain, natural phone HDR ». |
 | Ça ressemble à un shooting pro | « candid snapshot taken by a friend », « slightly off-center framing », « everyday clutter in the background ». |
 | Mains ou doigts déformés | Choisir une pose simple (main sur la hanche, dans les cheveux, le long du corps), éviter les objets tenus de façon complexe. |
 | Refus du filtre de contenu | Passer au vocabulaire de mode, retirer les termes anatomiques et « sexy », couvrir un peu plus (paréo, chemise ouverte, robe plus longue). |
 | Logos ou texte parasite | « No text, no logos, no watermark, unbranded clothing and bags ». |
-| Vidéo : le visage se déforme en bougeant | Réduire l'amplitude, caméra `[static]` ou mouvement lent, 6 s au lieu de 10 s, ajouter « her face stays sharp and consistent ». |
+| Vidéo : le visage se déforme en bougeant | Réduire l'amplitude, caméra `[static]` ou mouvement court, 5 à 6 s au lieu de 10 s, ajouter « her face stays sharp and consistent ». |
 | Vidéo : coupe non voulue | « One continuous shot, no cuts », supprimer les « then ». |
 | Vidéo : mouvement robotique ou trop lent | Décrire l'amplitude et la vitesse, des actions physiques précises, des micro-mouvements (cheveux, tissu, respiration). |
 | Vidéo : musique imposée | « Natural ambient sound only, no music » (H3) ou « no background music » (Seedance). |

@@ -19,14 +19,22 @@ const DOCS = [
   { src: 'references/pays.md', title: 'Pays', desc: "~30 pays : phénotypes, prénoms, lieux réels, mode, climat, fêtes, expressions locales" },
   { src: 'references/metiers.md', title: 'Métiers', desc: '~20 métiers : niveau de vie, scènes de vie pro, tenues de travail, légendes' },
   { src: 'templates/fiche-modele.md', title: 'Fiche Modèle', desc: "Modèle de fiche d'identité de l'influenceuse + exemple complet" },
-  { src: 'references/garde-robe.md', title: 'Garde-robe', desc: "~50 tenues détaillées, tenues culturelles et d'événement, matières en mouvement" },
+  { src: 'references/garde-robe.md', title: 'Garde-robe', desc: "~50 tenues détaillées du style des références, tenues d'événement, matières en mouvement" },
   { src: 'references/decors.md', title: 'Décors', desc: 'Décors en 3 plans, vie en arrière-plan, 12 événements' },
   { src: 'references/outils-ia.md', title: 'Outils IA', desc: 'Syntaxe GPT Image 2, Nano Banana, MiniMax H3, Seedance 2.5 ; kit de référence ; dépannage' },
   { src: 'references/formats-photo.md', title: 'Formats photo', desc: '20 formats photo, carrousel, structure détaillée, exemples complets' },
   { src: 'references/formats-video.md', title: 'Formats vidéo', desc: '16 formats vidéo, caméra fluide, anti-IA, scripts et exemples complets' },
   { src: 'references/legendes-hooks.md', title: 'Légendes & hooks', desc: 'Légendes, textes à l\'écran, hashtags, sons, planning, bio' },
   { src: 'references/analyse-sources.md', title: 'Analyse des sources', desc: 'Analyse de 101 posts et 34 Reels : ce qui performe et pourquoi' },
-].map((d) => ({ ...d, html: '/' + d.src.replace(/\.md$/, '.html'), txt: '/' + d.src.replace(/\.md$/, '.txt') }));
+].map((d) => ({ ...d, html: '/' + d.src.replace(/\.md$/, '.html'), slug: path.basename(d.src, '.md') }));
+const doc = (src) => DOCS.find((d) => d.src === src);
+
+// Pages d'étape : tous les fichiers d'une étape réunis sur une seule page, pour que Claude n'ait qu'un lien à ouvrir.
+const PACKS = [
+  { slug: 'etape-profil', name: 'PROFIL', icon: '🪪', title: "Étape PROFIL — créer l'influenceuse", when: "à l'onboarding, avant d'écrire la fiche", files: ['templates/fiche-modele.md', 'references/pays.md', 'references/metiers.md', 'references/outils-ia.md'] },
+  { slug: 'etape-image', name: 'IMAGE', icon: '📸', title: 'Étape IMAGE — écrire un prompt photo', when: 'avant le premier prompt image', files: ['references/formats-photo.md', 'references/garde-robe.md', 'references/decors.md', 'references/outils-ia.md', 'references/legendes-hooks.md'] },
+  { slug: 'etape-video', name: 'VIDÉO', icon: '🎬', title: 'Étape VIDÉO — écrire un prompt vidéo', when: 'avant le premier prompt vidéo', files: ['references/formats-video.md', 'references/garde-robe.md', 'references/decors.md', 'references/outils-ia.md', 'references/legendes-hooks.md'] },
+].map((p) => ({ ...p, html: `/${p.slug}.html`, docs: p.files.map(doc) }));
 
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
 
@@ -35,11 +43,11 @@ const MQ_PAGE = '/mannequins.html';
 const MANNEQUINS = JSON.parse(read('mannequins/mannequins.json'));
 const MQ_TYPES = [...new Set(MANNEQUINS.map((m) => m.type))];
 
-// Remplace les liens GitHub par les pages du site (principal) et leurs versions texte (secours).
+// Remplace les liens GitHub (blob ou raw) par les pages HTML du site.
 function siteLinks(md) {
   return md
     .replace(/https:\/\/github\.com\/kalim4k\/influenceuseIA\/blob\/main\/([\w\/.-]+?)\.md/g, (_, p) => abs(`/${p}.html`))
-    .replace(/https:\/\/raw\.githubusercontent\.com\/kalim4k\/influenceuseIA\/main\/([\w\/.-]+?)\.md/g, (_, p) => abs(`/${p}.txt`))
+    .replace(/https:\/\/raw\.githubusercontent\.com\/kalim4k\/influenceuseIA\/main\/([\w\/.-]+?)\.md/g, (_, p) => abs(`/${p}.html`))
     .replace(/https:\/\/github\.com\/kalim4k\/influenceuseIA(?![\w\/])/g, SITE || '/');
 }
 
@@ -48,16 +56,17 @@ const slugify = (s) => s.replace(/<[^>]+>/g, '').replace(/&#?\w+;/g, ' ').toLowe
   .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-function render(md) {
+function render(md, { prefix = '', shift = 0 } = {}) {
   let html = marked.parse(md, { gfm: true });
   const toc = [];
   const used = new Set();
   html = html.replace(/<h([1-4])>([\s\S]*?)<\/h\1>/g, (_, lvl, inner) => {
-    let id = slugify(inner) || 'section';
+    let id = prefix + (slugify(inner) || 'section');
     while (used.has(id)) id += '-2';
     used.add(id);
     if (lvl === '2') toc.push({ id, text: inner.replace(/<[^>]+>/g, '') });
-    return `<h${lvl} id="${id}">${inner}<a class="anchor" href="#${id}" aria-hidden="true">#</a></h${lvl}>`;
+    const h = Math.min(6, Number(lvl) + shift);
+    return `<h${h} id="${id}">${inner}<a class="anchor" href="#${id}" aria-hidden="true">#</a></h${h}>`;
   });
   html = html.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>');
   return { html, toc };
@@ -85,6 +94,9 @@ h1{font-size:clamp(1.7rem,4.5vw,2.3rem);line-height:1.2;margin:.6em 0 .4em}
 h2{font-size:1.4rem;margin:2.2em 0 .6em;padding-top:.6em;border-top:1px solid var(--border)}
 h3{font-size:1.12rem;margin:1.7em 0 .5em}
 h4{font-size:1rem;margin:1.4em 0 .4em}
+h5,h6{font-size:.95rem;margin:1.2em 0 .4em}
+.part{border-top:3px solid var(--accent);padding-top:.8em;margin-top:2.6em}
+.url{display:block;color:var(--muted);font-size:.78rem;word-break:break-all}
 h1 .anchor,h2 .anchor,h3 .anchor,h4 .anchor{margin-left:.4em;color:var(--border);text-decoration:none;font-weight:400}
 .lead{color:var(--muted);font-size:1.08rem;margin-top:0}
 .note{background:var(--note);border:1px solid var(--note-border);border-radius:12px;padding:14px 18px;margin:20px 0}
@@ -133,7 +145,7 @@ hr{border:0;border-top:1px solid var(--border);margin:2em 0}
 
 const JS = `document.querySelectorAll('pre').forEach(function(p){var b=document.createElement('button');b.className='copy';b.type='button';b.textContent='Copier';b.addEventListener('click',function(){var t=p.querySelector('code');navigator.clipboard.writeText((t||p).innerText).then(function(){b.textContent='Copié ✓';setTimeout(function(){b.textContent='Copier'},1500)})});p.appendChild(b)});`;
 
-function page({ title, description, body, canonical, txt }) {
+function page({ title, description, body, canonical }) {
   return `<!doctype html>
 <html lang="fr">
 <head>
@@ -143,16 +155,14 @@ function page({ title, description, body, canonical, txt }) {
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="index,follow">
 ${canonical && SITE ? `<link rel="canonical" href="${abs(canonical)}">` : ''}
-${txt ? `<link rel="alternate" type="text/plain" href="${abs(txt)}" title="Version texte">` : ''}
-<link rel="alternate" type="text/plain" href="${abs('/llms.txt')}" title="llms.txt">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💫</text></svg>">
 <style>${CSS}</style>
 </head>
 <body>
-<header class="top"><div class="top-in"><a class="brand" href="${abs('/')}">💫 Influenceuse IA</a><nav><a href="${abs('/#le-skill')}">Le skill</a><a href="${abs('/#bibliotheque')}">Bibliothèque</a><a href="${abs(MQ_PAGE)}">Corps</a></nav></div></header>
+<header class="top"><div class="top-in"><a class="brand" href="${abs('/')}">💫 Influenceuse IA</a><nav><a href="${abs('/#le-skill')}">Le skill</a><a href="${abs('/#bibliotheque')}">Étapes</a><a href="${abs(MQ_PAGE)}">Corps</a></nav></div></header>
 <main>
 ${body}
-<p class="foot">Skill « Influenceuse IA » pour Claude · source : <a href="${GH}">${GH.replace('https://', '')}</a> · tout en texte : <a href="${abs('/llms-full.txt')}">llms-full.txt</a></p>
+<p class="foot">Skill « Influenceuse IA » pour Claude · source : <a href="${GH}">${GH.replace('https://', '')}</a></p>
 </main>
 <script>${JS}</script>
 </body>
@@ -173,7 +183,10 @@ const write = (p, content) => {
 const skillBody = siteLinks(read('SKILL.md').replace(/^---\n[\s\S]*?\n---\n/, '').trim());
 const description = "Skill Claude pour créer une influenceuse IA cohérente (pays + métier) et générer des prompts photo et vidéo ultra-détaillés pour GPT Image 2, Nano Banana, MiniMax H3 et Seedance 2.5 — sans installation.";
 
-const library = `<ul class="cards">${DOCS.map((d) => `<li><a href="${abs(d.html)}">${d.title}</a><p>${esc(d.desc)}</p><small><a href="${abs(d.txt)}">version texte</a></small></li>`).join('')}</ul>`;
+// L'URL complète est écrite en clair sous chaque lien : certains lecteurs web ne gardent que le texte.
+const card = (href, title, desc) => `<li><a href="${abs(href)}">${title}</a><p>${esc(desc)}</p><small class="url">${abs(href)}</small></li>`;
+const stepCards = `<ul class="cards">${PACKS.map((p) => card(p.html, `${p.icon} Étape ${p.name}`, `À lire ${p.when} : ${p.docs.map((d) => d.title.toLowerCase()).join(', ')}.`)).join('')}${card(MQ_PAGE, '🖤 Corps', `${MANNEQUINS.length} mannequins de corpulence à télécharger + le prompt pour leur donner le visage de l'influenceuse.`)}</ul>`;
+const library = `<ul class="cards">${DOCS.map((d) => card(d.html, d.title, d.desc)).join('')}</ul>`;
 
 const skill = render(skillBody);
 const indexBody = `
@@ -184,9 +197,12 @@ const indexBody = `
 <strong>🤖 Note pour Claude</strong>
 Ce site contient un skill Claude complet, utilisable <strong>sans rien installer</strong>. Si un utilisateur t'a donné ce lien :
 <ol>
-<li>Lis la section <a href="${abs('/#le-skill')}">« Le skill »</a> plus bas sur cette page : c'est ton mode d'emploi complet (version texte : <a href="${abs('/skill.txt')}">${abs('/skill.txt')}</a>).</li>
+<li>Lis la section <a href="${abs('/#le-skill')}">« Le skill »</a> plus bas sur cette page : c'est ton mode d'emploi complet.</li>
 <li>Commence tout de suite par l'onboarding : pose les <strong>2 questions</strong> (pays de l'influenceuse, métier optionnel).</li>
-<li>Ouvre les fichiers de référence aux moments indiqués, avec les liens de la <a href="${abs('/#bibliotheque')}">Bibliothèque</a> ou du tableau « Fichiers de référence ». Pour tout lire d'un coup : <a href="${abs('/llms-full.txt')}">${abs('/llms-full.txt')}</a>.</li>
+<li>À chaque étape, ouvre <strong>une seule page</strong>, qui contient tout ce qu'il faut pour cette étape :
+<br>PROFIL (onboarding) : ${abs('/etape-profil.html')}
+<br>IMAGE (avant le 1er prompt image) : ${abs('/etape-image.html')}
+<br>VIDÉO (avant le 1er prompt vidéo) : ${abs('/etape-video.html')}</li>
 </ol>
 Rien à installer, rien à télécharger, aucun zip.
 </div>
@@ -203,31 +219,45 @@ Rien à installer, rien à télécharger, aucun zip.
 
 <a class="promo" href="${abs(MQ_PAGE)}"><img src="/mannequins/mini/${MANNEQUINS[0].file.replace(/\.png$/, '.jpg')}" alt="" width="64" height="64"><span><strong>🖤 Choisis le corps de ton influenceuse</strong><br>${MANNEQUINS.length} mannequins à télécharger + le prompt pour leur donner son visage →</span></a>
 
-<h2 id="bibliotheque">📚 Bibliothèque de référence<a class="anchor" href="#bibliotheque" aria-hidden="true">#</a></h2>
-<p>Les fichiers que le skill consulte pour écrire des prompts réalistes. Chaque page existe aussi en version texte.</p>
+<h2 id="bibliotheque">📚 Les pages du skill<a class="anchor" href="#bibliotheque" aria-hidden="true">#</a></h2>
+<p>Une page par étape de la conversation : chacune réunit tous les fichiers dont Claude a besoin à ce moment-là.</p>
+${stepCards}
+<h3 id="fichiers-separes">Fichiers séparés<a class="anchor" href="#fichiers-separes" aria-hidden="true">#</a></h3>
+<p>Les mêmes contenus, un fichier par page (utiles si une page d'étape ne s'ouvre pas en entier).</p>
 ${library}
 
 <h2 id="le-skill">🧠 Le skill (instructions complètes pour Claude)<a class="anchor" href="#le-skill" aria-hidden="true">#</a></h2>
 ${tocHtml(skill.toc)}
 ${skill.html}
 `;
-write('index.html', page({ title: 'Influenceuse IA — skill Claude sans installation', description, body: indexBody, canonical: '/', txt: '/skill.txt' }));
-write('skill.txt', skillBody + '\n');
+write('index.html', page({ title: 'Influenceuse IA — skill Claude sans installation', description, body: indexBody, canonical: '/' }));
 
-const fullParts = [`# Influenceuse IA — skill complet (tous les fichiers)\n\n${description}\n\n===== FICHIER : SKILL.md =====\n\n${skillBody}\n`];
+const NO_DESC = "Rappel : aucun prompt ne décrit le physique de l'influenceuse (visage, teint, cheveux, silhouette) ; sa photo, jointe en image 1, s'en charge.";
 
+// Fichiers séparés : une page par fichier.
 for (const d of DOCS) {
-  const md = siteLinks(read(d.src));
-  const r = render(md);
+  const r = render(siteLinks(read(d.src)));
+  const packs = PACKS.filter((p) => p.files.includes(d.src));
   const body = `
-<p class="lead"><a href="${abs('/')}">← Accueil du skill</a> · fichier de référence <code>${d.src}</code> · <a href="${abs(d.txt)}">version texte</a></p>
+<p class="lead"><a href="${abs('/')}">← Accueil du skill</a> · fichier de référence <code>${d.src}</code>${packs.length ? ` · inclus dans ${packs.map((p) => `<a href="${abs(p.html)}">l'étape ${p.name}</a>`).join(', ')}` : ''}</p>
 <div class="note" role="note"><strong>🤖 Note pour Claude</strong>Ce fichier fait partie du skill « Influenceuse IA ». Le mode d'emploi complet est sur la <a href="${abs('/#le-skill')}">page d'accueil</a> ; utilise ce fichier au moment indiqué par le skill.</div>
 ${tocHtml(r.toc)}
 ${r.html}
 `;
-  write(d.html, page({ title: `${d.title} — Influenceuse IA`, description: d.desc, body, canonical: d.html, txt: d.txt }));
-  write(d.txt, md + '\n');
-  fullParts.push(`===== FICHIER : ${d.src} =====\n\n${md}\n`);
+  write(d.html, page({ title: `${d.title} — Influenceuse IA`, description: d.desc, body, canonical: d.html }));
+}
+
+// Pages d'étape : tous les fichiers de l'étape à la suite, titres décalés d'un niveau.
+for (const p of PACKS) {
+  const parts = p.docs.map((d) => `<section id="${d.slug}" class="part">${render(siteLinks(read(d.src)), { prefix: `${d.slug}-`, shift: 1 }).html}</section>`).join('\n');
+  const body = `
+<p class="lead"><a href="${abs('/')}">← Accueil du skill</a> · page d'étape</p>
+<h1>${p.icon} ${esc(p.title)}</h1>
+<div class="note" role="note"><strong>🤖 Note pour Claude</strong>Cette page réunit tous les fichiers de l'étape ${p.name} du skill « Influenceuse IA » : ${p.docs.map((d) => `<code>${path.basename(d.src)}</code>`).join(', ')}. Lis-la en entier, une seule fois, ${p.when} : tu n'as pas besoin d'ouvrir les fichiers séparés. Le mode d'emploi complet est sur la <a href="${abs('/#le-skill')}">page d'accueil</a>. ${NO_DESC}</div>
+<details class="toc" open><summary>Dans cette page</summary><ol>${p.docs.map((d) => `<li><a href="#${d.slug}">${d.title}</a> <small>(${path.basename(d.src)})</small></li>`).join('')}</ol></details>
+${parts}
+`;
+  write(p.html, page({ title: `${p.title} — Influenceuse IA`, description: `Étape ${p.name} du skill Influenceuse IA : ${p.docs.map((d) => d.title.toLowerCase()).join(', ')}.`, body, canonical: p.html }));
 }
 
 // ---------- Page « Corps » : galerie de mannequins ----------
@@ -252,30 +282,26 @@ const mqBody = `
 ${render(mqMd).html.replace(/<!-- GALERIE -->\s*/, gallery)}
 `;
 write(MQ_PAGE, page({ title: 'Corps — Influenceuse IA', description: `${MANNEQUINS.length} mannequins de corpulence à télécharger et le prompt pour leur donner le visage de ton influenceuse (GPT Image 2, Nano Banana).`, body: mqBody, canonical: MQ_PAGE }));
-const mqTxt = `# Corps de l'influenceuse : mannequins de référence\n\nPage : ${abs(MQ_PAGE)}\n\n${MANNEQUINS.map((m) => `- N° ${num(m)} (${m.type}) : ${m.titre} · ${m.vues > 1 ? `${m.vues} vues` : '1 vue'} · ${m.tenue} · ${abs(`/mannequins/${m.file}`)}`).join('\n')}\n\n${mqMd.replace(/<!-- GALERIE -->\s*/, '')}`;
-write('mannequins.txt', mqTxt);
-fullParts.push(`===== PAGE : Corps (mannequins) =====\n\n${mqTxt}`);
-
-write('llms-full.txt', fullParts.join('\n'));
+// llms.txt (convention des sites lisibles par les IA) : ne pointe que vers des pages HTML.
 write('llms.txt', `# Influenceuse IA
 
 > ${description}
 
-Mode d'emploi : lis d'abord le skill, puis pose les 2 questions (pays, métier optionnel), puis demande « image ou vidéo ? ». Lis les fichiers de référence aux moments indiqués par le skill.
+Mode d'emploi : lis d'abord le skill sur la page d'accueil, puis pose les 2 questions (pays, métier optionnel), puis demande « image ou vidéo ? ». À chaque étape, ouvre la page d'étape indiquée.
 
 ## Skill
 
-- [Le skill complet](${abs('/skill.txt')}): déroulé, niveau de détail exigé, format de livraison, règles
-- [Tout le skill en un seul fichier](${abs('/llms-full.txt')}): skill + tous les fichiers de référence
+- [Le skill complet (page d'accueil)](${abs('/')}): déroulé, niveau de détail exigé, format de livraison, règles
 
-## Fichiers de référence
+## Pages d'étape
 
-${DOCS.map((d) => `- [${d.title}](${abs(d.txt)}): ${d.desc}`).join('\n')}
+${PACKS.map((p) => `- [Étape ${p.name}](${abs(p.html)}): à lire ${p.when}`).join('\n')}
+- [Corps](${abs(MQ_PAGE)}): ${MANNEQUINS.length} mannequins de corpulence et le prompt pour leur donner le visage de l'influenceuse
 
-## Corps
+## Fichiers séparés
 
-- [Mannequins de corpulence](${abs('/mannequins.txt')}): ${MANNEQUINS.length} corps à télécharger et le prompt pour leur donner le visage de l'influenceuse
+${DOCS.map((d) => `- [${d.title}](${abs(d.html)}): ${d.desc}`).join('\n')}
 `);
 write('robots.txt', `User-agent: *\nAllow: /\n`);
 
-console.log(`Site généré dans site/ (${DOCS.length + 1} pages) — URL de base : ${SITE || '(relative)'}`);
+console.log(`Site généré dans site/ (${1 + DOCS.length + PACKS.length + 1} pages) — URL de base : ${SITE || '(relative)'}`);

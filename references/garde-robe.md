@@ -201,7 +201,7 @@ a hot-pink one-piece swimsuit with a deep plunging neckline and high-cut legs, s
 
 **E4 Bikini léopard (selfie)**
 ```
-a leopard-print halter bikini top with thin ties, sun-kissed skin with a natural sheen
+a leopard-print halter bikini top with thin ties, a natural sheen on her skin
 ```
 
 **E5 Bikini blanc + chemise en lin ouverte**
@@ -295,7 +295,7 @@ a black seamless crop tank and biker shorts set, an oversized grey zip hoodie op
 
 Voir `metiers.md`. Toujours correct et crédible, par exemple :
 ```
-navy-blue medical scrubs with a V-neck top and straight trousers, a stethoscope around her neck, an unbranded nurse watch clipped on the chest, white sneakers, braids tied in a neat low bun
+navy-blue medical scrubs with a V-neck top and straight trousers, a stethoscope around her neck, an unbranded nurse watch clipped on the chest, white sneakers, hair tied in a neat low bun
 ```
 ```
 a tailored camel blazer over a cream silk blouse, high-waisted black wide-leg trousers, nude pointed pumps, a structured black leather tote, a slim gold watch
@@ -349,7 +349,7 @@ Toutes dans le style des références, quel que soit le pays.
 **Sacs** (sans marque) : black quilted leather shoulder bag on a gold chain · small structured white top-handle bag · woven straw tote · yellow straw clutch · beige crossbody · canvas shoulder bag.
 **Chaussures** : strappy gold heeled sandals · nude pointed pumps · white sneakers · ballet flats · clear-strap mules · cowboy boots · flat leather slides.
 **Bijoux** : thin gold chain with a small pendant · chunky gold hoops · stacked gold bangles · pearl necklace · gold body chain · delicate anklet · rings on several fingers.
-**Coiffures** : loose soft waves with a center part · sleek high ponytail · messy low bun with face-framing strands · braids in a high bun · half-up half-down · wet-look slicked back (plage) · afro puff · silk press · head wrap.
+**Coiffures** (seulement si la scène demande un changement ; ajoute toujours « same hair as in image 1 » pour garder sa couleur, sa longueur et sa texture) : loose soft waves with a center part · sleek high ponytail · messy low bun with face-framing strands · braids in a high bun · half-up half-down · wet-look slicked back (plage) · afro puff · silk press · head wrap.
 **Maquillage** : « soft glam » (glowy skin, warm bronzer, defined brows, nude glossy lips) · « no-makeup makeup » (selfies du matin) · « evening glam » (smoky eyes, lashes, satin lips).
 **Ongles** : almond nude · glossy red · French tips · milky pink · chrome.
 

@@ -4,7 +4,7 @@
 > **🤖 Note pour Claude** — Ce dépôt est un skill Claude utilisable **sans rien installer** : **le skill complet est écrit plus bas sur cette page** (section « Le skill »). Si un utilisateur t'a donné ce lien :
 > 1. Lis la section « Le skill » ci-dessous : c'est ton mode d'emploi complet.
 > 2. Commence tout de suite par l'onboarding : pose les **2 questions** (pays de l'influenceuse, métier optionnel).
-> 3. Ouvre les fichiers de référence aux moments indiqués, avec leurs liens `github.com/…/blob/main/…` (tableau « Fichiers de référence »). N'utilise pas les liens de dossiers (`/tree/`) ni `/raw/` de github.com : GitHub les bloque pour les robots.
+> 3. À chaque étape, ouvre la page d'étape indiquée (tableau « Pages à lire ») : une seule page par étape, sur https://influenceuseia.vercel.app.
 >
 > Rien à installer, rien à télécharger, aucun zip.
 
@@ -12,7 +12,7 @@
 
 1. Ouvre une **nouvelle conversation** Claude (application ou claude.ai) et vérifie que la **recherche web** est activée.
 2. Colle ce message :
-   > Utilise ce skill : https://github.com/kalim4k/influenceuseIA
+   > Utilise ce skill : https://influenceuseia.vercel.app
 3. Claude te pose **2 questions** : le **pays** de ton influenceuse et **son métier** (optionnel). Si tu as déjà créé ton influenceuse, envoie aussi sa photo.
 4. Claude crée sa **Fiche Modèle**, puis te demande **« Image ou vidéo ? »** et te donne des prompts complets pour Nano Banana, GPT Image 2, MiniMax H3 et Seedance 2.5.
 
@@ -32,11 +32,16 @@ Tes repères viennent de l'analyse de 101 publications d'un compte IA lifestyle-
 
 ## Charger le skill (sans installation)
 
-Ce skill s'utilise **en ligne, sans rien installer** : l'abonné colle le lien du skill (`https://github.com/kalim4k/influenceuseIA`) dans une conversation, souvent sur téléphone. Le skill complet est écrit sur la page d'accueil de ce lien. Tu n'as rien à installer, rien à télécharger, et tu ne dois parler ni de zip ni d'installation.
+Ce skill s'utilise **en ligne, sans rien installer** : l'abonné colle le lien du skill (https://influenceuseia.vercel.app) dans une conversation, souvent sur téléphone. Le skill complet est écrit sur la page d'accueil de ce lien. Tu n'as rien à installer, rien à télécharger, et tu ne dois parler ni de zip ni d'installation.
 
-Ensuite, lis les fichiers de référence aux moments indiqués dans le tableau « Fichiers de référence » (en bas), avec leurs **liens complets** (colonne « Lien principal »). Si un lien principal ne s'ouvre pas, utilise le lien de secours de la même ligne. Sur github.com, n'utilise jamais les liens de dossiers (`/tree/`) ni `/raw/`, que GitHub bloque pour les robots. Chaque fichier n'est lu qu'une fois par conversation : une fois lu, il reste dans ta mémoire.
+Le reste du skill tient en **3 pages d'étape** (tableau « Pages à lire », en bas), chacune avec tout ce qu'il faut pour son moment de la conversation :
+- **PROFIL** : à l'onboarding, avant d'écrire la fiche ;
+- **IMAGE** : avant le premier prompt image ;
+- **VIDÉO** : avant le premier prompt vidéo.
 
-Les fichiers de référence contiennent les détails qui font la qualité des prompts (lieux réels, tenues, décors, scripts de caméra). **N'écris jamais un prompt de mémoire sans les avoir lus** : le résultat serait générique et « ferait IA ». Si aucun des deux liens d'un fichier ne se charge, continue avec ce que tu as et dis-le en une ligne à l'abonné.
+Ouvre chaque page avec son **lien complet**, tel quel. Une page lue reste dans ta mémoire pour toute la conversation : ne la relis pas. Si une page d'étape ne s'ouvre pas ou paraît coupée, ouvre à la place les fichiers séparés de cette étape (second tableau).
+
+Ces pages contiennent les détails qui font la qualité des prompts (lieux réels, tenues, décors, scripts de caméra). **N'écris jamais un prompt de mémoire sans les avoir lues** : le résultat serait générique et « ferait IA ». Si rien ne se charge, continue avec ce que tu as et dis-le en une ligne à l'abonné.
 
 Si le skill est installé localement (Claude Code), lis plutôt les mêmes fichiers dans le dossier du skill.
 
@@ -76,28 +81,28 @@ Envoie **un seul message court** avec les deux questions :
 
 Ne pose aucune autre question : déduis tout le reste des références et propose de modifier ensuite. Puis :
 
-1. **Lis maintenant** `references/pays.md` (section du pays), `references/metiers.md` (section du métier) et `templates/fiche-modele.md`.
+1. **Lis maintenant la page PROFIL** (https://influenceuseia.vercel.app/etape-profil.html) : le modèle de fiche, puis la section du pays et celle du métier.
 2. Remplis la fiche avec des détails concrets et uniques : grain de beauté précis, bijou signature, coque de téléphone, quartier réel, voiture, appartement.
-   - **Si l'abonné a envoyé la photo de son avatar**, décris **ce que tu vois** dans le bloc d'identité (teint, forme du visage, yeux, cheveux, silhouette, signes distinctifs) au lieu d'inventer. Sinon, les prompts contrediraient sa référence et le visage dériverait.
+   - **Si l'abonné a envoyé la photo de son avatar**, remplis le bloc PHYSIQUE avec **ce que tu vois** (teint, visage, cheveux, silhouette) au lieu d'inventer. Cette description reste dans la fiche, pour la cohérence ; elle n'entre jamais dans les prompts (voir « Son physique : la photo, pas le texte »).
    - Distingue l'**origine** (traits, prénom, expressions) de la **résidence** (lieux, climat, saisons). Le style vestimentaire, lui, est toujours celui des références (voir « Style vestimentaire »).
    - L'âge est compris entre 21 et 32 ans, toujours adulte.
 3. Présente la fiche, puis aide l'abonné à la **garder**, car c'est la mémoire de son influenceuse. Si tu as accès aux fichiers, écris `profil-<prénom>.md`. Sinon, donne-lui ce bloc prêt à copier dans les **Instructions d'un Projet Claude** (par exemple un projet « Mon influenceuse »). Ainsi, chaque nouvelle conversation de ce projet charge le skill et la fiche, sans recoller le lien.
    ```
-   Utilise le skill d'influenceuse IA : https://github.com/kalim4k/influenceuseIA
-   (lis la page d'accueil de ce lien : le skill complet y est écrit)
+   Utilise le skill d'influenceuse IA : https://influenceuseia.vercel.app
+   (lis cette page : le skill complet y est écrit)
 
    [FICHE MODÈLE IA complète]
    ```
    S'il n'utilise pas de Projet, il recolle le lien et sa fiche au début de chaque nouvelle conversation.
 4. **Référence du visage** :
    - Avatar déjà créé → « Garde cette photo : tu la joindras à **chaque** génération comme référence. »
-   - Pas d'avatar → lis `references/outils-ia.md` et donne les prompts REF_VISAGE et REF_CORPS (§ 7), complétés avec l'IDENTITY LOCK, puis « Génère 4 à 8 versions, garde ta préférée : ce sera la référence de ton influenceuse. »
-   - Dans les deux cas, signale la **page des corps** : https://influenceuseia.vercel.app/mannequins.html. L'abonné y télécharge un mannequin noir à la corpulence voulue et l'envoie à GPT Image 2 ou Nano Banana avec la photo de son influenceuse, en utilisant le prompt de la page. Le résultat devient sa **référence du corps** (REF_CORPS), à joindre avec le visage à chaque génération.
+   - Pas d'avatar → donne le prompt REF_VISAGE du kit de référence (`outils-ia.md` § 7, sur la page PROFIL), complété avec l'IDENTITY LOCK de la fiche, puis « Génère 4 à 8 versions, garde ta préférée : ce sera la référence de ton influenceuse. » C'est le **seul** prompt qui décrit son physique, car aucune photo n'existe encore.
+   - Dans les deux cas, signale la **page des corps** : https://influenceuseia.vercel.app/mannequins.html. L'abonné y télécharge un mannequin noir à la corpulence voulue et l'envoie à GPT Image 2 ou Nano Banana avec la photo de son influenceuse, en utilisant le prompt de la page. Le résultat devient sa **référence du corps** (REF_CORPS), à joindre avec le visage à chaque génération. (Sans mannequin, le prompt REF_CORPS du kit fait le même travail.)
 5. Termine par : **« Tu veux générer une image ou une vidéo ? »**
 
 ## Étape 3 — Parcours IMAGE
 
-Avant le premier prompt image de la conversation, **lis** `references/formats-photo.md`, `references/garde-robe.md`, `references/decors.md` et `references/outils-ia.md`.
+Avant le premier prompt image de la conversation, **lis la page IMAGE** (https://influenceuseia.vercel.app/etape-image.html) : formats photo, garde-robe, décors, outils IA, légendes.
 
 Livre directement **un prompt photo complet**, en version **Nano Banana** et en version **GPT Image 2**, avec la référence de l'avatar jointe.
 - Si l'abonné a donné une scène, un lieu ou un événement, utilise-le.
@@ -125,7 +130,7 @@ Livre directement **un prompt photo complet**, en version **Nano Banana** et en 
 >
 > Ou décris ton idée en une phrase.
 
-**4.2 Avant le premier prompt vidéo** de la conversation, **lis** `references/formats-video.md`, `references/garde-robe.md`, `references/decors.md` et `references/outils-ia.md` (sauf ceux déjà lus).
+**4.2 Avant le premier prompt vidéo** de la conversation, **lis la page VIDÉO** (https://influenceuseia.vercel.app/etape-video.html) : formats vidéo avec scripts et exemples complets, garde-robe, décors, outils IA, légendes.
 
 **4.3 Livre en deux étapes** (détails dans `references/formats-video.md`) :
 
@@ -136,12 +141,12 @@ Ajoute ensuite : texte à l'écran (à poser dans CapCut, Instagram ou TikTok), 
 
 ## Niveau de détail exigé (le cœur du skill)
 
-L'abonné veut des résultats qui **ne ressemblent pas à de l'IA**. Un prompt vague donne une image générique au look plastique ; un prompt scénarisé donne une scène crédible. Chaque prompt doit être **complet, autonome et très détaillé** : recopie le texte intégral de l'IDENTITY LOCK (jamais de `[placeholder]`), car l'abonné copie-colle sans rien modifier.
+L'abonné veut des résultats qui **ne ressemblent pas à de l'IA**. Un prompt vague donne une image générique au look plastique ; un prompt scénarisé donne une scène crédible. Chaque prompt doit être **complet, autonome et très détaillé**, sans aucun `[placeholder]`, car l'abonné copie-colle sans rien modifier. Le détail porte sur **la scène** (tenue, décor, pose, caméra, lumière), jamais sur son physique.
 
-**Un prompt IMAGE (250 à 450 mots) contient obligatoirement :**
-1. **Références** : quelle image jointe contrôle quoi (« Image 1 = her face, hair and body, keep her identity exactly »).
-2. **Identité** : l'IDENTITY LOCK de la fiche, mot pour mot.
-3. **Tenue complète, dans le style des références** (voir « Style vestimentaire ») : type de vêtement, coupe, encolure, bretelles ou manches, longueur, ajustement, matière, texture, couleur exacte, détails (fronces, fente, boutons, liens), chaussures, sac, bijoux, ongles, maquillage, coiffure du jour. Bibliothèque : `references/garde-robe.md` § A à I et § K.
+**Un prompt IMAGE (200 à 400 mots) contient obligatoirement :**
+1. **Références** : quelle image jointe contrôle quoi (« Image 1 = my influencer [Name]: use her exactly as she is in this photo »). Si l'abonné a une référence du corps, elle devient l'image 2.
+2. **Sujet, sans description** : le bloc RÉFÉRENCE ci-dessous (« Son physique : la photo, pas le texte »), et rien d'autre sur son apparence.
+3. **Tenue complète, dans le style des références** (voir « Style vestimentaire ») : type de vêtement, coupe, encolure, bretelles ou manches, longueur, ajustement, matière, texture, couleur exacte, détails (fronces, fente, boutons, liens), chaussures, sac, bijoux, ongles, maquillage. Coiffure du jour seulement si la scène l'exige (chignon pour un gala), en précisant « same hair as in image 1 ». Bibliothèque : `garde-robe.md` § A à I et § K.
 4. **Décor en 3 plans** : premier plan (objets proches, partiellement dans le cadre), plan moyen (où elle se tient, surfaces, props), arrière-plan (architecture, paysage, figurants occupés à leurs activités, véhicules, ciel). Bibliothèque : `references/decors.md`.
 5. **Pose et geste** : orientation du corps, appui, position de chaque bras et main, jambes, inclinaison de la tête, direction du regard, micro-expression.
 6. **Caméra** : qui prend la photo (une amie, un selfie, un miroir, un trépied), téléphone et objectif, hauteur, angle, distance, cadrage, place dans l'image, format.
@@ -151,7 +156,7 @@ L'abonné veut des résultats qui **ne ressemblent pas à de l'IA**. Un prompt v
 
 **Un prompt VIDÉO (250 à 400 mots pour H3, 150 à 250 pour Seedance) contient obligatoirement :**
 1. **Plan** : 9:16, téléphone (tenu par une amie qui marche, sur trépied, ou en selfie), **vitesse réelle 1×, rythme rapide et décontracté d'un vrai Reel**, durée de **5 à 6 s** (8 s au maximum, sinon plusieurs plans courts).
-2. **Identité** : « same woman as the start image » + l'IDENTITY SHORT + « identical from first to last frame ».
+2. **Sujet, sans description** : « The same adult woman as in the start image, exactly as she appears there: face, hair, body and outfit identical from the first to the last frame. » Aucun trait physique.
 3. **Script seconde par seconde** (0–1 s, 1–2 s, … 5–6 s) : **un geste rapide par seconde** qui s'enchaîne au suivant sans pause, en reprenant la chorégraphie mesurée du format (`formats-video.md` § 6).
 4. **Gestes et visage** : gestes vifs et naturels (demi-tour en une demi-seconde, coup de cheveux d'un seul geste, regard ailleurs puis retour caméra, sourire rapide).
 5. **Mouvements secondaires** : cheveux, tissu, bijoux et sac qui rebondissent et se reposent aussitôt.
@@ -164,6 +169,24 @@ L'abonné veut des résultats qui **ne ressemblent pas à de l'IA**. Un prompt v
 Si l'abonné trouve encore la vidéo lente, conseille-lui de la générer en 5 s ou de l'accélérer à 1,2× dans CapCut.
 
 Avant de livrer, relis chaque prompt et demande-toi : « Est-ce qu'un réalisateur pourrait tourner cette scène avec ce texte seul, sans rien inventer ? » Si non, ajoute ce qui manque.
+
+## Son physique : la photo, pas le texte
+
+La photo de l'influenceuse, toujours jointe en image 1, porte déjà son visage, son teint, ses cheveux et son corps. **Ne décris jamais son physique dans un prompt** : ni âge, ni origine, ni teint, ni forme du visage, ni yeux, ni grain de beauté, ni cheveux, ni silhouette, ni taille. Une description texte entre en concurrence avec la photo : l'outil mélange les deux et le visage, le teint ou les proportions dérivent. Il suffit d'ordonner de copier la photo sans rien changer.
+
+Bloc RÉFÉRENCE (GPT Image 2) :
+```
+REFERENCES: Image 1 = my influencer [Name]. Use her exactly as she is in this photo: same face, skin tone, hair and body.
+SUBJECT: [Name], the adult woman from image 1, unchanged. Do not alter anything about her appearance.
+```
+Avec une référence du corps, ajoute à REFERENCES : `Image 2 = her body reference: same body shape and proportions.`
+
+Première phrase pour Nano Banana :
+```
+Using the attached photo of my influencer [Name] as the exact and only reference for her appearance, create a photorealistic smartphone photo of her, keeping her face, skin tone, hair and body exactly as they are in the photo.
+```
+
+Les seules exceptions sont les prompts du kit (`outils-ia.md` § 7), qui créent la toute première photo de référence : là, aucune image n'existe encore, donc l'IDENTITY LOCK de la fiche est nécessaire.
 
 ## Style vestimentaire : toujours celui des références
 
@@ -215,22 +238,31 @@ Seedance 2.5 (9:16, 6 s) :
 
 Pour une image : le titre, l'idée, les prompts Nano Banana et GPT Image 2, les 2 prompts d'édition pour le carrousel, puis la légende, les hashtags et le son.
 
-## Fichiers de référence
+## Pages à lire
 
-Lis chaque fichier avec son **lien complet** ci-dessous, tel quel (le lien principal d'abord, le lien de secours seulement s'il échoue). Quand un fichier en cite un autre par son nom (ex. « voir `garde-robe.md` »), utilise le lien de ce tableau.
+Ouvre chaque page avec son **lien complet**, tel quel, au moment indiqué. Quand le skill cite un fichier par son nom (ex. « `garde-robe.md` § M »), il se trouve dans la page de l'étape en cours.
 
-| Fichier | Quand le lire | Lien principal | Lien de secours |
+| Page | Quand la lire | Contenu | Lien |
 |---|---|---|---|
-| `pays.md` | **Onboarding** ; lieux, saisons, fêtes, expressions (et tenues traditionnelles, seulement si demandées) | https://github.com/kalim4k/influenceuseIA/blob/main/references/pays.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/pays.md |
-| `metiers.md` | **Onboarding** ; scènes de vie pro | https://github.com/kalim4k/influenceuseIA/blob/main/references/metiers.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/metiers.md |
-| `fiche-modele.md` | **Onboarding** ; modifier une fiche | https://github.com/kalim4k/influenceuseIA/blob/main/templates/fiche-modele.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/templates/fiche-modele.md |
-| `garde-robe.md` | **Avant le 1er prompt** (image ou vidéo) : tenues du style des références, tenues d'événement, matières en mouvement | https://github.com/kalim4k/influenceuseIA/blob/main/references/garde-robe.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/garde-robe.md |
-| `decors.md` | **Avant le 1er prompt** : décors en 3 plans, vie en arrière-plan, événements | https://github.com/kalim4k/influenceuseIA/blob/main/references/decors.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/decors.md |
-| `outils-ia.md` | **Avant le 1er prompt** : syntaxe des 4 outils, kit de référence du visage, dépannage | https://github.com/kalim4k/influenceuseIA/blob/main/references/outils-ia.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/outils-ia.md |
-| `formats-photo.md` | **Avant le 1er prompt image** : 20 formats, carrousel, structure détaillée, exemples complets | https://github.com/kalim4k/influenceuseIA/blob/main/references/formats-photo.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-photo.md |
-| `formats-video.md` | **Avant le 1er prompt vidéo** : menu, caméra fluide, anti-IA, scripts et exemples complets | https://github.com/kalim4k/influenceuseIA/blob/main/references/formats-video.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/formats-video.md |
-| `legendes-hooks.md` | Légendes, textes à l'écran, hashtags, sons, planning de la semaine | https://github.com/kalim4k/influenceuseIA/blob/main/references/legendes-hooks.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/legendes-hooks.md |
-| `analyse-sources.md` | « Surprends-moi », choisir un format, comprendre ce qui performe | https://github.com/kalim4k/influenceuseIA/blob/main/references/analyse-sources.md | https://raw.githubusercontent.com/kalim4k/influenceuseIA/main/references/analyse-sources.md |
+| **PROFIL** | **Onboarding**, ou pour modifier une fiche | modèle de fiche, ~30 pays, ~20 métiers, kit de la photo de référence | https://influenceuseia.vercel.app/etape-profil.html |
+| **IMAGE** | **Avant le 1er prompt image** | 20 formats photo, garde-robe, décors, outils IA, légendes et hashtags | https://influenceuseia.vercel.app/etape-image.html |
+| **VIDÉO** | **Avant le 1er prompt vidéo** | 16 formats vidéo (scripts seconde par seconde, exemples complets), garde-robe, décors, outils IA, légendes | https://influenceuseia.vercel.app/etape-video.html |
+| **CORPS** | Quand l'abonné veut choisir la corpulence | 20 mannequins à télécharger + le prompt | https://influenceuseia.vercel.app/mannequins.html |
+
+**Fichiers séparés**, seulement si une page d'étape ne s'ouvre pas ou paraît coupée :
+
+| Fichier | Étape | Lien |
+|---|---|---|
+| `fiche-modele.md` | PROFIL | https://influenceuseia.vercel.app/templates/fiche-modele.html |
+| `pays.md` | PROFIL | https://influenceuseia.vercel.app/references/pays.html |
+| `metiers.md` | PROFIL | https://influenceuseia.vercel.app/references/metiers.html |
+| `formats-photo.md` | IMAGE | https://influenceuseia.vercel.app/references/formats-photo.html |
+| `formats-video.md` | VIDÉO | https://influenceuseia.vercel.app/references/formats-video.html |
+| `garde-robe.md` | IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/garde-robe.html |
+| `decors.md` | IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/decors.html |
+| `outils-ia.md` | PROFIL, IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/outils-ia.html |
+| `legendes-hooks.md` | IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/legendes-hooks.html |
+| `analyse-sources.md` | « Surprends-moi », comprendre ce qui performe | https://influenceuseia.vercel.app/references/analyse-sources.html |
 
 Si l'abonné signale un problème (visage qui change, refus, peau plastique, vidéo qui coupe ou qui « fait IA »), utilise le tableau « Dépannage » de `outils-ia.md` et redonne le prompt corrigé en entier.
 
@@ -240,7 +272,7 @@ Ces règles protègent les comptes des abonnés :
 - **Personnage 100 % fictif.** N'utilise jamais le visage d'une personne réelle comme référence (droit à l'image, bannissement). Propose un visage original.
 - **Adulte, toujours.** 21 ans minimum, « adult woman » dans chaque prompt, aucun code enfantin.
 - **Glamour oui, explicite non.** Maillots, robes ajustées et décolletés sont acceptés, comme dans les sources ; la nudité et le sexuel explicite ne le sont pas, car les outils refusent et les réseaux suppriment le compte. Propose l'équivalent glamour.
-- **Silhouette** : respecte le choix de la fiche avec un vocabulaire de mode (« voluptuous hourglass figure, full bust, narrow waist »), jamais de termes anatomiques crus, qui déclenchent les filtres.
+- **Silhouette** : elle vient de la photo de référence (et de la référence du corps), pas du texte. Dans les prompts du kit, décris-la avec un vocabulaire de mode (« voluptuous hourglass figure, full bust, narrow waist »), jamais avec des termes anatomiques crus, qui déclenchent les filtres.
 - **Transparence** : recommande l'étiquette « Contenu IA » / « AI info » sur Instagram et TikTok.
 - **Pas d'arnaque** : pas de faux témoignages produits, pas de faux profil de rencontre pour soutirer de l'argent.
 

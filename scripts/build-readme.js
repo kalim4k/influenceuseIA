@@ -14,7 +14,7 @@ const header = `<!-- Généré par scripts/build-readme.js à partir de SKILL.md
 > **🤖 Note pour Claude** — Ce dépôt est un skill Claude utilisable **sans rien installer** : **le skill complet est écrit plus bas sur cette page** (section « Le skill »). Si un utilisateur t'a donné ce lien :
 > 1. Lis la section « Le skill » ci-dessous : c'est ton mode d'emploi complet.
 > 2. Commence tout de suite par l'onboarding : pose les **2 questions** (pays de l'influenceuse, métier optionnel).
-> 3. Ouvre les fichiers de référence aux moments indiqués, avec leurs liens \`github.com/…/blob/main/…\` (tableau « Fichiers de référence »). N'utilise pas les liens de dossiers (\`/tree/\`) ni \`/raw/\` de github.com : GitHub les bloque pour les robots.
+> 3. À chaque étape, ouvre la page d'étape indiquée (tableau « Pages à lire ») : une seule page par étape, sur https://influenceuseia.vercel.app.
 >
 > Rien à installer, rien à télécharger, aucun zip.
 
@@ -22,7 +22,7 @@ const header = `<!-- Généré par scripts/build-readme.js à partir de SKILL.md
 
 1. Ouvre une **nouvelle conversation** Claude (application ou claude.ai) et vérifie que la **recherche web** est activée.
 2. Colle ce message :
-   > Utilise ce skill : https://github.com/kalim4k/influenceuseIA
+   > Utilise ce skill : https://influenceuseia.vercel.app
 3. Claude te pose **2 questions** : le **pays** de ton influenceuse et **son métier** (optionnel). Si tu as déjà créé ton influenceuse, envoie aussi sa photo.
 4. Claude crée sa **Fiche Modèle**, puis te demande **« Image ou vidéo ? »** et te donne des prompts complets pour Nano Banana, GPT Image 2, MiniMax H3 et Seedance 2.5.
 

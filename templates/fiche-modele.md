@@ -1,6 +1,10 @@
 # Modèle de Fiche Modèle IA
 
-Remplis chaque champ de manière concrète et unique. Le bloc `IDENTITY LOCK` (en anglais) est copié **mot pour mot** au début de chaque prompt image : ne le paraphrase jamais d'un prompt à l'autre, car chaque variation de formulation fait dériver le visage.
+Remplis chaque champ de manière concrète et unique.
+
+Le bloc PHYSIQUE sert à la cohérence de la fiche (choix des couleurs de tenue, des coiffures, des légendes). **Il n'entre jamais dans les prompts** : c'est la photo de référence, jointe à chaque génération, qui porte son visage et son corps. Une description texte en plus de la photo fait dériver le résultat.
+
+Le bloc `IDENTITY LOCK` (en anglais) ne sert qu'**une fois** : pour créer sa première photo de référence avec le kit REF_VISAGE, quand l'abonné n'a pas encore d'avatar. Si l'abonné a déjà sa photo, ne l'écris pas.
 
 Présente la fiche à l'abonné exactement sous cette forme (bloc de code unique, facile à copier) :
 
@@ -50,16 +54,14 @@ Sons / musique    : [genres locaux + pop internationale]
 À éviter          : [incohérences propres à cette modèle]
 
 ━━ RÉFÉRENCE ━━
-Avatar            : [photo fournie par l'abonné / à créer avec le kit REF_VISAGE] — à joindre à CHAQUE génération
+Avatar            : [photo fournie par l'abonné / à créer avec le kit REF_VISAGE] — à joindre à CHAQUE génération, en image 1
+Corps             : [référence du corps créée avec un mannequin (page Corps) / à créer] — en image 2 pour les plans en pied
 
-━━ IDENTITY LOCK (à coller au début de chaque prompt image) ━━
-[Name], an adult [age]-year-old [nationality] woman. [Skin tone and undertone], natural skin texture with visible pores. [Face shape], [cheekbones], [nose], [lips]. [Eye shape and color], [eyebrows]. [Distinctive mark, exact position]. [Hair: type, length, color, usual style]. [Body type in fashion vocabulary], [height]. Signature details: [jewelry], [phone case color].
-
-━━ IDENTITY SHORT (pour les prompts vidéo) ━━
-[Name], the adult [age]-year-old [nationality] woman with [skin tone], [distinctive mark], [hair] and a [body type]
+━━ IDENTITY LOCK (seulement pour créer la photo de référence avec le kit, jamais dans les autres prompts) ━━
+[Name], an adult [age]-year-old [nationality] woman. [Skin tone and undertone], natural skin texture with visible pores. [Face shape], [cheekbones], [nose], [lips]. [Eye shape and color], [eyebrows]. [Distinctive mark, exact position]. [Hair: type, length, color, usual style]. [Body type in fashion vocabulary], [height].
 ```
 
-Si l'abonné a fourni la photo de son avatar, le bloc PHYSIQUE et l'IDENTITY LOCK décrivent **ce qui est visible sur cette photo** (teint, visage, yeux, cheveux, silhouette, signes distinctifs). N'invente un trait que s'il est invisible sur la photo.
+Si l'abonné a fourni la photo de son avatar, le bloc PHYSIQUE décrit **ce qui est visible sur cette photo** (teint, visage, cheveux, silhouette), et l'IDENTITY LOCK est remplacé par « — (photo fournie) ».
 
 ## Exemple rempli (pour t'inspirer, ne pas réutiliser tel quel)
 
@@ -110,11 +112,9 @@ Sons / musique    : coupé-décalé, afrobeats, amapiano, pop douce
 À éviter          : tenues traditionnelles (sauf demande), neige, hiver, uniforme d'infirmière sexualisé
 
 ━━ RÉFÉRENCE ━━
-Avatar            : à créer avec le kit REF_VISAGE — à joindre à CHAQUE génération
+Avatar            : à créer avec le kit REF_VISAGE — à joindre à CHAQUE génération, en image 1
+Corps             : à créer avec un mannequin « Sablier » (page Corps) — en image 2 pour les plans en pied
 
-━━ IDENTITY SHORT ━━
-Aya, the adult 25-year-old Ivorian woman with deep brown skin, a tiny beauty mark above the left corner of her lip, honey-brown ombré knotless braids and a curvy hourglass figure
-
-━━ IDENTITY LOCK ━━
-Aya Koné, an adult 25-year-old Ivorian woman. Deep brown skin with warm golden undertones, natural skin texture with visible pores. Oval face, high cheekbones, softly rounded nose, full lips with a defined cupid's bow. Large almond-shaped dark brown eyes, thick softly arched eyebrows. A tiny beauty mark just above the left corner of her upper lip. Waist-length knotless box braids with a honey-brown ombré, usually in a high ponytail. Curvy hourglass figure, 1.68 m tall. Signature details: thin gold chain with a small letter "A" pendant, gold hoop earrings, powder-pink phone case.
+━━ IDENTITY LOCK (seulement pour le kit REF_VISAGE) ━━
+Aya Koné, an adult 25-year-old Ivorian woman. Deep brown skin with warm golden undertones, natural skin texture with visible pores. Oval face, high cheekbones, softly rounded nose, full lips with a defined cupid's bow. Large almond-shaped dark brown eyes, thick softly arched eyebrows. A tiny beauty mark just above the left corner of her upper lip. Waist-length knotless box braids with a honey-brown ombré, usually in a high ponytail. Curvy hourglass figure, 1.68 m tall.
 ```
