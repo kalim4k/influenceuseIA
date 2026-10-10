@@ -1,6 +1,6 @@
 # Analyse des sources
 
-Base de travail : **101 captures** d'un compte Instagram d'influenceuse IA lifestyle-glamour (étiqueté « Contenu IA », environ 90 publications entre mi-août et début octobre) et **34 Reels / TikToks** de créatrices réelles et IA, choisis pour leurs formats viraux, plus **54 publications de créatrices d'Afrique de l'Ouest** analysées pour leurs décors du quotidien. Ce fichier explique *pourquoi* les formats du skill fonctionnent. Consulte-le pour choisir un format, justifier une idée ou répondre à « surprends-moi ».
+Base de travail : **101 captures** d'un compte Instagram d'influenceuse IA lifestyle-glamour (étiqueté « Contenu IA », environ 90 publications entre mi-août et début octobre) et **34 Reels / TikToks** de créatrices réelles et IA, choisis pour leurs formats viraux, plus **54 publications de créatrices d'Afrique de l'Ouest** analysées pour leurs décors du quotidien, et une **deuxième série de 40 photos** de comptes glamour et streetwear analysées pour leurs tenues et leurs poses. Ce fichier explique *pourquoi* les formats du skill fonctionnent. Consulte-le pour choisir un format, justifier une idée ou répondre à « surprends-moi ».
 
 ## Sommaire
 1. ADN visuel des photos
@@ -10,6 +10,7 @@ Base de travail : **101 captures** d'un compte Instagram d'influenceuse IA lifes
 5. Formats vidéo observés
 6. Faiblesses du compte analysé (à ne pas reproduire)
 7. Décors du quotidien en Afrique de l'Ouest
+8. Deuxième série : tenues et poses (40 photos)
 
 ---
 
@@ -135,3 +136,28 @@ Captures TikTok et Instagram de créatrices réelles, surtout de Lomé et des pa
 - **Lumière** : soleil tropical dur, lumière dorée de fin de journée sur la terre rouge, ciel laiteux d'harmattan, ciel gris de saison des pluies, ampoule nue la nuit.
 - **Cadrage** : selfie à bout de bras ou téléphone tenu par une amie, souvent en plan moyen ou en pied, dans la rue ou devant un mur, avec des passants qui vivent leur vie derrière.
 - **Leçon pour le skill** : alterner ces décors avec ceux de prestige rend l'influenceuse réelle et proche de son public. Les 25 décors décrits en 3 plans sont dans `decors.md` § Afrique du quotidien (D29 à D53).
+
+## 8. Deuxième série : tenues et poses (40 photos)
+
+Captures de deux comptes Instagram glamour (de 2 000 à 135 000 likes par post). Les tenues ont été ajoutées à `garde-robe.md` (A8 à A11, B5 à B7, C10 à C13, D9 à D13, E9, F6 à F8, G7 à G10, randonnée) et les poses au catalogue `poses.md`.
+
+**Ce qui fait les plus gros chiffres**
+
+| Likes | Photo | Leçon |
+|---|---|---|
+| 135 000 | T-shirt graphique oversize, tresses, accroupie vers l'objectif de nuit au flash | le décontracté pris sur le vif bat la robe de gala |
+| 96 500 | De profil dans la voiture, soleil, cheveux au vent | un moment simple et lumineux |
+| 58 000 | Look Y2K (baby tee, pantalon évasé, bottes fourrées) dans un parking | le streetwear a toute sa place à côté des robes |
+| 36 100 | Mini-robe fleurie, main tendue vers l'objectif, néon rouge de nuit | le geste vers la caméra crée l'interaction |
+| 35 500 | Mini-robe lilas à corset, cheveux qui volent | le mouvement |
+| 33 300 | Tenue de rando accroupie sur un tronc, contre-plongée au grand-angle | l'angle original |
+
+**Tendances de pose**
+- **Trois-quarts dos avec regard par-dessus l'épaule** : la pose la plus fréquente de la série, surtout avec des robes dos nu (blanche, noire, à sequins).
+- **Mouvement** : cheveux qui volent, main vers l'objectif, rire : les photos les plus aimées ne sont pas « posées ».
+- **Assise haute** : sur l'accoudoir d'un canapé, jambes croisées, avec collants et escarpins.
+- **Accroupie** face à l'objectif, de jour comme de nuit.
+- **Lifestyle** : au supermarché, au golf, en rando, au dîner : des tenues soignées dans des scènes du quotidien.
+
+**Leçon pour le skill** : alterner les robes élégantes et le streetwear, et préférer les poses prises sur le vif (mouvement, geste vers la caméra, rire) aux poses figées. Les poses de toutes les séries sont réunies dans `poses.md`.
+

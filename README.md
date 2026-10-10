@@ -43,7 +43,7 @@ Ce skill s'utilise **en ligne, sans rien installer**, souvent sur téléphone. T
 
 Le skill tient en une page d'accueil (ces instructions) et **4 pages d'étape**, chacune avec tout ce qu'il faut pour son moment de la conversation :
 - **PROFIL** : à l'onboarding, avant d'écrire la fiche ;
-- **STYLE** (tenues et décors) : avant le premier prompt, image ou vidéo ;
+- **STYLE** (tenues, décors et poses) : avant le premier prompt, image ou vidéo ;
 - **IMAGE** : avant le premier prompt image ;
 - **VIDÉO** : avant le premier prompt vidéo.
 
@@ -135,7 +135,7 @@ Ne pose aucune autre question : déduis tout le reste des références et propos
 
 ## Étape 3 — Parcours IMAGE
 
-Avant le premier prompt image de la conversation, **lis la page STYLE** (https://influenceuseia.vercel.app/etape-style.html : garde-robe et décors) si ce n'est pas déjà fait, puis **la page IMAGE** (https://influenceuseia.vercel.app/etape-image.html : formats photo, outils IA, légendes).
+Avant le premier prompt image de la conversation, **lis la page STYLE** (https://influenceuseia.vercel.app/etape-style.html : garde-robe, décors et poses) si ce n'est pas déjà fait, puis **la page IMAGE** (https://influenceuseia.vercel.app/etape-image.html : formats photo, outils IA, légendes).
 
 Livre directement **un prompt photo complet**, en version **Nano Banana** et en version **GPT Image 2**, avec la référence de l'avatar jointe.
 - Si l'abonné a donné une scène, un lieu ou un événement, utilise-le.
@@ -167,7 +167,7 @@ Livre directement **un prompt photo complet**, en version **Nano Banana** et en 
 
 Pour un type suivi de « quartier », garde la chorégraphie du type et prends le décor associé dans le tableau « Format → décor de quartier » de `decors.md`. Le type 13 suit la chorégraphie V17 et l'exemple D de `formats-video.md`.
 
-**4.2 Avant le premier prompt vidéo** de la conversation, **lis la page STYLE** (https://influenceuseia.vercel.app/etape-style.html : garde-robe et décors) si ce n'est pas déjà fait, puis **la page VIDÉO** (https://influenceuseia.vercel.app/etape-video.html : formats vidéo avec scripts et exemples complets, outils IA, légendes).
+**4.2 Avant le premier prompt vidéo** de la conversation, **lis la page STYLE** (https://influenceuseia.vercel.app/etape-style.html : garde-robe, décors et poses) si ce n'est pas déjà fait, puis **la page VIDÉO** (https://influenceuseia.vercel.app/etape-video.html : formats vidéo avec scripts et exemples complets, outils IA, légendes).
 
 **4.3 Livre en deux étapes** (détails dans `references/formats-video.md`) :
 
@@ -185,7 +185,7 @@ L'abonné veut des résultats qui **ne ressemblent pas à de l'IA**. Un prompt v
 2. **Sujet, sans description** : le bloc RÉFÉRENCE ci-dessous (« Son physique : la photo, pas le texte »), et rien d'autre sur son apparence.
 3. **Tenue complète, dans le style des références** (voir « Style vestimentaire ») : type de vêtement, coupe, encolure, bretelles ou manches, longueur, ajustement, matière, texture, couleur exacte, détails (fronces, fente, boutons, liens), chaussures, sac, bijoux, ongles, maquillage. Coiffure du jour seulement si la scène l'exige (chignon pour un gala), en précisant « same hair as in image 1 ». Bibliothèque : `garde-robe.md` § A à I et § K.
 4. **Décor en 3 plans** : premier plan (objets proches, partiellement dans le cadre), plan moyen (où elle se tient, surfaces, props), arrière-plan (architecture, paysage, figurants occupés à leurs activités, véhicules, ciel). Bibliothèque : `references/decors.md`.
-5. **Pose et geste** : orientation du corps, appui, position de chaque bras et main, jambes, inclinaison de la tête, direction du regard, micro-expression.
+5. **Pose et geste** : orientation du corps, appui, position de chaque bras et main, jambes, inclinaison de la tête, direction du regard, micro-expression. Pars d'une pose du catalogue `poses.md` (tableau « Quelle pose pour quel format ») et adapte-la au décor : poids sur une hanche, mains occupées, regard varié.
 6. **Caméra** : qui prend la photo (une amie, un selfie, un miroir, un trépied), téléphone et objectif, hauteur, angle, distance, cadrage, place dans l'image, format.
 7. **Lumière** : heure, source, direction, dureté, ombres sur le visage, le corps et le sol, température de couleur, reflets.
 8. **Réalisme** : texture de peau, pores, petits cheveux, plis du tissu, imperfections du décor, traitement couleur du téléphone.
@@ -227,7 +227,7 @@ Les seules exceptions sont les prompts du kit (`outils-ia.md` § 7), qui créent
 
 ## Style vestimentaire : toujours celui des références
 
-**Quel que soit le pays de l'influenceuse**, ses tenues suivent le style des photos de référence analysées : robes longues moulantes unies et vives, robes satinées, robes dos nu, mini-robes ajustées, ensembles crop top et jupe, corsets, maillots et paréos, peignoir pour les selfies intimes. Utilise **uniquement** les tenues de `garde-robe.md` § A à I et § K.
+**Quel que soit le pays de l'influenceuse**, ses tenues suivent le style des photos de référence analysées : robes longues moulantes unies et vives, robes sirène, robes satinées, robes dos nu, mini-robes ajustées ou à corset, ensembles crop top et jupe, corsets, maillots et paréos, peignoir pour les selfies intimes, et streetwear Y2K (t-shirt oversize, baby tee et pantalon évasé, bottes fourrées). Utilise **uniquement** les tenues de `garde-robe.md` § A à I et § K.
 
 - **Ne mets jamais** de pagne, de wax, de boubou, de bazin, de caftan, de kente ni aucune autre tenue traditionnelle au seul motif de l'origine. Une Togolaise, une Camerounaise ou une Marocaine portent les mêmes types de tenues que la référence.
 - Une tenue traditionnelle (`garde-robe.md` § J) n'est utilisée **que si l'abonné la demande explicitement** (« en tenue traditionnelle », « en pagne pour la fête nationale »…).
@@ -286,7 +286,7 @@ Ouvre chaque page avec son **lien complet**, tel quel, au moment indiqué. Quand
 | Page | Quand la lire | Contenu | Lien |
 |---|---|---|---|
 | **PROFIL** | **Onboarding**, ou pour modifier une fiche | modèle de fiche, ~30 pays, ~20 métiers, kit de la photo de référence | https://influenceuseia.vercel.app/etape-profil.html |
-| **STYLE** | **Avant le 1er prompt**, image ou vidéo | ~50 tenues du style des références, décors en 3 plans (dont 25 décors du quotidien africain), événements | https://influenceuseia.vercel.app/etape-style.html |
+| **STYLE** | **Avant le 1er prompt**, image ou vidéo | ~75 tenues du style des références, décors en 3 plans (dont 25 décors du quotidien africain), événements, 48 poses | https://influenceuseia.vercel.app/etape-style.html |
 | **IMAGE** | **Avant le 1er prompt image** | 20 formats photo et exemples complets, outils IA, légendes et hashtags | https://influenceuseia.vercel.app/etape-image.html |
 | **VIDÉO** | **Avant le 1er prompt vidéo** | 17 formats vidéo (scripts seconde par seconde, exemples complets), outils IA, légendes | https://influenceuseia.vercel.app/etape-video.html |
 | **CORPS** | Quand l'abonné veut choisir la corpulence | 20 mannequins à télécharger + le prompt | https://influenceuseia.vercel.app/mannequins.html |
@@ -301,7 +301,8 @@ Ouvre chaque page avec son **lien complet**, tel quel, au moment indiqué. Quand
 | `formats-photo.md` | IMAGE | https://influenceuseia.vercel.app/references/formats-photo.html |
 | `formats-video.md` | VIDÉO | https://influenceuseia.vercel.app/references/formats-video.html |
 | `garde-robe.md` | STYLE | https://influenceuseia.vercel.app/references/garde-robe.html |
-| `decors.md` | STYLE | https://influenceuseia.vercel.app/references/decors.html |
+| `decors.md` | STYLE |
+| `poses.md` | STYLE | https://influenceuseia.vercel.app/references/poses.html | https://influenceuseia.vercel.app/references/decors.html |
 | `outils-ia.md` | PROFIL, IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/outils-ia.html |
 | `legendes-hooks.md` | IMAGE et VIDÉO | https://influenceuseia.vercel.app/references/legendes-hooks.html |
 | `analyse-sources.md` | « Surprends-moi », comprendre ce qui performe | https://influenceuseia.vercel.app/references/analyse-sources.html |

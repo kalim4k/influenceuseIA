@@ -19,8 +19,9 @@ const DOCS = [
   { src: 'references/pays.md', title: 'Pays', desc: "~30 pays : phénotypes, prénoms, lieux réels, mode, climat, fêtes, expressions locales" },
   { src: 'references/metiers.md', title: 'Métiers', desc: '~20 métiers : niveau de vie, scènes de vie pro, tenues de travail, légendes' },
   { src: 'templates/fiche-modele.md', title: 'Fiche Modèle', desc: "Modèle de fiche d'identité de l'influenceuse + exemple complet" },
-  { src: 'references/garde-robe.md', title: 'Garde-robe', desc: "~50 tenues détaillées du style des références, tenues d'événement, matières en mouvement" },
+  { src: 'references/garde-robe.md', title: 'Garde-robe', desc: "~75 tenues détaillées du style des références (robes, streetwear Y2K…), tenues d'événement, matières en mouvement" },
   { src: 'references/decors.md', title: 'Décors', desc: 'Décors en 3 plans (dont 25 décors du quotidien africain : cour, rue en terre, marché…), vie en arrière-plan, 12 événements' },
+  { src: 'references/poses.md', title: 'Poses', desc: '48 poses observées dans toutes les références (debout, de dos, assise, selfies, mouvement), expressions, pose par format et par slide' },
   { src: 'references/outils-ia.md', title: 'Outils IA', desc: 'Syntaxe GPT Image 2, Nano Banana, MiniMax H3, Seedance 2.5 ; kit de référence ; dépannage' },
   { src: 'references/formats-photo.md', title: 'Formats photo', desc: '20 formats photo, carrousel, structure détaillée, exemples complets' },
   { src: 'references/formats-video.md', title: 'Formats vidéo', desc: '16 formats vidéo, caméra fluide, anti-IA, scripts et exemples complets' },
@@ -32,7 +33,7 @@ const doc = (src) => DOCS.find((d) => d.src === src);
 // Pages d'étape : tous les fichiers d'une étape réunis sur une seule page, pour que Claude n'ait qu'un lien à ouvrir.
 const PACKS = [
   { slug: 'etape-profil', name: 'PROFIL', icon: '🪪', title: "Étape PROFIL — créer l'influenceuse", when: "à l'onboarding, avant d'écrire la fiche", files: ['templates/fiche-modele.md', 'references/pays.md', 'references/metiers.md', 'references/outils-ia.md'] },
-  { slug: 'etape-style', name: 'STYLE', icon: '👗', title: 'Étape STYLE — tenues et décors', when: 'avant le premier prompt, image ou vidéo', files: ['references/garde-robe.md', 'references/decors.md'] },
+  { slug: 'etape-style', name: 'STYLE', icon: '👗', title: 'Étape STYLE — tenues, décors et poses', when: 'avant le premier prompt, image ou vidéo', files: ['references/garde-robe.md', 'references/decors.md', 'references/poses.md'] },
   { slug: 'etape-image', name: 'IMAGE', icon: '📸', title: 'Étape IMAGE — écrire un prompt photo', when: 'avant le premier prompt image', files: ['references/formats-photo.md', 'references/outils-ia.md', 'references/legendes-hooks.md'] },
   { slug: 'etape-video', name: 'VIDÉO', icon: '🎬', title: 'Étape VIDÉO — écrire un prompt vidéo', when: 'avant le premier prompt vidéo', files: ['references/formats-video.md', 'references/outils-ia.md', 'references/legendes-hooks.md'] },
 ].map((p) => ({ ...p, html: `/${p.slug}.html`, docs: p.files.map(doc) }));
@@ -204,7 +205,7 @@ Ce site contient un skill Claude complet, utilisable <strong>sans rien installer
 <li>Commence tout de suite par l'onboarding : pose les <strong>2 questions</strong> (pays de l'influenceuse, métier optionnel).</li>
 <li>À chaque étape, ouvre <strong>une seule page</strong>, qui contient tout ce qu'il faut pour cette étape :
 <br>PROFIL (onboarding) : ${abs('/etape-profil.html')}
-<br>STYLE, tenues et décors (avant le 1er prompt) : ${abs('/etape-style.html')}
+<br>STYLE, tenues, décors et poses (avant le 1er prompt) : ${abs('/etape-style.html')}
 <br>IMAGE (avant le 1er prompt image) : ${abs('/etape-image.html')}
 <br>VIDÉO (avant le 1er prompt vidéo) : ${abs('/etape-video.html')}</li>
 <li>Tu ne peux ouvrir que les liens que l'utilisateur a collés lui-même. S'il n'a pas collé ces liens d'étape, demande-lui de les coller dans sa réponse (le skill explique comment).</li>

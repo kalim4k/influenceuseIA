@@ -1,8 +1,8 @@
 # Garde-robe
 
-Bibliothèque de tenues décrites en anglais, prêtes à coller dans les prompts. Les tenues des sections A à G viennent de l'analyse des 101 photos sources (★ = post très performant). Adapte la couleur à la palette de la fiche, ajoute les bijoux signature et vérifie que la tenue convient à l'occasion.
+Bibliothèque de tenues décrites en anglais, prêtes à coller dans les prompts. Les tenues des sections A à H viennent de l'analyse des 101 photos sources et des 40 photos de la deuxième série (★ = post très performant ; les likes de la deuxième série sont indiqués « 2e série »). Adapte la couleur à la palette de la fiche, ajoute les bijoux signature et vérifie que la tenue convient à l'occasion.
 
-> **Règle principale : le style des références s'applique à toutes les influenceuses, quel que soit leur pays.** Choisis toujours dans les sections A à I et K. Une influenceuse togolaise, camerounaise, sénégalaise ou marocaine porte les mêmes types de tenues que la référence : robes longues moulantes unies, satin, robes dos nu, mini-robes ajustées, ensembles crop top et jupe, corsets, maillots. La section J (tenues traditionnelles) n'est utilisée **que si l'abonné le demande explicitement**. Par temps froid, ajoute seulement une pièce par-dessus (long manteau, blazer, bottes).
+> **Règle principale : le style des références s'applique à toutes les influenceuses, quel que soit leur pays.** Choisis toujours dans les sections A à I et K. Une influenceuse togolaise, camerounaise, sénégalaise ou marocaine porte les mêmes types de tenues que la référence : robes longues moulantes unies, robes sirène, satin, robes dos nu, mini-robes ajustées ou à corset, ensembles crop top et jupe, corsets, maillots, streetwear Y2K. La section J (tenues traditionnelles) n'est utilisée **que si l'abonné le demande explicitement**. Par temps froid, ajoute seulement une pièce par-dessus (long manteau, blazer, bottes).
 
 ## Sommaire
 - Méthode : décrire une tenue
@@ -71,6 +71,26 @@ an ankle-length cobalt-blue stretch-jersey bodycon dress with a strapless straig
 a dusty-rose cotton dress with a laced corset-style bodice with visible boning and thin straps, and a long tiered prairie skirt with soft gathers falling to the ankles
 ```
 
+**A8 ★ Robe sirène blanche bustier (14 100 likes, 2e série)**
+```
+a floor-length white strapless stretch-jersey mermaid gown, fitted from the bust to the knees and flaring into a soft hem that pools at her feet, smooth matte fabric
+```
+
+**A9 ★ Robe longue noire à sequins, dos nu et fendue (10 100 likes, 2e série)**
+```
+a floor-length black sequin halter gown with a fully open back down to the waist and a thigh-high side slit, the sequins sparkling under the night lights; small silver earrings
+```
+
+**A10 Robe sirène en dentelle blanche, épaules dénudées**
+```
+a floor-length white lace off-the-shoulder mermaid gown, fully lined in nude, long fitted lace sleeves, a fitted body and a fishtail hem that trails behind her
+```
+
+**A11 ★ Robe longue noire dos nu, de nuit (13 200 likes, 2e série)**
+```
+an ankle-length black stretch-jersey maxi dress with thin straps and a low open back, fitted like a second skin; small silver hoops
+```
+
 ## B. Robes longues de jour
 
 **B1 ★ Robe longue imprimé léopard des neiges** (1 674 likes)
@@ -91,6 +111,21 @@ a rust-red floral-printed chiffon maxi dress with spaghetti straps, a V neckline
 **B4 Robe longue en crochet noir**
 ```
 a black open-weave crochet halter top tied at the neck and a matching black crochet maxi skirt sitting low on the hips; the skin barely visible through the knit pattern
+```
+
+**B5 ★ Robe longue blanche dos nu, rue italienne (9 500 likes, 2e série)**
+```
+an ankle-length white ribbed-knit maxi dress with a scoop neckline and a fully open back held by a thin tie, fitted through the hips and flaring at the hem; a long side braid tied with a white ribbon
+```
+
+**B6 Robe longue taupe dos nu + bottes**
+```
+an ankle-length taupe stretch maxi dress with a high racer neckline and an open back, worn with chunky black lace-up boots
+```
+
+**B7 ★ Robe longue noire col montant, version sport chic (10 800 likes, 2e série)**
+```
+an ankle-length black long-sleeved mock-neck bodycon dress, worn sporty with white chunky sneakers and a white golf glove
 ```
 
 ## C. Mini et midi robes
@@ -140,6 +175,26 @@ a white halter mini dress with small navy polka dots, a deep V neckline with a t
 a champagne silk-satin slip mini dress with a cowl neckline, thin straps and a side slit, the satin reflecting soft highlights
 ```
 
+**C10 ★ Mini-robe lilas fleurie à corset (35 500 likes, 2e série)**
+```
+a lilac floral-print mini dress with long fitted sleeves, a sweetheart corset bodice laced at the front, a ruffled hem and long satin ribbon ties falling from the hips
+```
+
+**C11 ★ Mini-robe fleurie corail à manches voilées (36 100 likes, 2e série)**
+```
+a coral-red floral chiffon mini dress with a square neckline, long sheer flared sleeves and a light flippy skater skirt
+```
+
+**C12 Mini-robe blanche lacée sur les côtés**
+```
+a white sleeveless stretch mini dress with black criss-cross lacing running down both sides
+```
+
+**C13 Combishort côtelé taupe, dos lacé**
+```
+a taupe ribbed-knit romper with thin straps, a low back laced like a corset and ruched shorts
+```
+
 ## D. Ensembles deux-pièces
 
 **D1 ★ Crop top à volants + jupe longue bleu électrique** (674 likes)
@@ -180,6 +235,31 @@ a powder-blue floral co-ord: a ruffled cropped wrap blouse with long sleeves and
 **D8 Haut vert noué + jupe blanche**
 ```
 an emerald-green satin top tied at the front and a white flowing maxi skirt; gold bangles stacked on both wrists
+```
+
+**D9 ★ Look Y2K : baby tee, boléro, pantalon évasé, bottes fourrées (58 000 likes, 2e série)**
+```
+a white cropped baby tee (no text) under an open white long-sleeved shrug, black high-waisted flared yoga pants, fluffy brown faux-fur boots and a thin white ribbon choker
+```
+
+**D10 Bandeau beige + short en jean**
+```
+a beige ribbed bandeau top with high-waisted light-wash denim cut-off shorts and a small black shoulder bag
+```
+
+**D11 Débardeur court gris + jean taille basse**
+```
+a charcoal cropped tank top (no readable print) with low-rise light-wash baggy jeans and a light denim jacket slipping off one arm, a thin silver chain
+```
+
+**D12 Haut rayé + jean baggy noir**
+```
+a cream-and-white striped long-sleeved knit top with black wide-leg baggy jeans
+```
+
+**D13 Top blanc dos nu + pantalon évasé imprimé**
+```
+a white cropped long-sleeved top with an open back and red-and-black paisley-print flared trousers
 ```
 
 ## E. Plage et piscine
@@ -224,6 +304,11 @@ a red cotton button-front sundress with a sweetheart neckline, a single row of s
 a magenta crochet bikini top and a long orange-and-pink crochet maxi skirt with fringe at the hem
 ```
 
+**E9 Haut de bikini blanc + casque audio (selfie)**
+```
+a white triangle bikini top worn with large white over-ear headphones, a thin gold necklace
+```
+
 ## F. Maison et intimité
 
 **F1 ★ Peignoir rose duveteux** (3 786 likes, selfie miroir)
@@ -249,6 +334,21 @@ a champagne satin pajama set: a short-sleeved button-up shirt with contrast pipi
 **F5 T-shirt oversize + serviette sur les cheveux**
 ```
 an oversized soft white cotton t-shirt worn as a dress, her hair wrapped in a white microfiber towel turban
+```
+
+**F6 Pull oversize bleu tombant sur une épaule (selfie miroir)**
+```
+an oversized royal-blue chunky knit sweater with a varsity-style print (no readable letters) slipping off one shoulder
+```
+
+**F7 Body noir, collants et escarpins (salon)**
+```
+a black long-sleeved square-neck bodysuit, sheer black tights and black pointed stiletto pumps; hair in a sleek low bun
+```
+
+**F8 T-shirt oversize imprimé porté en robe**
+```
+an oversized black graphic t-shirt with an illustrated print (no readable text, no recognizable character) worn as a mini dress over sheer black tights, black ankle-strap heels, two long braids
 ```
 
 ## G. Ville et décontracté
@@ -283,6 +383,26 @@ a cream long-sleeved square-neck bodysuit and high-waisted light-wash flare jean
 a white linen co-ord: a relaxed button-up shirt knotted at the waist and wide-leg drawstring trousers, tan leather slides
 ```
 
+**G7 ★ T-shirt graphique oversize, de nuit au flash (135 000 likes, 2e série)**
+```
+an oversized black band-style graphic t-shirt with an illustrated print (no readable text), black biker shorts, chunky silver rings on several fingers, two long braids
+```
+
+**G8 Gilet court blanc + legging crème (courses)**
+```
+a white cropped long-sleeved cardigan and cream high-waisted leggings, white sneakers
+```
+
+**G9 ★ Caraco blanc à dentelle, tresses à perles (dîner, 12 300 likes, 2e série)**
+```
+a white ribbed cami top with a delicate lace trim, two braids decorated with small pearl hair clips
+```
+
+**G10 Body à motifs graphiques + jambières fourrées (nuit)**
+```
+a white long-sleeved bodysuit with a black illustrated line-art print, worn with fluffy black faux-fur leg warmers
+```
+
 ## H. Sport
 ```
 a matching sage-green ribbed sports bra and high-waisted leggings, white running shoes, white crew socks, hair in a high ponytail, a pastel water bottle
@@ -290,6 +410,12 @@ a matching sage-green ribbed sports bra and high-waisted leggings, white running
 ```
 a black seamless crop tank and biker shorts set, an oversized grey zip hoodie open over it, chunky white sneakers
 ```
+
+Randonnée (33 300 likes, 2e série) :
+```
+a white cropped tank top, black running shorts, a red plaid flannel shirt tied around the waist, a black beanie, white crew socks and black sneakers
+```
+Golf : voir B7.
 
 ## I. Travail
 
@@ -347,9 +473,10 @@ Toutes dans le style des références, quel que soit le pays.
 ## L. Accessoires, coiffures, maquillage, ongles
 
 **Sacs** (sans marque) : black quilted leather shoulder bag on a gold chain · small structured white top-handle bag · woven straw tote · yellow straw clutch · beige crossbody · canvas shoulder bag.
-**Chaussures** : strappy gold heeled sandals · nude pointed pumps · white sneakers · ballet flats · clear-strap mules · cowboy boots · flat leather slides.
-**Bijoux** : thin gold chain with a small pendant · chunky gold hoops · stacked gold bangles · pearl necklace · gold body chain · delicate anklet · rings on several fingers.
-**Coiffures** (seulement si la scène demande un changement ; ajoute toujours « same hair as in image 1 » pour garder sa couleur, sa longueur et sa texture) : loose soft waves with a center part · sleek high ponytail · messy low bun with face-framing strands · braids in a high bun · half-up half-down · wet-look slicked back (plage) · afro puff · silk press · head wrap.
+**Chaussures** : strappy gold heeled sandals · nude pointed pumps · white sneakers · ballet flats · clear-strap mules · cowboy boots · flat leather slides · black pointed stilettos · chunky black lace-up boots · fluffy faux-fur boots.
+**Bijoux** : thin gold chain with a small pendant · chunky gold hoops · stacked gold bangles · pearl necklace · gold body chain · delicate anklet · rings on several fingers · chunky silver rings · thin white ribbon choker.
+**Autres accessoires** : large over-ear headphones · black beanie · small pearl hair clips · white ribbon tied in the hair · sheer black tights.
+**Coiffures** (seulement si la scène demande un changement ; ajoute toujours « same hair as in image 1 » pour garder sa couleur, sa longueur et sa texture) : loose soft waves with a center part · sleek high ponytail · messy low bun with face-framing strands · braids in a high bun · half-up half-down · wet-look slicked back (plage) · afro puff · silk press · head wrap · two long braids (pigtails) · one long side braid tied with a ribbon · sleek low bun.
 **Maquillage** : « soft glam » (glowy skin, warm bronzer, defined brows, nude glossy lips) · « no-makeup makeup » (selfies du matin) · « evening glam » (smoky eyes, lashes, satin lips).
 **Ongles** : almond nude · glossy red · French tips · milky pink · chrome.
 
@@ -371,6 +498,7 @@ Toutes dans le style des références, quel que soit le pays.
 | Peignoir éponge | `the thick terry cloth moves with weight, the belt ends swinging` |
 | Cheveux longs | `her hair bounces with each step and settles at once; loose strands lift in the breeze` |
 | Tresses | `her braids swing together with weight and momentum, tapping lightly against her back` |
+| Coup de cheveux | `her long hair fans out in one quick arc and falls back into place` |
 | Bijoux et sac | `the gold hoops sway and glint, the handbag swings slightly at her side` |
 
 ## N. Couleurs et contrastes qui performent

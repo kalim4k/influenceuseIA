@@ -24,7 +24,7 @@ La signature des sources : **2 à 4 images de la même scène**, où seule la po
 
 Pour les slides 2 à 4, donne des prompts d'**édition** (voir `outils-ia.md` § 3 et § 4) plutôt que de nouveaux prompts complets : c'est ce qui garde le visage, la tenue et la lumière identiques.
 
-**Banque de micro-poses** (slides 2 et 3) :
+**Banque de micro-poses** (slides 2 et 3 ; catalogue complet de 48 poses et combinaisons de carrousel : `poses.md` § J) :
 - eyes closed, face tilted up toward the sun, soft smile
 - right hand running through her hair, elbow raised, head tilted
 - laughing naturally, looking down and to the side
